@@ -43,13 +43,14 @@ module cap_notch(male = true) {
 };
 
 module hole_for_om_pin() {
+	// om -> overlap measure
 	cylinder(d = om_pin_diameter + move_tolerance, h = pin_height + overlap);
 }
 
 module pin() {
 	difference() {
 		cylinder(d = pin_diameter, h = pin_height);
-		hole_for_om_pin();
+		//hole_for_om_pin();
 	};
 };
 
@@ -83,8 +84,8 @@ module switch_male() {
 			lever_anchor();
 			translate([ -lever_anchor_posX, lever_anchor_posY, blade_cover_thicknes ])
 			lever_anchor();
-			translate([ 0, y_pos_first_pin, 0 ])
-			hole_for_om_pin();
+/* 			translate([ 0, y_pos_first_pin, 0 ])
+			hole_for_om_pin(); */
 		};
 		translate([ 0, y_pos_first_pin, blade_thickness ])
 		pin();
@@ -105,8 +106,8 @@ module switch_female() {
 			lever_anchor();
 			translate([ -lever_anchor_posX, lever_anchor_posY, 0 ])
 			lever_anchor();
-			translate([ 0, y_pos_first_pin, 0 ])
-			hole_for_om_pin();
+/* 			translate([ 0, y_pos_first_pin, 0 ])
+			hole_for_om_pin(); */
 			base_rounding();
 		};
 		translate([ 0, y_pos_first_pin, 0 ])
@@ -123,8 +124,8 @@ module cap() {
                 switch_blade(blade_cover_thicknes);
                 translate([ -1, 2 * pin_diameter, 0 ])
                 cap_notch(male = true);
-                translate([ 0, y_pos_first_pin, 0 ])
-                hole_for_om_pin();
+/*                 translate([ 0, y_pos_first_pin, 0 ])
+                hole_for_om_pin(); */
             };
         };
     };
