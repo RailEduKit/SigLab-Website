@@ -74,10 +74,10 @@ module train_integrity(position) {
 	}
 
 	difference() { // front shield
-		translate([ -shield_width / 2, -(shield_depth) / 2 - coupling_radius + 1, -shield_thickness ])
+		translate([ -shield_width / 2, -(shield_depth) / 2 - coupling_radius + 1, -shield_thickness ]) 
 		cube([ shield_width, shield_depth, shield_thickness ]);
 		translate([ 0, 0, -inlay_thickness ])
-		cylinder(h = inlay_thickness * 1.1, r = inlay_radius);
+		#cylinder(h = inlay_thickness, r = inlay_radius);
 		if (position == "rear") {
 			end_of_train_symbol();
 		}
@@ -87,7 +87,7 @@ module train_integrity(position) {
 	}
 }
 
-//train_integrity("rear");
-end_of_train_symbol();
+train_integrity("rear");
+//end_of_train_symbol();
 //translate([ 0, 30, 0 ])
 //train_integrity("front");
