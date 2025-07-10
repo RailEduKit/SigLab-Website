@@ -87,6 +87,7 @@ module train_integrity(position) {
 	}
 }
 
-train_integrity("rear");
-translate([ 0, 30, 0 ])
-train_integrity("front");
+//train_integrity("rear");
+end_of_train_symbol();
+//translate([ 0, 30, 0 ])
+//train_integrity("front");
