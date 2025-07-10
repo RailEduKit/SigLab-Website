@@ -394,8 +394,8 @@ move_tolerance = 0.5;
     lipp_width         = coupler_thickness - move_tolerance;
     shield_width       = 20;
     shield_depth        = 25;
-    shield_thickness   = 2;
     inlay_thickness    = 0.45;
+    shield_thickness   = number_height+inlay_thickness+0.2; //2;
     inlay_radius       = 10.5/2;
 
     headlight_d = (1/3)*shield_width;

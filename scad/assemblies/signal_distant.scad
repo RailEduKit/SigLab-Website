@@ -106,6 +106,6 @@ module visualize_colorBlock_in_body(state) {
 	}
 }
 
-// body();
-// translate([-30,handle_depth,0]) signal_lever_distant();
-visualize_colorBlock_in_body("y");
+//body();
+ signal_lever_distant();// translate([-30,handle_depth,0]) signal_lever_distant();
+//visualize_colorBlock_in_body("y");
