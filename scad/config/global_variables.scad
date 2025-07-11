@@ -27,6 +27,8 @@ TODO
 
 move_tolerance = 0.5;
 
+nozzle_diameter = 0.4;
+
 {/***************wood rail specification***************/
     // rail instead of wood to prevent duplicate variables with tracklib.scad file
     rail_height = 12;
@@ -400,3 +402,23 @@ move_tolerance = 0.5;
 
     headlight_d = (1/3)*shield_width;
 }
+
+{/***************switch locker***************/
+    //switch locker = sl
+    sl_width = rail_height + 2*wall_thickness;
+    sl_depth = 30;
+    sl_height = 0.6;
+    
+    sl_barrier_width = sl_width;
+    sl_barrier_depth = 15 + wall_thickness;
+    sl_barrier_height = rail_height;
+
+    sl_wedge_width = 2;
+    sl_wedge_depth = 3;
+    sl_wedge_height = rail_well_height;
+
+    brio_handle_diameter = 11;
+    brio_handle_depth = 15;
+}
+
+
