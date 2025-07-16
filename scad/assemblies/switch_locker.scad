@@ -11,13 +11,13 @@
 // Include configuration file
 include <../config/global_variables.scad>
 
-module wedge() {
+module wedge(y_value) {
     hull(){
-        translate([0,sl_depth,-sl_wedge_height+nozzle_diameter/2])
+        translate([0,0,-sl_wedge_height+nozzle_diameter/2])
         rotate([90,0,0])
-        cylinder(d=nozzle_diameter, h= sl_wedge_depth);
-        translate([-sl_wedge_width/2, sl_depth-sl_wedge_depth, -0.2])
-        cube([sl_wedge_width, sl_wedge_depth, 0.2]);
+        cylinder(d=nozzle_diameter, h= y_value);
+        translate([-sl_wedge_width/2, -y_value, -0.2]) //sl_depth-y_value
+        cube([sl_wedge_width, y_value, 0.2]);
     }
 }
 
@@ -30,22 +30,31 @@ module half_circle(diameter) {
 }
 
 module brio_switch_handle() {
-    curve_h = 2;
-    translate([0, curve_h, 0])
-    cube([brio_handle_diameter + move_tolerance, brio_handle_depth-curve_h, brio_handle_diameter + move_tolerance]);
-    translate([(brio_handle_diameter + move_tolerance)/2, curve_h, (brio_handle_diameter + move_tolerance)/2]) scale([1,curve_h/((brio_handle_diameter + move_tolerance)/2),1])
-    half_circle(brio_handle_diameter + move_tolerance);
+    // the half circle is needed, otherwise the locker moves upwards if you move the switch
+    translate([0, handle_curve_h, 0])
+    cube([brio_handle_diameter, brio_handle_depth-handle_curve_h, brio_handle_height]); 
+    translate([(brio_handle_diameter)/2, handle_curve_h, (brio_handle_diameter)/2]) scale([1,handle_curve_h/((brio_handle_diameter)/2),1])
+    half_circle(brio_handle_diameter);
 
 }
 
 module barrier() {
     difference(){
-        cube([sl_barrier_width, sl_barrier_depth, sl_barrier_height]);
-        //TODO cut the cube to gain more flexibilaty while installation
-        translate([wall_thickness,wall_thickness,0])
-        brio_switch_handle();
+        difference(){
+            cube([sl_barrier_width, sl_barrier_depth, sl_barrier_height]);
+            //TODO cut the cube to gain more flexibilaty while installation
+            translate([wall_thickness,wall_thickness,0])
+            brio_switch_handle();
+        }
+        // gap for better movement
+        //translate([0,wall_thickness+handle_curve_h,0])
+        //cube([sl_barrier_width,2,sl_barrier_height]);
     }
 
+}
+
+module handle(){
+    cube([sl_handle_width, sl_handle_depth, sl_handle_height]);
 }
 
 module switch_locker() {
@@ -57,14 +66,24 @@ module switch_locker() {
         translate([0, sl_depth - nozzle_diameter/2, 0])
         cylinder(d = 5*nozzle_diameter, h=sl_height);
     } */
-    translate([-sl_width/2,0,0])
-    cube([sl_width, sl_depth, sl_height]);
+    hull(){
+        translate([-sl_width/2,0,0])
+        cube([sl_width, sl_barrier_depth, sl_height]);
+        translate([-sl_wedge_width/2, sl_depth-sl_wedge_depth, 0]) //sl_depth-y_value
+        cube([sl_wedge_width, sl_wedge_depth, sl_height]);
+    }
+
     translate([-sl_barrier_width/2, 0, -sl_barrier_height])
     barrier();
-    wedge();
+    translate([0,sl_depth,0])
+    wedge(sl_wedge_depth);
+    translate([0,sl_barrier_depth+sl_wedge_short+move_tolerance,0])
+    wedge(sl_wedge_short);
+    translate([-sl_handle_width/2,0,0])
+    handle();
 }
 
 //brio_switch_handle();
 //barrier();
 switch_locker();
-//wedge();
+//wedge(sl_wedge_depth);
