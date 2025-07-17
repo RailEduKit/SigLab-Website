@@ -49,7 +49,7 @@ nozzle_diameter = 0.4;
     magnet_thickness = 3;
     magnet_diameter = 5;
     magnet_distance_to_middle = 7.5;
-    magnet_z = 5.75;
+    magnet_z = rail_height/2;
 }
 {/***************engraving specifications***************/
     engraving_height = 2;//(block_height-handle_height)/2;
