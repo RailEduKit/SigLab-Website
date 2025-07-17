@@ -31,10 +31,17 @@ module half_circle(diameter) {
 
 module brio_switch_handle() {
     // the half circle is needed, otherwise the locker moves upwards if you move the switch
-    translate([0, handle_curve_h, 0])
-    cube([brio_handle_diameter, brio_handle_depth-handle_curve_h, brio_handle_height]); 
-    translate([(brio_handle_diameter)/2, handle_curve_h, (brio_handle_diameter)/2]) scale([1,handle_curve_h/((brio_handle_diameter)/2),1])
-    half_circle(brio_handle_diameter);
+    translate([0, 0, 0]) // y: handle_curve_h if you use half circle
+    cube([brio_handle_diameter, brio_handle_depth, brio_handle_height]); // y: -handle_curve_h if you use half circle
+
+    //brio sxis
+    translate([(brio_handle_diameter-brio_axis_diameter)/2,brio_handle_depth,0])
+    cube([brio_axis_diameter, 5, brio_handle_height]);
+
+    // half circle
+    //translate([(brio_handle_diameter)/2, handle_curve_h, (brio_handle_diameter)/2]) 
+    //scale([1,handle_curve_h/((brio_handle_diameter)/2),1])
+    //half_circle(brio_handle_diameter);
 
 }
 
@@ -77,8 +84,8 @@ module switch_locker() {
     barrier();
     translate([0,sl_depth,0])
     wedge(sl_wedge_depth);
-    translate([0,sl_barrier_depth+sl_wedge_short+move_tolerance,0])
-    wedge(sl_wedge_short);
+    //translate([0,sl_barrier_depth+sl_wedge_short+move_tolerance,0])
+    //wedge(sl_wedge_short);
     translate([-sl_handle_width/2,0,0])
     handle();
 }
