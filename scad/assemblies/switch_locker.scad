@@ -73,17 +73,22 @@ module switch_locker() {
         translate([0, sl_depth - nozzle_diameter/2, 0])
         cylinder(d = 5*nozzle_diameter, h=sl_height);
     } */
-    hull(){
-        translate([-sl_width/2,0,0])
-        cube([sl_width, sl_barrier_depth, sl_height]);
-        translate([-sl_wedge_width/2, sl_depth-sl_wedge_depth, 0]) //sl_depth-y_value
-        cube([sl_wedge_width, sl_wedge_depth, sl_height]);
+    difference(){
+        hull(){
+            translate([-sl_width/2,sl_barrier_depth,-sl_lock_height])
+            cube([sl_width, 0.4, sl_lock_height]);
+            translate([-sl_wedge_width/2, sl_depth-sl_wedge_depth, -sl_lock_height]) //sl_depth-y_value
+            cube([sl_wedge_width, sl_wedge_depth, sl_lock_height]);
+        }
+        translate([-sl_barrier_width/2,sl_barrier_depth,-sl_lock_height])
+        cube([sl_barrier_width, rail_well_width + 2*move_tolerance, sl_lock_height-sl_height]);
     }
+    
 
     translate([-sl_barrier_width/2, 0, -sl_barrier_height])
     barrier();
-    translate([0,sl_depth,0])
-    wedge(sl_wedge_depth);
+    //translate([0,sl_depth,0])
+    //wedge(sl_wedge_depth);
     //translate([0,sl_barrier_depth+sl_wedge_short+move_tolerance,0])
     //wedge(sl_wedge_short);
     translate([-sl_handle_width/2,0,0])
@@ -91,6 +96,5 @@ module switch_locker() {
 }
 
 //brio_switch_handle();
-//barrier();
 switch_locker();
 //wedge(sl_wedge_depth);

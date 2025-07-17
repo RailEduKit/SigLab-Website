@@ -37,6 +37,7 @@ nozzle_diameter = 0.4;
     rail_well_height = 9; // copy from tracklib
     rail_well_width = 5.7; // copy from tracklib
     rail_well_spacing = 19.25; // copy from tracklib
+    rail_groove_depth = rail_height - rail_well_height;
 
     straight_length = 144;
 
@@ -406,12 +407,14 @@ nozzle_diameter = 0.4;
 {/***************switch locker***************/
     //switch locker = sl
     sl_width = rail_height + 2*wall_thickness;
-    sl_depth = 30;
+    sl_depth = 27 + wall_thickness;
     sl_height = 0.6;
+
+    sl_lock_height = rail_groove_depth + sl_height + move_tolerance;
     
     sl_barrier_width = sl_width;
-    sl_barrier_depth = 16 + 2*wall_thickness;
-    sl_barrier_height = rail_height+1;
+    sl_barrier_depth = 17.5 + wall_thickness;
+    sl_barrier_height = rail_height+ move_tolerance + sl_height;
 
     sl_wedge_width = 2;
     sl_wedge_depth = 3;
@@ -419,8 +422,8 @@ nozzle_diameter = 0.4;
     sl_wedge_height = 9;
 
     brio_handle_diameter = rail_height;
-    brio_handle_height = sl_barrier_height;
-    brio_handle_depth = 16;
+    brio_handle_height = sl_barrier_height - sl_height;
+    brio_handle_depth = 15 + move_tolerance;
     handle_curve_h = 2;
     brio_axis_diameter = 7;
 
