@@ -20,7 +20,7 @@ difference(){
     translate([0,-24,0]) rotate([0,90,0]) cylinder(h = magnet_thickness + move_tolerance, d = magnet_diameter + 0.3);
     translate([0,-31,0]) rotate([0,90,0]) cylinder(h = magnet_thickness + move_tolerance, d = magnet_diameter + 0.4);
     translate([0,-38,0]) rotate([0,90,0]) cylinder(h = magnet_thickness + move_tolerance, d = magnet_diameter + move_tolerance);
-    translate([0.5,3,4]) rotate([0,0,-90]) linear_extrude(h=1) text("round 0.0 - 0.5", size = 5);
+    translate([0.5,3,4]) rotate([0,0,-90]) linear_extrude(h=1) text("round 5.0 - 5.5", size = 5);
 }
 
 translate([-10,0,0]) difference(){
