@@ -410,18 +410,19 @@ nozzle_diameter = 0.4;
     sl_height = 0.6;
     
     sl_barrier_width = sl_width;
-    sl_barrier_depth = 15 + wall_thickness;
+    sl_barrier_depth = 16 + 2*wall_thickness;
     sl_barrier_height = rail_height+1;
 
     sl_wedge_width = 2;
     sl_wedge_depth = 3;
     sl_wedge_short = 2; // alternative depth
-    sl_wedge_height = 8;
+    sl_wedge_height = 9;
 
     brio_handle_diameter = rail_height;
     brio_handle_height = sl_barrier_height;
-    brio_handle_depth = 15;
+    brio_handle_depth = 16;
     handle_curve_h = 2;
+    brio_axis_diameter = 7;
 
     sl_handle_width = 2;
     sl_handle_depth = sl_depth;
