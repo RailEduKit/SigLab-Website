@@ -6,6 +6,10 @@
  * Module: component/driving_direction_arrow
  */
 
+// Include configuration file
+include <../config/global_variables.scad>
+include <../config/colors.scad>
+
 module attach_arrow() {
 	hull() {
 		cyl_d = 0.4;
