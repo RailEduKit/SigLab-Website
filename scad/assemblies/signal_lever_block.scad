@@ -1,0 +1,31 @@
+/* RailEduKit/InteractiveSignallingLaboratory © 2025 by Martin Scheidt and contributors
+ * License: CC-BY 4.0 - https://creativecommons.org/licenses/by/4.0/
+ * Project description: The Interactive Signalling Laboratory is a tool for training in Rail
+ * Applications to enhance the knowledge of control and signalling principles for rail transport systems.
+ *
+ * Module: signal_lever_block
+ */
+
+// Include configuration file
+include <../config/global_variables.scad>
+
+// include common parts
+include <../parts/signal_lever.scad>
+include <../parts/signal_symbols.scad>
+
+module signal_lever_block() {
+	difference() {
+		signal_lever();
+		// locker pin hole
+		translate([ block_width / 2, -wall_thickness_y / 2 - 3 * move_tolerance, 0 ])
+		cylinder(h = locker_height, d = locker_width + 2 * move_tolerance);
+	
+		// symbol
+		translate([ signal_symbol_side_space, 4 * (block_depth - signal_symbol_size) / 5, 0 ])
+		symbol_block();
+		translate([ signal_symbol_side_space, 4 * (block_depth - signal_symbol_size) / 5, block_height - engraving_height ])
+		symbol_block();
+	}
+}
+
+signal_lever_block();
