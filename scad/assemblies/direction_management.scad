@@ -77,6 +77,13 @@ module V_axis() {
 	}
 }
 
+module I_axis(){
+	hull(){
+		cylinder(h = body_width, d = axis_diameter + move_tolerance);
+		right((3 / 2) * overlap_cube_depth) cylinder(h = body_width, d = axis_diameter + move_tolerance);
+	}
+}
+
 module cavity_cube_direction_management() {
 	module guide_cube() {
 		diff() cuboid(
@@ -133,7 +140,8 @@ module direction_management_flipFlop() {
 		// axis
 		translate([ 0, body_depth / 2, z_pos_axis ])
 		rotate([ 0, 90, 0 ])
-		V_axis(); // cylinder(h=body_width, d=axis_diameter+move_tolerance);
+		//V_axis(); // cylinder(h=body_width, d=axis_diameter+move_tolerance);
+		I_axis();
 		// handle space
 		lever_space_cubes();
 		// locker pin hole
@@ -155,9 +163,16 @@ module direction_management_flipFlop() {
 module arrow_block() {
 	difference() {
 		union() {
-			cube([ block_width, arrow_block_depth, arrow_block_height ]);
+			// v axis
+/* 			cube([ block_width, arrow_block_depth, arrow_block_height ]);
 			translate([ 0, arrow_block_depth, 0 ])
+			cube([ block_width, overlap_cube_depth, arrow_block_height ]); */
+
+			// I axis
+			cube([ block_width, block_depth, arrow_block_height ]);
+			translate([ 0, block_depth, 0 ])
 			cube([ block_width, overlap_cube_depth, arrow_block_height ]);
+
 			// translate([0,arrow_block_depth+overlap_cube_depth,arrow_block_height/2]) scale([1,0.5,1])
 			// rotate([0,90,0]) cylinder(h=block_width, r=arrow_block_height/2); // scale y:
 			// (overhang)/(arrow_block_height/2) // curve is flat, because the printer can't make that much overhang
@@ -230,8 +245,9 @@ module arrow_block() {
 //     locking_pin();
 // }
 
-arrow_block();
-translate([30,0,0]) direction_management_flipFlop();
+	arrow_block();
+//translate([30,0,0]) direction_management_flipFlop();
+
 // guide_cube();
 // direction_management_onePiece();
 // bidirectional_arrow();
