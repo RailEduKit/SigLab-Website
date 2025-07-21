@@ -10,82 +10,12 @@
 include <../config/global_variables.scad>
 
 // include common parts
-include <../parts/signal_box.scad>
-include <../parts/signal_lever.scad>
-include <../parts/driving_direction_arrow.scad>
-
-// symbol_distant();
-module symbol_distant() {
-	// symbol_distant = sb
-	cylinder_diameter = 0.4;
-	sb_beta = atan(1 / 2);
-	sb_gamma = 180 - 90 - sb_beta;
-	sb_theta = 90 - sb_gamma;
-	top_cyl_ydif = engraving_thickness / sin(sb_beta);
-	bottom_cyl_xdif = engraving_thickness / sin(sb_gamma) + tan(sb_theta) * engraving_thickness;
-
-	difference() {
-		hull() {
-			translate([ signal_symbol_size / 2, cylinder_diameter / 2, 0 ])
-			cylinder(d = cylinder_diameter, h = engraving_height);
-			translate([ cylinder_diameter / 2, signal_symbol_size - cylinder_diameter / 2, 0 ])
-			cylinder(d = cylinder_diameter, h = engraving_height);
-			translate([ signal_symbol_size - cylinder_diameter / 2, signal_symbol_size - cylinder_diameter / 2, 0 ])
-			cylinder(d = cylinder_diameter, h = engraving_height);
-		}
-		hull() {
-			translate([ signal_symbol_size / 2, top_cyl_ydif + cylinder_diameter / 2, 0 ])
-			cylinder(d = cylinder_diameter, h = engraving_height);
-			translate([
-				bottom_cyl_xdif + cylinder_diameter / 2,
-				signal_symbol_size - engraving_thickness - cylinder_diameter / 2, 0
-			])
-			cylinder(d = cylinder_diameter, h = engraving_height);
-			translate([
-				signal_symbol_size - bottom_cyl_xdif - cylinder_diameter / 2,
-				signal_symbol_size - engraving_thickness - cylinder_diameter / 2, 0
-			])
-			cylinder(d = cylinder_diameter, h = engraving_height);
-		}
-	}
-}
-
-module body() {
-	difference() {
-		signal_box(); // import from basis_component-roundedBox
-		cavity_cube_signal_box();
-		// axis
-		translate([ 0, body_depth / 2, z_pos_axis ])
-		rotate([ 0, 90, 0 ])
-		cylinder(h = body_width, d = axis_diameter);
-		// handle space
-		lever_space_cubes();
-	}
-	translate([ body_width - wall_thickness_x + attach_arrow_wall_distance, body_depth / 2, body_height ])
-	driving_direction_arrow();
-	translate([ attach_arrow_wall_distance, body_depth / 2, body_height ])
-	driving_direction_arrow();
-}
-
-// signal_lever(("distant"));
-module signal_lever_distant() {
-	difference(){
-		signal_lever(bottom_color = ASPECT_APPROACH);
-		// symbol
-		translate([
-			signal_symbol_size + signal_symbol_side_space, signal_symbol_size + 4 * (block_depth - signal_symbol_size) / 5,
-			0
-		])
-		rotate([ 0, 0, 180 ])
-		symbol_distant();
-		translate([ signal_symbol_side_space, 4 * (block_depth - signal_symbol_size) / 5, block_height - engraving_height ])
-		symbol_distant();
-	}
-}
+use <../assemblies/signal_box_distant.scad>
+use <../assemblies/signal_lever_distant.scad>
 
 module visualize_colorBlock_in_body(state) {
 	translate([ 0, -body_depth / 2, -z_pos_axis ])
-	body(); // z=-block_height/2-wall_thickness_z
+	signal_box_distant(); // z=-block_height/2-wall_thickness_z
 	if (state == "-y") {
 		rotate([ 0, 0, 0 ])
 		translate([
@@ -106,6 +36,5 @@ module visualize_colorBlock_in_body(state) {
 	}
 }
 
-//body();
- signal_lever_distant();// translate([-30,handle_depth,0]) signal_lever_distant();
-//visualize_colorBlock_in_body("y");
+
+visualize_colorBlock_in_body("y");
