@@ -181,7 +181,10 @@ module arrow_block() {
 			cube([ block_width, handle_depth, handle_height ]);
 		}
 		// axis
-		translate([ 0, arrow_block_depth, arrow_block_height / 2 ])
+		// v axis
+		// translate([ 0, arrow_block_depth, arrow_block_height / 2 ])
+		// I axis
+		translate([ 0, block_depth, arrow_block_height / 2 ])
 		rotate([ 0, 90, 0 ])
 		cylinder(h = block_width, d = axis_diameter);
 		// locker pin hole
