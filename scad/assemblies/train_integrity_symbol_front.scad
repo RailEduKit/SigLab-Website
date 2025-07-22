@@ -8,6 +8,7 @@
 
 // Include configuration file
 include <../config/global_variables.scad>
+include <../config/colors.scad>
 
 /* PRINT INSTRUCTION
 To print the train integrity you have to export the symbol and the body seperately as STL.
@@ -18,7 +19,8 @@ Through this procedure you can print multiple colors in one layer.
  */
 
 
-module front_of_train_symbol() {
+module train_integrity_symbol_front() {
+	color(INDICATOR_COLOR)
 	translate([ -shield_width / 2, -(shield_depth) / 2 - coupling_radius + 1, -shield_thickness ])
 	union() {
 		translate(
@@ -33,4 +35,4 @@ module front_of_train_symbol() {
 	}
 }
 
-front_of_train_symbol();
+train_integrity_symbol_front();
