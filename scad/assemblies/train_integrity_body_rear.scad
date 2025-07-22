@@ -26,7 +26,7 @@ Through this procedure you can print multiple colors in one layer.
 module train_integrity_body_rear() {
 	difference() {
         train_integrity_body();
-        end_of_train_symbol();
+        train_integrity_symbol_rear();
 	}
 }
 

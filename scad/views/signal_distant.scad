@@ -9,7 +9,7 @@
 // Include configuration file
 include <../config/global_variables.scad>
 
-// include common parts
+// use common parts
 use <../assemblies/signal_box_distant.scad>
 use <../assemblies/signal_lever_distant.scad>
 

@@ -8,8 +8,10 @@
 
 // Include configuration file
 include <../config/global_variables.scad>
+include <../config/colors.scad>
 
 module train_integrity_body() {
+	color(BASE_COLOR) union(){
 	difference() { // coupling
 		// outer ring
 		cylinder(h = coupling_depth, r = coupling_radius + move_tolerance / 2 + coupler_thickness);
@@ -43,6 +45,7 @@ module train_integrity_body() {
 		cube([ shield_width, shield_depth, shield_thickness ]);
 		translate([ 0, 0, -inlay_thickness ])
 		cylinder(h = inlay_thickness, r = inlay_radius);
+	}
 	}
 }
 
