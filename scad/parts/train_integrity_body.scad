@@ -3,48 +3,13 @@
  * Project description: The Interactive Signalling Laboratory is a tool for training in Rail
  * Applications to enhance the knowledge of control and signalling principles for rail transport systems.
  *
- * Module: train_integrity
+ * Module: train_integrity_body
  */
 
 // Include configuration file
 include <../config/global_variables.scad>
 
-module triangle() {
-	cylinder_diameter = 0.1;
-	hull() {
-		translate([ cylinder_diameter / 2, cylinder_diameter / 2, 0 ])
-		cylinder(d = cylinder_diameter, h = number_height);
-		translate([ cylinder_diameter / 2, shield_depth - cylinder_diameter / 2, 0 ])
-		cylinder(d = cylinder_diameter, h = number_height);
-		translate([ (shield_width - cylinder_diameter) / 2, (shield_depth - cylinder_diameter) / 2, 0 ])
-		cylinder(d = cylinder_diameter, h = number_height);
-	}
-}
-
-module front_of_train_symbol() {
-	translate([ -shield_width / 2, -(shield_depth) / 2 - coupling_radius + 1, -shield_thickness ])
-	union() {
-		translate(
-		    [ (1 / 12) * shield_width + headlight_d / 2, (shield_depth + (1 / 6) * shield_width + headlight_d) / 2, 0 ])
-		cylinder(d = headlight_d, h = number_height);
-		translate([
-			(11 / 12) * shield_width - headlight_d / 2, (shield_depth + (1 / 6) * shield_width + headlight_d) / 2, 0
-		])
-		cylinder(d = headlight_d, h = number_height);
-		translate([ (1 / 2) * shield_width, (shield_depth - (1 / 6) * shield_width - headlight_d) / 2, 0 ])
-		cylinder(d = headlight_d, h = number_height);
-	}
-}
-
-module end_of_train_symbol() {
-	translate([ -shield_width / 2, -(shield_depth) / 2 - coupling_radius + 1, -shield_thickness ])
-	triangle();
-	translate([ shield_width / 2, -(shield_depth) / 2 - coupling_radius + 1, -shield_thickness + number_height ])
-	rotate([ 0, 180, 0 ])
-	triangle();
-}
-
-module train_integrity(position) {
+module train_integrity_body() {
 	difference() { // coupling
 		// outer ring
 		cylinder(h = coupling_depth, r = coupling_radius + move_tolerance / 2 + coupler_thickness);
@@ -77,17 +42,8 @@ module train_integrity(position) {
 		translate([ -shield_width / 2, -(shield_depth) / 2 - coupling_radius + 1, -shield_thickness ]) 
 		cube([ shield_width, shield_depth, shield_thickness ]);
 		translate([ 0, 0, -inlay_thickness ])
-		#cylinder(h = inlay_thickness, r = inlay_radius);
-		if (position == "rear") {
-			end_of_train_symbol();
-		}
-		if (position == "front") {
-			front_of_train_symbol();
-		}
+		cylinder(h = inlay_thickness, r = inlay_radius);
 	}
 }
 
-train_integrity("rear");
-//end_of_train_symbol();
-//translate([ 0, 30, 0 ])
-//train_integrity("front");
+//train_integrity_body();
