@@ -12,12 +12,12 @@ include <../config/global_variables.scad>
 // include common parts
 use <../assemblies/direction_management_lever.scad>
 use <../assemblies/direction_management_box.scad>
-use <../assemblies/locking_pin.scad> // used in "visualize_arrowBlock_in_body"
+use <../assemblies/locking_pin.scad>
 
 // include external libraries
 include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
 
- module visualize_arrowBlock_in_body(state){
+ module direction_management(state){
          union(){
             translate([0,-body_depth/2,-z_pos_axis]) direction_management_box();
             if(state == "-y"){
@@ -58,4 +58,4 @@ include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
      locking_pin();
  } */
 
-visualize_arrowBlock_in_body("y");
+direction_management("y");
