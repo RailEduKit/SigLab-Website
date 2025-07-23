@@ -17,48 +17,6 @@ include <../parts/signal_lever.scad>
 include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
 
 
-// module T_axis() {
-//     hull() {
-//         translate([0, -overlap_cube_depth, 0])cylinder(h=body_width, d=axis_diameter+move_tolerance);
-//         translate([0, overlap_cube_depth, 0])cylinder(h=body_width, d=axis_diameter+move_tolerance);
-//     }
-//     hull() {
-//         cylinder(h=body_width, d=axis_diameter+move_tolerance);
-//         translate([overlap_cube_depth-2*move_tolerance, 0, 0]) cylinder(h=body_width,
-//         d=axis_diameter+move_tolerance);
-//     }
-// }
-// module Y_axis() {
-//     hull(){
-//         fwd(overlap_cube_depth) cylinder(h=body_width, d=axis_diameter+move_tolerance);
-//         right(overlap_cube_depth/2) cylinder(h=body_width, d=axis_diameter+move_tolerance);
-//     }
-//     hull(){
-//         back(overlap_cube_depth) cylinder(h=body_width, d=axis_diameter+move_tolerance);
-//         right(overlap_cube_depth/2) cylinder(h=body_width, d=axis_diameter+move_tolerance);
-//     }
-//     hull() {
-//         right(overlap_cube_depth/2) cylinder(h=body_width, d=axis_diameter+move_tolerance);
-//         right((3/2)*overlap_cube_depth) cylinder(h=body_width, d=axis_diameter+move_tolerance);
-//     }
-// }
-
-module V_axis() {
-	hull() {
-		fwd(overlap_cube_depth) cylinder(h = body_width, d = axis_diameter + move_tolerance);
-		right((3 / 2) * overlap_cube_depth) cylinder(h = body_width, d = axis_diameter + move_tolerance);
-	}
-	hull() {
-		back(overlap_cube_depth) cylinder(h = body_width, d = axis_diameter + move_tolerance);
-		right((3 / 2) * overlap_cube_depth) cylinder(h = body_width, d = axis_diameter + move_tolerance);
-	}
-	right((1 / 6) * overlap_cube_depth + 0.25) difference() {
-		translate([ (axis_diameter + move_tolerance) / 2, 0, body_width / 2 ])
-		cube([ (axis_diameter + move_tolerance), axis_diameter, body_width ], center = true);
-		down(0.1) cylinder(h = body_width + 0.2, d = axis_diameter + move_tolerance);
-	}
-}
-
 module I_axis(){
 	hull(){
 		cylinder(h = body_width, d = axis_diameter + move_tolerance);
@@ -104,17 +62,6 @@ module cavity_cube_direction_management() {
 	}
 }
 
-// module direction_management_onePiece(){
-//     difference(){
-//         signal_box(); // import from basis_component-roundedBox
-//         translate([body_width*(1/2),body_depth*(1/6),wall_thickness_z])cylinder(d=locker_width+move_tolerance,
-//         h=body_height-wall_thickness_z);
-//         translate([body_width*(1/2),body_depth*(5/6),wall_thickness_z])cylinder(d=locker_width+move_tolerance,
-//         h=body_height-wall_thickness_z);
-//     }
-//     translate([body_width/2, body_depth/2, body_height])rotate([0,0,90]) bidirectional_arrow();
-// }
-
 module direction_management_box() {
 	difference() {
 		signal_box(); // import from basis_component-roundedBox
@@ -122,7 +69,6 @@ module direction_management_box() {
 		// axis
 		translate([ 0, body_depth / 2, z_pos_axis ])
 		rotate([ 0, 90, 0 ])
-		//V_axis(); // cylinder(h=body_width, d=axis_diameter+move_tolerance);
 		I_axis();
 		// handle space
 		lever_space_cubes();
