@@ -11,6 +11,10 @@ BASE_COLOR = [0.25, 0.25, 0.25];// lighter black to see the shapes
 INDICATOR_COLOR = "white";
 ROUTE_COLOR = "blue";
 
+METALLIC_GREY = [0.474, 0.482, 0.482];
+
+
+
 // signal colors
 ASPECT_CLEAR = "green";
 ASPECT_APPROACH = "yellow";

@@ -12,15 +12,16 @@ include <../config/global_variables.scad>
 // include common parts
 use <../assemblies/direction_management_lever.scad>
 use <../assemblies/direction_management_box.scad>
-use <locking_pin.scad> // used in "visualize_arrowBlock_in_body"
+use <../assemblies/locking_pin.scad> // used in "visualize_arrowBlock_in_body"
 
 // include external libraries
 include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
 
  module visualize_arrowBlock_in_body(state){
          union(){
-             translate([0,-body_depth/2,-z_pos_axis]) direction_management_box();
-             //z=-arrow_block_height/2-wall_thickness_z if(state== "-y"){
+            translate([0,-body_depth/2,-z_pos_axis]) direction_management_box();
+            if(state == "-y"){
+                //z=-arrow_block_height/2-wall_thickness_z if(state== "-y"){
                  rotate([0,0,0]) translate([wall_thickness_x + move_tolerance,
                  -(arrow_block_depth+overlap_cube_depth),-arrow_block_height/2-wall_thickness_z+wall_thickness_z])
                  direction_management_lever(); // translate y = -body_depth/2 + wall_thickness_y+3*move_tolerance
@@ -28,23 +29,14 @@ include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
                  rotate([180,0,90]) locking_pin();
              }
              if(state== "-yz"){
-                 translate([0,-overlap_cube_depth/2,-(overlap_cube_depth)/4]) rotate([-45,0,0])
+                 translate([0,-overlap_cube_depth*(2/3),-(overlap_cube_depth)/4]) 
+                 rotate([-45,0,0])
                  translate([wall_thickness_x + move_tolerance,
                  -arrow_block_depth,-arrow_block_height/2-wall_thickness_z+wall_thickness_z]) direction_management_lever();
-                 translate([body_width/2,-(body_depth-wall_thickness_y)/2,locker_height-0.5-z_pos_axis])
-                 rotate([180,0,90]) locking_pin();
              }
              if(state == "z"){
                  down(overlap_cube_depth/2) rotate([-90,0,0]) translate([wall_thickness_x + move_tolerance,
                  -arrow_block_depth,-arrow_block_height/2-wall_thickness_z+wall_thickness_z]) direction_management_lever();
-                 translate([body_width/2,-(body_depth-wall_thickness_y)/2,locker_height-0.5-z_pos_axis])
-                 rotate([180,0,90]) locking_pin();
-             }
-             if(state == "-z"){
-                 #down((3/2)*overlap_cube_depth) rotate([-90,0,0]) translate([wall_thickness_x + move_tolerance,
-                 -arrow_block_depth,-arrow_block_height/2-wall_thickness_z+wall_thickness_z]) direction_management_lever();
-                 translate([body_width/2,-(body_depth-wall_thickness_y)/2,locker_height-0.5-z_pos_axis])
-                 rotate([180,0,90]) locking_pin();
              }
              if(state== "y"){
                  rotate([-180,0,0]) translate([wall_thickness_x + move_tolerance, -body_depth/2 +
@@ -52,10 +44,12 @@ include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
                  direction_management_lever(); translate([body_width/2,(body_depth-wall_thickness_y)/2,locker_height-0.5-z_pos_axis])
                  rotate([180,0,90]) locking_pin();
              }
+         }
          //cut -> THIS would need a difference function
         //translate([15,-50,-25])
         //cube([50,100,50]);
-     }
+    }
+
 
 
 /*  module visualize_onePiece_with_locker(){
@@ -64,4 +58,4 @@ include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
      locking_pin();
  } */
 
-visualize_arrowBlock_in_body("-y");
+visualize_arrowBlock_in_body("y");

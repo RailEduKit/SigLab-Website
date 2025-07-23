@@ -17,12 +17,22 @@ module signal_lever_block() {
 	difference() {
 		signal_lever();
 		// locker pin hole
+		color(ASPECT_STOP)
 		translate([ block_width / 2, -wall_thickness_y / 2 - 3 * move_tolerance, 0 ])
-		cylinder(h = locker_height, d = locker_width + 2 * move_tolerance);
+		cylinder(h = (block_height- handle_height)/2, d = locker_width + 2 * move_tolerance);
+		color(BASE_COLOR)
+		translate([ block_width / 2, -wall_thickness_y / 2 - 3 * move_tolerance, (block_height- handle_height)/2 ])
+		cylinder(h = handle_height, d = locker_width + 2 * move_tolerance);
+		color(ASPECT_CLEAR)
+		translate([ block_width / 2, -wall_thickness_y / 2 - 3 * move_tolerance, (block_height + handle_height)/2 ])
+		cylinder(h = block_height, d = locker_width + 2 * move_tolerance);
+
 	
 		// symbol
+		color(ASPECT_STOP)
 		translate([ signal_symbol_side_space, 4 * (block_depth - signal_symbol_size) / 5, 0 ])
 		symbol_block();
+		color(ASPECT_CLEAR)
 		translate([ signal_symbol_side_space, 4 * (block_depth - signal_symbol_size) / 5, block_height - engraving_height ])
 		symbol_block();
 	}

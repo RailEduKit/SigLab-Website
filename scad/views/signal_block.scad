@@ -44,4 +44,4 @@ module signal_block(aspect) {
 }
 
 
-signal_block("STOP");
+signal_block("CLEAR");

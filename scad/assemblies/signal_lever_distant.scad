@@ -17,12 +17,14 @@ module signal_lever_distant() {
 	difference(){
 		signal_lever(bottom_color = ASPECT_APPROACH);
 		// symbol
+		color(ASPECT_APPROACH)
 		translate([
 			signal_symbol_size + signal_symbol_side_space, signal_symbol_size + 4 * (block_depth - signal_symbol_size) / 5,
 			0
 		])
 		rotate([ 0, 0, 180 ])
 		symbol_distant();
+		color(ASPECT_CLEAR)
 		translate([ signal_symbol_side_space, 4 * (block_depth - signal_symbol_size) / 5, block_height - engraving_height ])
 		symbol_distant();
 	}

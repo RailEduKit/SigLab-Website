@@ -15,6 +15,7 @@ include <../parts/signal_lever.scad>
 include <../parts/driving_direction_arrow.scad>
 
 module signal_box_block() {
+	color(BASE_COLOR)
 	difference() {
 		signal_box(); // import from basis_component-roundedBox
 		cavity_cube_signal_box();
@@ -40,6 +41,7 @@ module signal_box_block() {
 	lock_block_width = 6;
 	lock_block_depth = 2;
 	lock_block_height = z_pos_axis - handle_height / 2 - move_tolerance + handle_height;
+	color(BASE_COLOR)
 	translate([ (body_width - lock_block_width) / 2, wall_thickness_y, 0 ])
 	cube([ lock_block_width, lock_block_depth, lock_block_height ]);
 }
