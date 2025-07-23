@@ -13,10 +13,10 @@ include <../config/global_variables.scad>
 use <../assemblies/signal_box_distant.scad>
 use <../assemblies/signal_lever_distant.scad>
 
-module visualize_colorBlock_in_body(state) {
+module signal_distant(aspect) {
 	translate([ 0, -body_depth / 2, -z_pos_axis ])
 	signal_box_distant(); // z=-block_height/2-wall_thickness_z
-	if (state == "-y") {
+	if (aspect == "CLEAR") {
 		rotate([ 0, 0, 0 ])
 		translate([
 			wall_thickness_x + move_tolerance, -body_depth / 2 + wall_thickness_y + 3 * move_tolerance,
@@ -25,7 +25,7 @@ module visualize_colorBlock_in_body(state) {
 		])
 		signal_lever_distant();
 	}
-	if (state == "y") {
+	if (aspect == "APPROACH") {
 		rotate([ -180, 0, 0 ])
 		translate([
 			wall_thickness_x + move_tolerance, -body_depth / 2 + wall_thickness_y + 3 * move_tolerance,
@@ -37,4 +37,4 @@ module visualize_colorBlock_in_body(state) {
 }
 
 
-visualize_colorBlock_in_body("y");
+signal_distant("APPROACH");
