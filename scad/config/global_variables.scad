@@ -398,7 +398,7 @@ nozzle_diameter = 0.4;
     shield_width       = 20;
     shield_depth        = 25;
     inlay_thickness    = 0.45;
-    shield_thickness   = number_height+inlay_thickness+0.2; //2;
+    shield_thickness   = 2; // the shield has to be at least 2mm thick. Otherwise the front symbol will be printed badly
     inlay_radius       = 10.5/2;
 
     headlight_d = (1/3)*shield_width;
