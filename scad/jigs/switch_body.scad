@@ -10,12 +10,12 @@
 include <../config/global_variables.scad>
 
 // include common components
-include <../parts/components/magnet_hole.scad>
-include <../parts/components/pin_hole.scad>
+include <../parts/magnet_hole.scad>
+include <../parts/pin_hole.scad>
 
 // include external libraries
 use <trains/tracklib.scad>; // Import tracklib from dependency dotscad/trains.git
-use <switch_blade.scad>
+use <../assemblies/switch_blade.scad>
 
 // Length of the straight track, or auto to use the best fit for the requested curve radius.
 straight_size =
@@ -406,7 +406,7 @@ module visualize_blade_in_switch() {
 mill_projections("male", "male", "male", "none", true, false, false); // left
 
 // echo(pin_female_diameter);
-// visualize_blade_in_switch();
+//visualize_blade_in_switch();
 // render_track("male","none","female","female",true);
 // modified_switch("male","none","female","female",true,true);
 // translate([100,0,0]) modified_switch("male","female","female","none",false,true);
