@@ -10,17 +10,17 @@
 include <../config/global_variables.scad>
 
 // include other parts
-use <../assemblies/locking_pin.scad> // used in visualize_colorBlock_in_body("block", "y");
+use <../assemblies/locking_pin.scad> 
 use <../assemblies/signal_box_block.scad>
 use <../assemblies/signal_lever_block.scad>
 
 
 
 
-module visualize_colorBlock_in_body(state) {
+module signal_block(aspect) {
 	translate([ 0, -body_depth / 2, -z_pos_axis ])
 	signal_box_block(); // z=-block_height/2-wall_thickness_z
-	if (state == "-y") {
+	if (aspect == "CLEAR") {
 		rotate([ 0, 0, 0 ])
 		translate([
 			wall_thickness_x + move_tolerance, -body_depth / 2 + wall_thickness_y + 3 * move_tolerance,
@@ -29,7 +29,7 @@ module visualize_colorBlock_in_body(state) {
 		])
 		signal_lever_block();
 	}
-	if (state == "y") {
+	if (aspect == "STOP") {
 		rotate([ -180, 0, 0 ])
 		translate([
 			wall_thickness_x + move_tolerance, -body_depth / 2 + wall_thickness_y + 3 * move_tolerance,
@@ -44,4 +44,4 @@ module visualize_colorBlock_in_body(state) {
 }
 
 
-visualize_colorBlock_in_body("y");
+signal_block("STOP");
