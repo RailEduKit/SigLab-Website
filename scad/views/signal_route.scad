@@ -32,4 +32,4 @@ module route_signal(aspect) {
 	}
 }
 
-route_signal("STOP"); // CLEAR or STOP
+route_signal("CLEAR"); // CLEAR or STOP

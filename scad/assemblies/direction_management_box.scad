@@ -8,6 +8,7 @@
 
 // Include configuration file
 include <../config/global_variables.scad>
+include <../config/colors.scad>
 
 // include common parts
 include <../parts/signal_box.scad>
@@ -63,6 +64,7 @@ module cavity_cube_direction_management() {
 }
 
 module direction_management_box() {
+	color(BASE_COLOR)
 	difference() {
 		signal_box(); // import from basis_component-roundedBox
 		cavity_cube_direction_management();

@@ -19,6 +19,7 @@ module checkbox_route() {
 	difference() {
 		signal_box(); // import from components/signal_box.scad
 		for (y = [ body_depth * (1 / 6), body_depth / 2, body_depth * (5 / 6) ]) {
+			color(BASE_COLOR)
 			translate([ body_width * (1 / 3), y, wall_thickness_z ])
 			cylinder(d = locker_width + move_tolerance, h = body_height - wall_thickness_z);
 		}

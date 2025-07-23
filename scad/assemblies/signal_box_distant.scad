@@ -15,6 +15,7 @@ include <../parts/signal_lever.scad>
 include <../parts/driving_direction_arrow.scad>
 
 module signal_box_distant() {
+	color(BASE_COLOR)
 	difference() {
 		signal_box(); // import from basis_component-roundedBox
 		cavity_cube_signal_box();

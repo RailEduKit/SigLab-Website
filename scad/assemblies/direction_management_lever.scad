@@ -8,20 +8,25 @@
 
 // Include configuration file
 include <../config/global_variables.scad>
+include <../config/colors.scad>
 
 // include external libraries
 include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
 
 module onedirect_arrow() {
-	translate([ -arrowline_length, -3 / 2, 0 ])
-	cube([ arrowline_length, 3, engraving_height ]);
-	translate([ arrow_depth * (3 / 8), 0, 0 ])
-	scale([ 3 / 4, (arrow_depth / (2 * arrow_depth * sin(120))), 1 ])
-	    cylinder(engraving_height, arrow_depth, arrow_depth, $fn = 3);
+	color(INDICATOR_COLOR) union(){
+		translate([ -arrowline_length, -3 / 2, 0 ])
+		cube([ arrowline_length, 3, engraving_height ]);
+		translate([ arrow_depth * (3 / 8), 0, 0 ])
+		scale([ 3 / 4, (arrow_depth / (2 * arrow_depth * sin(120))), 1 ])
+		cylinder(engraving_height, arrow_depth, arrow_depth, $fn = 3);
+	}
+	
 }
 
 
 module direction_management_lever() {
+	color(BASE_COLOR)
 	difference() {
 		union() {
 			// I axis
