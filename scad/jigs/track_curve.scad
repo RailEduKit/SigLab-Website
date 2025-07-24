@@ -14,7 +14,7 @@ include <../parts/magnet_hole.scad>
 include <../parts/pin_hole.scad>
 
 // Include external libraries
-use <trains/tracklib.scad>; // Import tracklib from dependency dotscad/trains.git
+include <trains/tracklib.scad>; // Import tracklib from dependency dotscad/trains.git
 
 /* [parameters] */
 
