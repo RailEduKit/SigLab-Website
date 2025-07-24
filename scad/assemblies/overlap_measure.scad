@@ -16,7 +16,7 @@ include <BOSL2/joiners.scad> // Import joiners from dependency BelfrySCAD/BOSL2.
 
 /*[Track Settings]*/
 // length of track piece, in mm
-length = straight_length - om_dovetail_depth; //[30:10:400] //inklusive the male pin
+// length = straight_length - om_dovetail_depth; //[30:10:400] //inklusive the male pin
 
 // only one preset... for now
 // track_type = 0; //[1:brio,0:custom]
@@ -57,7 +57,7 @@ track_type = use_custom_settings ? 0 : 1;
 /***************/
 /*     CODE    */
 /***************/
-module endproduct() {
+module endproduct(length) {
 	color(ROUTE_COLOR) union(){
 		translate([ -track_type_params()[track_type][1] / 2, 0 ])
 		intersection(convexity = 20) {
@@ -125,6 +125,11 @@ module endproduct() {
 			rotate([ -90, 0, 0 ])
 			dovetail("female", w = om_dovetail_width, h = om_dovetail_depth, slide = custom_height_middle);
 		}
+		// track guidance at the dovetail
+		translate([-custom_width_base/2, length, -om_track_guidance_height])
+		cube([om_track_guidance_width, om_dovetail_depth, om_track_guidance_height]);
+		translate([custom_width_base/2-om_track_guidance_width, length, -om_track_guidance_height])
+		cube([om_track_guidance_width, om_dovetail_depth, om_track_guidance_height]);
 	}
 	
 }
@@ -311,6 +316,9 @@ module pin(base_width, base_depth, base_height) {
 }
 // track_profile_2D();
 // flex_track_pattern_2D();
-endproduct();
+endproduct(straight_length - om_dovetail_depth);
+translate([custom_width_base+10, 0 ,0])
+endproduct(curve_length_middle_radius - straight_length - om_dovetail_depth);
+//endproduct();
 
 echo("custom_width_base", custom_width_base);
