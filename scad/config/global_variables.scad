@@ -45,6 +45,7 @@ nozzle_diameter = 0.4;
     curve_middle_radius = curve_inner_radius+rail_width/2;
     curve_outer_radius = curve_inner_radius+rail_width;
     curve_angle = 45.7; // degree
+    curve_length_middle_radius = (2*PI*curve_middle_radius*curve_angle)/360;
 }
 {/***************magnet specifications***************/
     magnet_thickness = 3;
