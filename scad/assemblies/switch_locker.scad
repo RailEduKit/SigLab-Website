@@ -10,6 +10,7 @@
 
 // Include configuration file
 include <../config/global_variables.scad>
+include <../config/colors.scad>
 
 module wedge(y_value) {
     hull(){
@@ -65,35 +66,38 @@ module handle(){
 }
 
 module switch_locker() {
-/*     hull(){
-        translate([-sl_width/2 + nozzle_diameter/2, nozzle_diameter/2, 0])
-        cylinder(d = nozzle_diameter, h=sl_height);
-        translate([sl_width/2-nozzle_diameter/2, nozzle_diameter/2, 0])
-        cylinder(d = nozzle_diameter, h=sl_height);
-        translate([0, sl_depth - nozzle_diameter/2, 0])
-        cylinder(d = 5*nozzle_diameter, h=sl_height);
-    } */
-    difference(){
-        hull(){
-            translate([-sl_width/2,sl_barrier_depth,-sl_lock_height])
-            cube([sl_width, 0.4, sl_lock_height]);
-            translate([-sl_wedge_width/2, sl_depth-sl_wedge_depth, -sl_lock_height]) //sl_depth-y_value
-            cube([sl_wedge_width, sl_wedge_depth, sl_lock_height]);
+    color(ROUTE_COLOR) union(){
+            /*     hull(){
+            translate([-sl_width/2 + nozzle_diameter/2, nozzle_diameter/2, 0])
+            cylinder(d = nozzle_diameter, h=sl_height);
+            translate([sl_width/2-nozzle_diameter/2, nozzle_diameter/2, 0])
+            cylinder(d = nozzle_diameter, h=sl_height);
+            translate([0, sl_depth - nozzle_diameter/2, 0])
+            cylinder(d = 5*nozzle_diameter, h=sl_height);
+        } */
+        difference(){
+            hull(){
+                translate([-sl_width/2,sl_barrier_depth,-sl_lock_height])
+                cube([sl_width, 0.4, sl_lock_height]);
+                translate([-sl_wedge_width/2, sl_depth-sl_wedge_depth, -sl_lock_height]) //sl_depth-y_value
+                cube([sl_wedge_width, sl_wedge_depth, sl_lock_height]);
+            }
+            translate([-sl_barrier_width/2,sl_barrier_depth,-sl_lock_height])
+            cube([sl_barrier_width, rail_well_width + 2*move_tolerance, sl_lock_height-sl_height]);
         }
-        translate([-sl_barrier_width/2,sl_barrier_depth,-sl_lock_height])
-        cube([sl_barrier_width, rail_well_width + 2*move_tolerance, sl_lock_height-sl_height]);
-    }
-    
+        
 
-    translate([-sl_barrier_width/2, 0, -sl_barrier_height])
-    barrier();
-    //translate([0,sl_depth,0])
-    //wedge(sl_wedge_depth);
-    //translate([0,sl_barrier_depth+sl_wedge_short+move_tolerance,0])
-    //wedge(sl_wedge_short);
-    translate([-sl_handle_width/2,0,0])
-    handle();
+        translate([-sl_barrier_width/2, 0, -sl_barrier_height])
+        barrier();
+        //translate([0,sl_depth,0])
+        //wedge(sl_wedge_depth);
+        //translate([0,sl_barrier_depth+sl_wedge_short+move_tolerance,0])
+        //wedge(sl_wedge_short);
+        translate([-sl_handle_width/2,0,0])
+        handle();
+    }
 }
+
 
 //brio_switch_handle();
 switch_locker();
