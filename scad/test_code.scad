@@ -1,12 +1,21 @@
- render( convexity = 20 ) 
-    difference()
-        { // stretch a cube vertically
-        cube([20, 20, 150], center = true);
-        // make a notch in one corner 
-        translate([-10, -10, 0])
-            cylinder(h = 80, r = 10, center = true);
-        translate([-10, -10, +40])
-            sphere(r = 10);
-        translate([-10, -10, -40])
-            sphere(r = 10);
-        }
+/* RailEduKit/InteractiveSignallingLaboratory © 2025 by Martin Scheidt and contributors
+ * License: CC-BY 4.0 - https://creativecommons.org/licenses/by/4.0/
+ * Project description: The Interactive Signalling Laboratory is a tool for training in Rail
+ * Applications to enhance the knowledge of control and signalling principles for rail transport systems.
+ *
+ * Module: route indicator straight
+ */
+
+// Include configuration file
+include <config/global_variables.scad>
+
+// Include external libraries
+include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
+include <BOSL2/joiners.scad> // Import joiners from dependency BelfrySCAD/BOSL2.git
+
+
+//xflip() 
+yrot(90) 
+cylinder(d1=10, d2=0, h=20);
+//color("blue", 0.25) cube([0.01,15,15], center=true);
+//color("red", 0.333) yrot(90) cylinder(d1=10, d2=0, h=20);
