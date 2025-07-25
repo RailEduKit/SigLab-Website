@@ -13,9 +13,8 @@ include <config/global_variables.scad>
 include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
 include <BOSL2/joiners.scad> // Import joiners from dependency BelfrySCAD/BOSL2.git
 
-
-//xflip() 
-yrot(90) 
-cylinder(d1=10, d2=0, h=20);
-//color("blue", 0.25) cube([0.01,15,15], center=true);
-//color("red", 0.333) yrot(90) cylinder(d1=10, d2=0, h=20);
+rotate_extrude(angle=45)
+right(20) rect([ris_width, om_thickness], rounding = ris_rounding*[1,1,0,0], anchor = LEFT+FRONT)
+xflip_copy() position(FRONT + LEFT) rect([om_track_guidance_width,om_track_guidance_height], anchor = BACK+LEFT);
+/* rotate_extrude(angle=45)
+square([10,5]); */

@@ -439,3 +439,8 @@ nozzle_diameter = 0.4;
     ris_length = straight_length;
     ris_rounding = om_track_guidance_width; //om_thickness/2 doesn't work at the track guidance
 }
+
+{/***************route_indicator_curve***************/
+    // ric = route indicator curve
+    ric_inner_radius = curve_inner_radius + (rail_width-ris_width)/2;
+}
