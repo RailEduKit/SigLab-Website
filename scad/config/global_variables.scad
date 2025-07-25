@@ -433,4 +433,9 @@ nozzle_diameter = 0.4;
     sl_handle_height = 10;
 }
 
-
+{/***************route_indicator_straight***************/
+    // ris = route indicator straight
+    ris_width = rail_well_spacing + 2 * om_track_guidance_width + move_tolerance;
+    ris_length = straight_length;
+    ris_rounding = om_track_guidance_width; //om_thickness/2 doesn't work at the track guidance
+}
