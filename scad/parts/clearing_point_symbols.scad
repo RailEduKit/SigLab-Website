@@ -8,8 +8,10 @@
 
 // Include configuration file
 include <../config/global_variables.scad>
+include <../config/colors.scad>
 
 module route_clearing_symbol() {
+	color(ROUTE_COLOR)
 	union() {
 		difference() {
 			cylinder(h = engraving_height, d = cp_symbol_size);
@@ -19,6 +21,7 @@ module route_clearing_symbol() {
 }
 
 module block_clearing_symbol() {
+	color(INDICATOR_COLOR)
 	translate([ 0, 0, engraving_height / 2 ])
 	union() {
 		difference() {

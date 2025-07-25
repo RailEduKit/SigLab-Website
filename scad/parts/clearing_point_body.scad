@@ -8,12 +8,14 @@
 
 // Include configuration file
 include <../config/global_variables.scad>
+include <../config/colors.scad>
 
 // Include common parts
 include <../parts/magnet_hole.scad>
 include <../parts/driving_direction_arrow.scad>
 
 module clearing_point_body() {
+	color(BASE_COLOR)
 	difference() {
 		cube([ zs_with, zs_depth, zs_height ]);
 		// Magnet holes
@@ -30,9 +32,6 @@ module clearing_point_body() {
 		rotate([ 90, 0, 0 ])
 		magnet_hole();
 	}
-	translate([ zs_with * (4 / 5), (zs_depth - attach_arrow_depth) / 2, zs_height ])
-	rotate([ 0, 0, 90 ])
-	driving_direction_arrow();
 }
 
 //clearing_point_body();

@@ -17,6 +17,9 @@ module clearing_point_block() {
     clearing_point_body();
     translate([ zs_with / 2, zs_depth / 2, zs_height ])
     block_clearing_symbol();
+    translate([ zs_with * (4 / 5), (zs_depth - attach_arrow_depth) / 2, zs_height ])
+	rotate([ 0, 0, 90 ])
+	driving_direction_arrow();
 }
 
 clearing_point_block();
