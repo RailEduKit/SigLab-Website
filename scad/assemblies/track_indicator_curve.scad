@@ -3,7 +3,7 @@
  * Project description: The Interactive Signalling Laboratory is a tool for training in Rail
  * Applications to enhance the knowledge of control and signalling principles for rail transport systems.
  *
- * Module: route indicator straight
+ * Module: track indicator straight
  */
 
 // Include configuration file
@@ -13,7 +13,7 @@ include <../config/global_variables.scad>
 include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
 include <BOSL2/joiners.scad> // Import joiners from dependency BelfrySCAD/BOSL2.git
 
-module route_indicator_curve() {
+module track_indicator_curve() {
     difference(){
         union(){
             rotate_extrude(angle=curve_angle)
@@ -25,4 +25,4 @@ module route_indicator_curve() {
     zrot(curve_angle) right(ric_inner_radius+ris_width/2) up(om_thickness/2) xrot(-90) dovetail("male", w = om_dovetail_width, h = om_dovetail_depth, slide = om_thickness);
 }
 
-route_indicator_curve();
+track_indicator_curve();

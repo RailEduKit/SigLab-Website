@@ -3,7 +3,7 @@
  * Project description: The Interactive Signalling Laboratory is a tool for training in Rail
  * Applications to enhance the knowledge of control and signalling principles for rail transport systems.
  *
- * Module: route indicator straight
+ * Module: track indicator straight
  */
 
 // Include configuration file
@@ -13,7 +13,7 @@ include <../config/global_variables.scad>
 include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
 include <BOSL2/joiners.scad> // Import joiners from dependency BelfrySCAD/BOSL2.git
 
-module route_indicator_straight() {
+module track_indicator_straight() {
     diff()
         cuboid([ris_width, ris_length, om_thickness], rounding = ris_rounding, edges = [TOP+LEFT, TOP+RIGHT, FRONT+LEFT, FRONT+RIGHT, BACK+LEFT, BACK+RIGHT]){
             xflip_copy() position(BOTTOM+LEFT+FRONT) cuboid([om_track_guidance_width, ris_length, om_track_guidance_height], anchor= LEFT+TOP+FRONT, rounding= ris_rounding, edges = [LEFT+FRONT, LEFT+BACK]);
@@ -25,4 +25,4 @@ module route_indicator_straight() {
     
 }
 
-route_indicator_straight();
+track_indicator_straight();
