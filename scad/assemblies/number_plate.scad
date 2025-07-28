@@ -7,6 +7,7 @@
  */
 
 include <../config/global_variables.scad>
+include <../config/colors.scad>
 
 module frame() {
 	difference() {
@@ -16,18 +17,24 @@ module frame() {
 }
 
 module piece_number(number) {
-	translate([ 0, 0, number_height ])
-	rotate([ 180, 0, 0 ])
-	linear_extrude(height = number_height) text(str(number), 7.5, halign = "center", valign = "center");
+	color(INDICATOR_COLOR) union(){
+		translate([ 0, 0, number_height ])
+		rotate([ 180, 0, 0 ])
+		linear_extrude(height = number_height) text(str(number), 7.5, halign = "center", valign = "center");
+	}
+
 }
 
 module number_plate(number) {
-	difference() {
-		cylinder(d = np_diameter, h = np_height);
-		piece_number(number);
+	color(BASE_COLOR) union(){
+		difference() {
+			cylinder(d = np_diameter, h = np_height);
+			piece_number(number);
+		}
+		translate([ 0, 0, np_height ])
+		cylinder(h = np_pin_height, d = np_pin_diameter);
 	}
-	translate([ 0, 0, np_height ])
-	cylinder(h = np_pin_height, d = np_pin_diameter);
+
 }
 
 module plate_collection() {
@@ -287,7 +294,7 @@ module number_collection() {
 
 // frame();
 plate_collection();
-// number_collection();
+number_collection();
 // number_plate(34);
 // piece_number(34);
 // numberPlate_collection();
