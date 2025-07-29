@@ -89,6 +89,8 @@ nozzle_diameter = 0.4;
     //dovetail connector specifications
     om_dovetail_width = 10;
     om_dovetail_depth = 5;
+    om_dovetail_angle = 20;
+    dovetail_overhang = tan(om_dovetail_angle)*om_dovetail_depth;
     
     
 }
