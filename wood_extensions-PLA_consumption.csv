@@ -1,0 +1,10 @@
+﻿wood extension;quantity;black;white;grey;blue;red;yellow;green;support for PLA
+balise;tba;tba;tba;tba;tba;tba;tba;tba;tba
+checkbox_route;8;81.52;2.86;0;0;0;0;0;0
+clearing_point_block;10;26.5;1.45;0;0;0;0;0;0
+clearing_point_route;8;21.21;0;0;0.99;0;0;0;0
+direction_management_box;2;17.17;0;0;0;0;0;0;0
+direction_management_lever;2;6.27;3.13;0;0;0;0;0;1.5
+locking_pin;20;0;0;52.03;0;0;0;0;0
+signal_box_block;10;81.28;0.84;0;0;0;0;0;0
+signal_box_distant;8;65.04;0.80;0;0;0;0;0;0
