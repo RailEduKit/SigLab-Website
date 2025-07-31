@@ -1,5 +1,5 @@
 ﻿wood extension;quantity;black;white;grey;blue;red;yellow;green;support for PLA
-balise;tba;tba;tba;tba;tba;tba;tba;tba;tba
+balise;;;;;;;;;
 checkbox_route;8;81.52;2.86;0;0;0;0;0;0
 clearing_point_block;10;26.5;1.45;0;0;0;0;0;0
 clearing_point_route;8;21.21;0;0;0.99;0;0;0;0
@@ -8,3 +8,8 @@ direction_management_lever;2;6.27;3.13;0;0;0;0;0;1.5
 locking_pin;20;0;0;52.03;0;0;0;0;0
 signal_box_block;10;81.28;0.84;0;0;0;0;0;0
 signal_box_distant;8;65.04;0.80;0;0;0;0;0;0
+signal_lever_block;10;12.4;0;0;0;20.45;0;16.38;2.2
+signal_lever_distant;8;12.89;0;0;0;0;16.95;13.44;2.54
+switch_locker;4;0;0;0;14.5;0;0;0;1.1
+train_integrity_front;3;5.69;1.52;0;0;0;0;0;0
+train_integrity_rear;3;5.41;0;0;0;1.15;0;0;0

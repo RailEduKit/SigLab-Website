@@ -247,8 +247,7 @@ nozzle_diameter = 0.4;
 
     // color_block specifications
     block_depth = (body_depth-2*wall_thickness_y)/2-3*move_tolerance;
-    block_height = 13.5; // material constraint
-    //block_height =(body_height-wall_thickness_z)*1.4; //the heigher the value, the more color_block comes out of the body. BUT also: the higher will be the axis hole
+    block_height = 13.5; 
     overhang = block_height/2-2*move_tolerance; //the circle has to be flattend at one side with move_tolerance
     handle_depth = 10+wall_thickness_y;
     handle_height = 3;
