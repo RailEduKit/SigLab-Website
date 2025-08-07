@@ -8,13 +8,14 @@
 
 // Include configuration file
 include <../config/global_variables.scad>
+include <../config/colors.scad>
 
 // include common components
-include <../parts/components/magnet_hole.scad>
-include <../parts/components/pin_hole.scad>
+include <../parts/magnet_hole.scad>
+include <../parts/pin_hole.scad>
 
 // include external libraries
-use <trains/tracklib.scad>; // Import tracklib from dependency dotscad/trains.git
+include <trains/tracklib.scad>; // Import tracklib from dependency dotscad/trains.git
 
 /* [parameters] */
 
@@ -169,13 +170,9 @@ module render_track(base, left, straight, right, double_sided_rails) {
 }
 
 module straight_with_drill_holes() {
-	difference() {
+	color(SPRUCE_WOOD) difference() {
 		render_track("female", "none", "male", "none", false);
-		translate([ s_ph_xpos, s_ph1_ypos, 0 ])
-		pin_hole();
 		translate([ s_ph_xpos, s_ph2_ypos, 0 ])
-		pin_hole();
-		translate([ s_ph_xpos, s_ph3_ypos, 0 ])
 		pin_hole();
 		translate([ 0, s_mh_ypos1, s_mh_zpos ])
 		rotate([ 0, 90, 0 ])

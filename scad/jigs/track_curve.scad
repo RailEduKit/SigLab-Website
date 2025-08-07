@@ -8,6 +8,7 @@
 
 // Include configuration file
 include <../config/global_variables.scad>
+include <../config/colors.scad>
 
 // include common parts
 include <../parts/magnet_hole.scad>
@@ -173,13 +174,9 @@ module curve_shape_control() {
 }
 
 module curve_with_drill_holes() {
-	difference() {
+	color(SPRUCE_WOOD) difference() {
 		render_track("female", "none", "none", "male", true);
-		translate([ c_ph1_xpos, c_ph1_ypos, 0 ])
-		pin_hole();
 		translate([ c_ph2_xpos, c_ph2_ypos, 0 ])
-		pin_hole();
-		translate([ c_ph3_xpos, c_ph3_ypos, 0 ])
 		pin_hole();
 		translate([ c_mh4_xpos, c_mh4_ypos, c_mh_zpos ])
 		rotate([ 0, 90, c_mh4_zrot ])

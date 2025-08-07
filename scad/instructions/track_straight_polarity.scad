@@ -3,20 +3,22 @@
  * Project description: The Interactive Signalling Laboratory is a tool for training in Rail
  * Applications to enhance the knowledge of control and signalling principles for rail transport systems.
  *
- * Module: checkbox_route
+ * Module: track_straight_polarity
  */
 
 // Include configuration file
 include <../config/global_variables.scad>
 
-use <../assemblies/checkbox_route.scad>
+// include common components
+use <../jigs/track_straight.scad>
 use <polarity_indicator.scad>
 
-module checkbox_route_polarity(){
-    translate([ body_width, body_depth / 2, -z_pos_axis ])
-    rotate([0,0,180])
-    checkbox_route();
-    polarity_signal_box();
+// include external libraries
+include <trains/tracklib.scad>; // Import tracklib from dependency dotscad/trains.git
+
+module track_straight_polarity() {
+    straight_with_drill_holes();
+    polarity_track_straight();
 }
 
-checkbox_route_polarity();
+track_straight_polarity();
