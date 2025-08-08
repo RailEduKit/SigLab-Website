@@ -1,7 +1,7 @@
 include <BOSL2/std.scad>
-include <BOSL2/joiners.scad>
-diff()
-  cuboid([50,30,10]){
-    attach(BACK) dovetail("male", slide=10, width=15, height=5, angle = 25);
-    tag("remove")attach(FRONT) dovetail("female", slide=10, width=15, height=8);
-  }
+include <BOSL2/std.scad>
+
+cuboid([10,40,2]){
+    zrot_copies(n=2)
+    color([0.255, 0.412, 0.882]) position(BACK) cuboid([5,5,2], anchor = RIGHT+FRONT);
+}

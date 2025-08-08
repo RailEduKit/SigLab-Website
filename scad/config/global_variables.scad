@@ -87,9 +87,13 @@ nozzle_diameter = 0.4;
     om_track_guidance_height = 2.5;
     
     //dovetail connector specifications
-    om_dovetail_width = 10;
+    /* om_dovetail_width = 10;
     om_dovetail_depth = 5;
     om_dovetail_angle = 20;
+    dovetail_overhang = tan(om_dovetail_angle)*om_dovetail_depth; */
+    om_dovetail_width = rail_well_spacing/2-1;
+    om_dovetail_depth = 5;
+    om_dovetail_angle = 23;
     dovetail_overhang = tan(om_dovetail_angle)*om_dovetail_depth;
     
     
