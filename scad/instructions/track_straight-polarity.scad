@@ -18,7 +18,7 @@ include <trains/tracklib.scad>; // Import tracklib from dependency dotscad/train
 
 module track_straight_polarity() {
     straight_with_drill_holes();
-    polarity_track_straight();
+    polarity_bars_straight();
 }
 
 track_straight_polarity();

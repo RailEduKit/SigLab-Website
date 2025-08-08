@@ -15,10 +15,10 @@ include <../parts/clearing_point_symbols.scad>
 
 module clearing_point_route() {
     clearing_point_body();
-    translate([ zs_with / 2, zs_depth / 2, zs_height ])
+    translate([ zs_width / 2, zs_depth / 2, zs_height ])
     route_clearing_symbol();
     color(ROUTE_COLOR)
-    translate([ zs_with * (4 / 5), (zs_depth - attach_arrow_depth) / 2, zs_height ])
+    translate([ zs_width * (4 / 5), (zs_depth - attach_arrow_depth) / 2, zs_height ])
 	rotate([ 0, 0, 90 ])
 	driving_direction_arrow();
 }

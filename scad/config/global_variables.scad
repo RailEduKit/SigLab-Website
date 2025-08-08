@@ -259,7 +259,7 @@ nozzle_diameter = 0.4;
     signal_triangle_height = (sqrt(3)*signal_symbol_size)/2;
 }
 {/***************clearing_point***************/
-    zs_with = 25;
+    zs_width = 25;
     zs_depth = 10;
     zs_height = 15;
 

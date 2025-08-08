@@ -3,21 +3,22 @@
  * Project description: The Interactive Signalling Laboratory is a tool for training in Rail
  * Applications to enhance the knowledge of control and signalling principles for rail transport systems.
  *
- * Module: checkbox_route
+ * Module: direction_management
  */
 
 // Include configuration file
 include <../config/global_variables.scad>
 
 // use common parts
-use <../assemblies/checkbox_route.scad>
+use <../views/direction_management.scad>
 use <polarity_indicator.scad>
 
-module checkbox_route_polarity(){
-    translate([ body_width, body_depth / 2, -z_pos_axis ])
-    rotate([0,0,180])
-    checkbox_route();
+// include external libraries
+include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
+
+module direction_management_polarity(state){
+    direction_management(state);
     polarity_bars_signal_box();
 }
 
-checkbox_route_polarity();
+direction_management_polarity("y");

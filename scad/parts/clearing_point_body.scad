@@ -17,18 +17,18 @@ include <../parts/driving_direction_arrow.scad>
 module clearing_point_body() {
 	color(BASE_COLOR)
 	difference() {
-		cube([ zs_with, zs_depth, zs_height ]);
+		cube([ zs_width, zs_depth, zs_height ]);
 		// Magnet holes
-		translate([ zs_with / 2 - magnet_distance_to_middle, magnet_thickness + move_tolerance, magnet_z ])
+		translate([ zs_width / 2 - magnet_distance_to_middle, magnet_thickness + move_tolerance, magnet_z ])
 		rotate([ 90, 0, 0 ])
 		magnet_hole();
-		translate([ zs_with / 2 + magnet_distance_to_middle, magnet_thickness + move_tolerance, magnet_z ])
+		translate([ zs_width / 2 + magnet_distance_to_middle, magnet_thickness + move_tolerance, magnet_z ])
 		rotate([ 90, 0, 0 ])
 		magnet_hole();
-		translate([ zs_with / 2 - magnet_distance_to_middle, zs_depth, magnet_z ])
+		translate([ zs_width / 2 - magnet_distance_to_middle, zs_depth, magnet_z ])
 		rotate([ 90, 0, 0 ])
 		magnet_hole();
-		translate([ zs_with / 2 + magnet_distance_to_middle, zs_depth, magnet_z ])
+		translate([ zs_width / 2 + magnet_distance_to_middle, zs_depth, magnet_z ])
 		rotate([ 90, 0, 0 ])
 		magnet_hole();
 	}
