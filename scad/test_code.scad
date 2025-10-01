@@ -1,7 +1,26 @@
 include <BOSL2/std.scad>
-include <BOSL2/std.scad>
 
-cuboid([10,40,2]){
-    zrot_copies(n=2)
-    color([0.255, 0.412, 0.882]) position(BACK) cuboid([5,5,2], anchor = RIGHT+FRONT);
-}
+
+/* union(){
+    rotate_extrude(angle=45)
+    right(30) rect([20, 1], anchor = LEFT+FRONT);
+    //xflip_copy() position(FRONT + LEFT) rect([1,2], anchor = BACK+LEFT);
+} */
+
+
+/* diff() 
+    rotate_extrude(angle=45)
+    right(30) rect([20, 1], anchor = LEFT+FRONT){
+        tag("remove") rect([5,1]);
+    } */
+
+/* diff()
+    #tag("remove") cuboid(5)
+        tag("") position(RIGHT+BACK) cuboid(10); */
+
+diff()
+    tag("remove") cuboid([40,5,1], anchor = LEFT+BOTTOM);
+        tag("") rotate_extrude(angle=45)
+    right(30) rect([20, 1], anchor = LEFT+FRONT);
+
+//parent_object();      
