@@ -6,6 +6,38 @@
  * Module: config/global_variables.scad
  */
 
+/* 
+++++++++++++++++++++++++ Start of New Structure +++++++++++++++++++++++++++++++++++
+
+the structure should orientate on the file structure
+but some variables have to stand on the top of the structure
+
+
+ */
+
+{// assemblies
+    {// balise
+            
+    }
+    {// checkbox_route
+
+    }
+}
+{// jigs
+
+}
+
+
+
+
+
+
+
+
+
+/* 
+++++++++++++++++++++++++ End of New Structure +++++++++++++++++++++++++++++++++++
+ */
 
 /*************** resolution ***************/
 // number of fragments; default 0;

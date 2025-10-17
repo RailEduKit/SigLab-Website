@@ -6,6 +6,14 @@
  * Module: overlap_measure
  */
 
+/* 
+uses code from:
+Customizable toy train tracks
+by atartanian (www.thingiverse.com/atartanian)
+license CC-BY-SA
+ */
+
+
 // Include configuration file
 include <../config/global_variables.scad>
 include <../config/colors.scad>
