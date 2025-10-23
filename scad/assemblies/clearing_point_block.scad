@@ -12,6 +12,7 @@ include <../config/global_variables.scad>
 // Include common parts
 include <../parts/clearing_point_body.scad>
 include <../parts/clearing_point_symbols.scad>
+include <../parts/driving_direction_arrow.scad>
 
 module clearing_point_block() {
     clearing_point_body();

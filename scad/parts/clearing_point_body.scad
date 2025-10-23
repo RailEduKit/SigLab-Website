@@ -12,7 +12,7 @@ include <../config/colors.scad>
 
 // Include common parts
 include <../parts/magnet_hole.scad>
-include <../parts/driving_direction_arrow.scad>
+//
 
 // zs - Zugschluss
 zs_width = 25;

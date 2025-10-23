@@ -391,14 +391,11 @@ nozzle_diameter = 0.4;
 
 
 {/***************direction_management***************/
-    arrow_depth = 6.5; //5 for onePiece
-    arrowline_length = 6.5; //5 for onePiece
-    
-    
+    // has to stay global. Box as well as lever uses the variables. Both objects are created in assemblies. So the variable can't be included, otherwise both objects are printed
+    // That is because in assemblies every object should be printed. 
     arrow_block_height = 9-engraving_height;
     overlap_cube_depth = arrow_block_height/2;
     arrow_block_depth = block_depth - overlap_cube_depth;
-    
 }
 
 {/***************number_plate***************/
