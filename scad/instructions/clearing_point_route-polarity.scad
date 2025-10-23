@@ -8,6 +8,8 @@
 
 // Include configuration file
 include <../config/global_variables.scad>
+include <../parts/clearing_point_body.scad>
+
 
 // use common parts
 use <../assemblies/clearing_point_route.scad>

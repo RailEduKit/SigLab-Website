@@ -13,6 +13,8 @@ include <../config/global_variables.scad>
 include <../parts/signal_box.scad>
 include <../parts/checkbox_symbols_route.scad>
 
+rc_symbol_xpos = body_width - (body_width - (body_width*(1/3)+locker_width/2))/2;
+
 
 
 module checkbox_route() {

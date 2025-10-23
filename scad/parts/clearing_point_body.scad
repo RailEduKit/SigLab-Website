@@ -14,6 +14,11 @@ include <../config/colors.scad>
 include <../parts/magnet_hole.scad>
 include <../parts/driving_direction_arrow.scad>
 
+// zs - Zugschluss
+zs_width = 25;
+zs_depth = 10;
+zs_height = 15;
+
 module clearing_point_body() {
 	color(BASE_COLOR)
 	difference() {

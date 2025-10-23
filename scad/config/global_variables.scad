@@ -20,10 +20,35 @@ but some variables have to stand on the top of the structure
             
     }
     {// checkbox_route
+        
+    }
+    {// clearing_point_block
 
+    }
+    {// clearing_point_route
+
+    }
+    {// direction_management_box
+
+    }
+    {// direction_management_lever
+
+    }
+    {// locking_pin
+
+    }
+    {// overlap_measure
+
+    }
+    {// position_indicator_number
+
+    }
+    {
+        
     }
 }
 {// jigs
+
 
 }
 
@@ -295,14 +320,6 @@ nozzle_diameter = 0.4;
     signal_symbol_size = block_width-2*signal_symbol_side_space;
     signal_triangle_height = (sqrt(3)*signal_symbol_size)/2;
 }
-{/***************clearing_point***************/
-    zs_width = 25;
-    zs_depth = 10;
-    zs_height = 15;
-
-    cp_symbol_side_space = 2;
-    cp_symbol_size = zs_depth-2*cp_symbol_side_space;
-}
 
 {/***************drill_template_straight***************/
     drill_move_tolerance = 0.3;
@@ -372,21 +389,6 @@ nozzle_diameter = 0.4;
 }
 
 
-
-{/***************route signal***************/
-    // used "basis_component-roundedBox" and "locking_pin"
-    //road Checkbox -> rc
-    rc_symbol_side_space = 2;
-    rc_symbol_size = body_width*(2/3)-locker_width/2-2*rc_symbol_side_space;
-    // echo("rc_symbol_size: ", rc_symbol_size);
-    rc_symbol_xpos = body_width - (body_width - (body_width*(1/3)+locker_width/2))/2;
-    straight_thickness = 0.8;
-    rc_arrow_depth = 4;
-    rc_arrowline_length = 4;
-    slash_angle = 45; // 53,13
-    
-    junction_r=11.5;
-}
 
 {/***************direction_management***************/
     arrow_depth = 6.5; //5 for onePiece

@@ -9,6 +9,7 @@
 // Include configuration file
 include <../config/global_variables.scad>
 include <../config/colors.scad>
+include <../parts/clearing_point_body.scad>
 
 polarity_width = 5;
 polarity_height = 5;

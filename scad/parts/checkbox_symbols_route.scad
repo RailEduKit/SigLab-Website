@@ -9,6 +9,14 @@
 // Include configuration file
 include <../config/global_variables.scad>
 
+//road Checkbox -> rc
+rc_symbol_side_space = 2;
+rc_symbol_size = body_width*(2/3)-locker_width/2-2*rc_symbol_side_space;
+straight_thickness = 0.8;
+rc_arrow_depth = 4;
+rc_arrowline_length = 4;
+junction_r=11.5;
+
 module bidirectional_arrow() {
 	translate([ -rc_arrowline_length / 2, -1.2 / 2, 0 ])
 	cube([ rc_arrowline_length, 1.2, engraving_height ]);
