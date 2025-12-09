@@ -3,16 +3,15 @@
  * Project description: The Interactive Signalling Laboratory is a tool for training in Rail
  * Applications to enhance the knowledge of control and signalling principles for rail transport systems.
  *
- * Module: overlap_measure
+ * Module: overlap_straigth
  */
 
-/* 
+ /* 
 uses code from:
 Customizable toy train tracks
 by atartanian (www.thingiverse.com/atartanian)
 license CC-BY-SA
  */
-
 
 // Include configuration file
 include <../config/global_variables.scad>
@@ -21,6 +20,10 @@ include <../config/colors.scad>
 // Include external libraries
 include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
 include <BOSL2/joiners.scad> // Import joiners from dependency BelfrySCAD/BOSL2.git
+
+
+// Include common parts
+use <track_indicator_straight.scad>
 
 /*[Track Settings]*/
 // length of track piece, in mm
@@ -94,37 +97,6 @@ module endproduct(length) {
 								thin_line * extrusion_width, // this defines the gap_thickness
 								false);
 
-		/***pin***/
-		// middle pin
-		// translate([0,(length+om_dovetail_depth)/2-0.1,0]) pin(track_type_params()[track_type][2]-2*thin_line *
-		// extrusion_width,
-		//     4*thin_line * extrusion_width,
-		//     track_type_params()[track_type][3]);
-	/* 	// male side pin
-		translate([ 0, om_pin_y_pos, 0 ])
-		pin(track_type_params()[track_type][2] - 2 * thin_line * extrusion_width, 4 * thin_line * extrusion_width - 1,
-			track_type_params()[track_type][3]);
-		// female side pin
-		translate([ 0, length + om_dovetail_depth - (om_pin_y_pos), 0 ])
-		pin(track_type_params()[track_type][2] - 2 * thin_line * extrusion_width, 4 * thin_line * extrusion_width - 1,
-			track_type_params()[track_type][3]); */
-		/***connectors***/
-		translate([ 0, 0, custom_height_middle / 2 ])
-		rotate([ 90, 0, 0 ])
-		dovetail("male", w = om_dovetail_width, h = om_dovetail_depth, slide = om_thickness);
-		translate([ 0, length, 0 ])
-		difference() {
-			translate([ -custom_width_middle / 2, 0, 0 ])
-			cube([ custom_width_middle, om_dovetail_depth, custom_height_middle ]);
-			translate([ 0, om_dovetail_depth, custom_height_middle / 2 ])
-			rotate([ -90, 0, 0 ])
-			dovetail("female", w = om_dovetail_width, h = om_dovetail_depth, slide = custom_height_middle);
-		}
-		// track guidance at the dovetail
-		translate([-custom_width_base/2, length, -om_track_guidance_height])
-		cube([om_track_guidance_width, om_dovetail_depth, om_track_guidance_height]);
-		translate([custom_width_base/2-om_track_guidance_width, length, -om_track_guidance_height])
-		cube([om_track_guidance_width, om_dovetail_depth, om_track_guidance_height]);
 	}
 	
 }

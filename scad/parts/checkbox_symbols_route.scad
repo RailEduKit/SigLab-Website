@@ -8,6 +8,7 @@
 
 // Include configuration file
 include <../config/global_variables.scad>
+include <../config/colors.scad>
 
 //road Checkbox -> rc
 rc_symbol_side_space = 2;
@@ -135,3 +136,6 @@ module flank_protection_symbol() {
 	}
 	buckler();
 }
+
+
+color(BASE_COLOR) turnout_locking_symbol();
