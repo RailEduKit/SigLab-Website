@@ -19,13 +19,13 @@ bar_depth = sqrt(pow(ris_width, 2) + pow(ris_width, 2));
 
 module bar_master(){
     difference() {
-        zrot(-45) cuboid([bar_width, bar_depth, number_height], anchor = (BOTTOM+FRONT+LEFT));
-        cuboid([2*bar_width, 2*bar_width, number_height], anchor = (BOTTOM+BACK+LEFT));
+        zrot(-45) cuboid([bar_width, bar_depth, number_height], anchor = (TOP+FRONT+LEFT));
+        cuboid([2*bar_width, 2*bar_width, number_height], anchor = (TOP+BACK+LEFT));
         translate([sqrt(pow(bar_depth,2)/2),sqrt(pow(bar_depth,2)/2),0])
-        cuboid([2*bar_width, 3*bar_width, number_height], anchor = (BOTTOM+LEFT));
+        cuboid([2*bar_width, 3*bar_width, number_height], anchor = (TOP+LEFT));
     }
 
 }
 
-bar_master();
+
 
