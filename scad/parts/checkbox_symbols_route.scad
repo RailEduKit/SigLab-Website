@@ -30,7 +30,7 @@ module bidirectional_arrow() {
 	    cylinder(engraving_height, rc_arrow_depth, rc_arrow_depth, $fn = 3);
 }
 
-module overlap_symbol() {
+module overlap_symbol() { // this has to be adopted to the new overlap pattern (to be seen in overlap_straigth)
 	module overlap() {
 		difference() {
 			union() {
