@@ -480,4 +480,5 @@ nozzle_diameter = 0.4;
 {/***************route_indicator_curve***************/
     // ric = route indicator curve
     ric_inner_radius = curve_inner_radius + (rail_width-ris_width)/2 - move_tolerance/2;
+    echo(str("ric_inner_radius = ", ric_inner_radius));
 }

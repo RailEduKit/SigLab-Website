@@ -30,7 +30,7 @@ module overlap_pattern_straight(){
     module bar_setup(){
         x = round(straight_length / sqrt(2*pow(bar_width,2)));
         for(i = [-6:2:x]){
-        left(ris_width/2 - bar_frame) back(i*sqrt(2*pow(bar_width,2))+bar_frame) bar_master(); 
+        left(ris_width/2 - bar_frame) back(i*sqrt(2*pow(bar_width,2))+bar_frame) bar_for_straight(); 
         }
     }
     up(om_thickness/2 + 0.011) difference(){ // +0.011 to see it at the surface of the track indicator straigth

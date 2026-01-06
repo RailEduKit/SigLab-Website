@@ -20,8 +20,16 @@ bar_depth = sqrt(pow(ris_width - additional_frame, 2) + pow(ris_width - addition
 
 
 module bar_master(){
+    zrot(-45) cuboid([bar_width, bar_depth, number_height], anchor = (TOP+FRONT+RIGHT));
+}
+
+module bar_for_curve(){
+    color(INDICATOR_COLOR) bar_master();
+}
+
+module bar_for_straight(){
     color(INDICATOR_COLOR) difference() {
-        zrot(-45) cuboid([bar_width, bar_depth, number_height], anchor = (TOP+FRONT+RIGHT));
+        bar_master();
         // flat left
         cuboid([2*bar_width, 2*bar_width, number_height], anchor = (TOP+FRONT+RIGHT));
         // flat right
@@ -31,7 +39,7 @@ module bar_master(){
 
 }
 
-//bar_master();
+//bar_for_straight();
 
 
 
