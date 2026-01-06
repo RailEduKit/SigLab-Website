@@ -3,7 +3,7 @@
  * Project description: The Interactive Signalling Laboratory is a tool for training in Rail
  * Applications to enhance the knowledge of control and signalling principles for rail transport systems.
  *
- * Module: overlap_straight
+ * Module: overlap_pattern_straight
  */
 
 // Include configuration file
@@ -26,26 +26,20 @@ module negative_track_indicator(){
     }
 }
 
-module overlap_pattern(){
-    x = round(straight_length / sqrt(2*pow(bar_width,2)));
-    for(i = [-6:2:x]){
+module overlap_pattern_straight(){
+    module bar_setup(){
+        x = round(straight_length / sqrt(2*pow(bar_width,2)));
+        for(i = [-6:2:x]){
         left(ris_width/2 - bar_frame) back(i*sqrt(2*pow(bar_width,2))+bar_frame) bar_master(); 
+        }
     }
-}
-
-module overlap_straight(){
     up(om_thickness/2 + 0.011) difference(){ // +0.011 to see it at the surface of the track indicator straigth
-        overlap_pattern();
+        bar_setup();
         back(straight_length/2) negative_track_indicator();
     }
-    color(ROUTE_COLOR) back(straight_length/2) track_indicator_straight();
+
+    
 }
-overlap_straight();
-//negative_track_indicator();
-//overlap_pattern();
 
-
-/* left(ris_width/2 - bar_frame) up(om_thickness/2 + 0.011) back(bar_frame) bar_master();
-left(ris_width/2 - bar_frame) up(om_thickness/2 + 0.011) back(-2*sqrt(2*pow(bar_width,2))+bar_frame) bar_master();
-left(ris_width/2 - bar_frame) up(om_thickness/2 + 0.011) back(-4*sqrt(2*pow(bar_width,2))+bar_frame) bar_master(); */
+overlap_pattern_straight();
 
