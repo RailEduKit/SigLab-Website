@@ -19,17 +19,21 @@ bar_frame = (sqrt(pow(bar_width,2)/2) + additional_frame)/2;
 bar_depth = sqrt(pow(ris_width - additional_frame, 2) + pow(ris_width - additional_frame, 2));
 
 
-module bar_master(){
-    zrot(-45) cuboid([bar_width, bar_depth, number_height], anchor = (TOP+FRONT+RIGHT));
+module bar_master(length){
+    zrot(-45) cuboid([bar_width, length, number_height], anchor = (TOP+FRONT+RIGHT));
 }
 
 module bar_for_curve(){
-    color(INDICATOR_COLOR) bar_master();
+    color(INDICATOR_COLOR) bar_master(bar_depth);
+}
+
+module bar_long(){
+    translate([-sqrt(pow(2*ric_inner_radius,2)/2), -sqrt(pow(2*ric_inner_radius,2)/2), 0]) color(INDICATOR_COLOR) bar_master(2*(2*ric_inner_radius));
 }
 
 module bar_for_straight(){
     color(INDICATOR_COLOR) difference() {
-        bar_master();
+        bar_master(bar_depth);
         // flat left
         cuboid([2*bar_width, 2*bar_width, number_height], anchor = (TOP+FRONT+RIGHT));
         // flat right
@@ -39,7 +43,7 @@ module bar_for_straight(){
 
 }
 
-//bar_for_straight();
-
+/* color(BASE_COLOR) bar_for_straight();
+bar_long(); */
 
 

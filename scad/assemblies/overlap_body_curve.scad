@@ -20,12 +20,20 @@ use <overlap_pattern_curve.scad>
 include <../parts/overlap_bar.scad>
 
 
-module overlap_body_curve(){
-    track_indicator_curve();
-    overlap_pattern_curve();
+module overlap_body_curve_rot(){
+    difference(){
+        color(ROUTE_COLOR) track_indicator_curve();
+        overlap_pattern_curve_rot();
+    }
 }
 
+module overlap_body_curve_onedirect(){
+    difference(){
+        color(ROUTE_COLOR) track_indicator_curve();
+        overlap_pattern_curve_onedirect();
+    }
+}
+overlap_body_curve_rot();
 
-overlap_body_curve();
 
 

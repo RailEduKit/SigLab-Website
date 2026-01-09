@@ -20,8 +20,9 @@ include <../parts/overlap_bar.scad>
 
 
 module negative_curve_indicator(frame){
+    // This cuts of the overhanging bar parts
     difference(){
-        cuboid([2*ric_inner_radius + 6*ris_width, 2*ric_inner_radius + 6*ris_width, om_thickness], anchor = BOTTOM);
+        cuboid([4*ric_inner_radius + 6*ris_width, 5*ric_inner_radius + 6*ris_width, om_thickness], anchor = BOTTOM); // it just has to be big enogh to cancel out all longs bars
         union(){
                 rotate_extrude(angle=curve_angle)
                 right(ric_inner_radius + frame) rect([ris_width - 2*frame, om_thickness], anchor = LEFT+FRONT);
@@ -38,18 +39,14 @@ module negative_curve_indicator(frame){
     symmetrical_connector("female"); // Dont't worry, after rendering, the track guidance shouldn't overlap with the connector! Otherwise change the slope.
 }
 
-module overlap_pattern_curve(){
+module overlap_pattern_curve_rot(){
     bar_gap = sqrt(2*pow(bar_width,2));
     bar_rot = (bar_gap*360) / (2*PI*ric_inner_radius); 
     x = round(curve_angle/bar_rot);
-    right(ric_inner_radius) cuboid([2,200,2], anchor = RIGHT);
     module bar_setup(){
-        for(i=[0:2:x]){
+        for(i=[-6:2:x]){
             zrot(i*bar_rot) up(om_thickness) right(ric_inner_radius) bar_for_curve();
         }
-        back(-2*sqrt(2*pow(bar_width,2))) up(om_thickness) right(ric_inner_radius) bar_for_curve();
-        back(-4*sqrt(2*pow(bar_width,2))) up(om_thickness) right(ric_inner_radius) bar_for_curve(); //warum deckt der Balken nicht wie bei dem geraden den kompletten bereich ab?
-        back(-6*sqrt(2*pow(bar_width,2))) up(om_thickness) right(ric_inner_radius) bar_for_curve();
     }
     up(0.011) difference(){
         bar_setup();
@@ -58,6 +55,25 @@ module overlap_pattern_curve(){
     
 }
 
-overlap_pattern_curve();
+module overlap_pattern_curve_onedirect(){
+    bar_gap = sqrt(2*pow(bar_width,2));
+    x = round((ric_inner_radius + ris_width)/bar_gap);
+    module bar_setup(){
+        for(i=[-6:2:x]){
+            fwd(ric_inner_radius - (i*bar_gap)) up(om_thickness) bar_long();
+        }
+    }
+    
+    up(0.011) difference(){
+    bar_setup();
+    negative_curve_indicator(bar_frame);
+    }
 
-//negative_curve_indicator(bar_frame);
+
+/*     up(om_thickness) bar_long();
+    fwd(ric_inner_radius) bar_long();
+    color(BASE_COLOR) up(om_thickness) right(ric_inner_radius) bar_for_curve(); */
+}
+
+
+overlap_pattern_curve_rot();
