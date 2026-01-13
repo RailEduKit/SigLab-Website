@@ -55,5 +55,16 @@ module symbol_distant() {
 	}
 }
 
+module symbol_route() {
+    translate([ signal_symbol_size/2, signal_symbol_size/2, 0 ])
+	union() {
+		difference() {
+			cylinder(h = engraving_height, d = signal_symbol_size);
+			cylinder(h = engraving_height, d = signal_symbol_size - 2 * engraving_thickness);
+		}
+	}
+}
+
 //symbol_block();
 //symbol_distant();
+//symbol_route();
