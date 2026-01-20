@@ -9,7 +9,7 @@
  // Include configuration file
 include <../config/global_variables.scad>
 
-module symbol_block() {
+module symbol_block(engraving_thickness=engraving_thickness) {
 	difference() {
 		cube([ signal_symbol_size, signal_symbol_size, engraving_height ]);
 		translate([ engraving_thickness, engraving_thickness, 0 ])
@@ -20,7 +20,7 @@ module symbol_block() {
 	}
 }
 
-module symbol_distant() {
+module symbol_distant(engraving_thickness=engraving_thickness) {
 	// symbol_distant = sb
 	cylinder_diameter = 0.4;
 	sb_beta = atan(1 / 2);
@@ -55,7 +55,7 @@ module symbol_distant() {
 	}
 }
 
-module symbol_route() {
+module symbol_route(engraving_thickness=engraving_thickness) {
     translate([ signal_symbol_size/2, signal_symbol_size/2, 0 ])
 	union() {
 		difference() {
