@@ -27,6 +27,8 @@ TODO
 
 move_tolerance = 0.5;
 
+nozzle_diameter = 0.4;
+
 {/***************wood rail specification***************/
     // rail instead of wood to prevent duplicate variables with tracklib.scad file
     rail_height = 12;
@@ -35,6 +37,7 @@ move_tolerance = 0.5;
     rail_well_height = 9; // copy from tracklib
     rail_well_width = 5.7; // copy from tracklib
     rail_well_spacing = 19.25; // copy from tracklib
+    rail_groove_depth = rail_height - rail_well_height;
 
     straight_length = 144;
 
@@ -42,12 +45,13 @@ move_tolerance = 0.5;
     curve_middle_radius = curve_inner_radius+rail_width/2;
     curve_outer_radius = curve_inner_radius+rail_width;
     curve_angle = 45.7; // degree
+    curve_length_middle_radius = (2*PI*curve_middle_radius*curve_angle)/360;
 }
 {/***************magnet specifications***************/
     magnet_thickness = 3;
     magnet_diameter = 5;
     magnet_distance_to_middle = 7.5;
-    magnet_z = 5.75;
+    magnet_z = rail_height/2;
 }
 {/***************engraving specifications***************/
     engraving_height = 2;//(block_height-handle_height)/2;
@@ -85,6 +89,8 @@ move_tolerance = 0.5;
     //dovetail connector specifications
     om_dovetail_width = 10;
     om_dovetail_depth = 5;
+    om_dovetail_angle = 20;
+    dovetail_overhang = tan(om_dovetail_angle)*om_dovetail_depth;
     
     
 }
@@ -241,8 +247,7 @@ move_tolerance = 0.5;
 
     // color_block specifications
     block_depth = (body_depth-2*wall_thickness_y)/2-3*move_tolerance;
-    block_height = 13.5; // material constraint
-    //block_height =(body_height-wall_thickness_z)*1.4; //the heigher the value, the more color_block comes out of the body. BUT also: the higher will be the axis hole
+    block_height = 13.5; 
     overhang = block_height/2-2*move_tolerance; //the circle has to be flattend at one side with move_tolerance
     handle_depth = 10+wall_thickness_y;
     handle_height = 3;
@@ -394,9 +399,49 @@ move_tolerance = 0.5;
     lipp_width         = coupler_thickness - move_tolerance;
     shield_width       = 20;
     shield_depth        = 25;
-    shield_thickness   = 2;
     inlay_thickness    = 0.45;
+    shield_thickness   = 2; // the shield has to be at least 2mm thick. Otherwise the front symbol will be printed badly
     inlay_radius       = 10.5/2;
 
     headlight_d = (1/3)*shield_width;
+}
+
+{/***************switch locker***************/
+    //switch locker = sl
+    sl_width = rail_height + 2*wall_thickness;
+    sl_depth = 27 + wall_thickness;
+    sl_height = 0.6;
+
+    sl_lock_height = rail_groove_depth + sl_height + move_tolerance;
+    
+    sl_barrier_width = sl_width;
+    sl_barrier_depth = 17.5 + wall_thickness;
+    sl_barrier_height = rail_height+ move_tolerance + sl_height;
+
+    sl_wedge_width = 2;
+    sl_wedge_depth = 3;
+    sl_wedge_short = 2; // alternative depth
+    sl_wedge_height = 9;
+
+    brio_handle_diameter = rail_height;
+    brio_handle_height = sl_barrier_height - sl_height;
+    brio_handle_depth = 15 + move_tolerance;
+    handle_curve_h = 2;
+    brio_axis_diameter = 7;
+
+    sl_handle_width = 2;
+    sl_handle_depth = sl_depth;
+    sl_handle_height = 10;
+}
+
+{/***************route_indicator_straight***************/
+    // ris = route indicator straight
+    ris_width = rail_well_spacing + 2 * om_track_guidance_width + move_tolerance;
+    ris_length = straight_length;
+    ris_rounding = om_track_guidance_width; //om_thickness/2 doesn't work at the track guidance
+}
+
+{/***************route_indicator_curve***************/
+    // ric = route indicator curve
+    ric_inner_radius = curve_inner_radius + (rail_width-ris_width)/2 - move_tolerance/2;
 }

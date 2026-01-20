@@ -7,6 +7,7 @@
  */
 
 include <../config/global_variables.scad>
+include <../config/colors.scad>
 
 locking_pin();
 
@@ -19,6 +20,7 @@ module grip_ring() {
 	}
 }
 module locking_pin() {
+	color(METALLIC_GREY)
 	difference() {
 		minkowski() {
 			difference() {

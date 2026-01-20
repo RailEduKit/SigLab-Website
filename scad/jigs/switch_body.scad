@@ -10,12 +10,12 @@
 include <../config/global_variables.scad>
 
 // include common components
-include <../parts/components/magnet_hole.scad>
-include <../parts/components/pin_hole.scad>
+include <../parts/magnet_hole.scad>
+include <../parts/pin_hole.scad>
 
 // include external libraries
-use <trains/tracklib.scad>; // Import tracklib from dependency dotscad/trains.git
-use <switch_blade.scad>
+include <trains/tracklib.scad>; // Import tracklib from dependency dotscad/trains.git
+use <../assemblies/switch_blade.scad>
 
 // Length of the straight track, or auto to use the best fit for the requested curve radius.
 straight_size =
@@ -56,6 +56,7 @@ module render_track(base, left, straight, right, double_sided_rails) {
 		difference() {
 			union() {
 				if (straight != "none") {
+					render(convexity=5)
 					translate([ radius + wood_width(), 0, 0 ])
 					rotate([ 0, 0, 90 ])
 					wood_track(straight_length, false);
@@ -66,6 +67,7 @@ module render_track(base, left, straight, right, double_sided_rails) {
 					}
 				}
 				if (left != "none") {
+					render(convexity=5)
 					wood_track_arc(radius, angle, false);
 					if (left == "male") {
 						rotate([ 0, 0, angle ])
@@ -75,6 +77,7 @@ module render_track(base, left, straight, right, double_sided_rails) {
 					}
 				}
 				if (right != "none") {
+					render(convexity=5)
 					translate([ radius * 2 + wood_width(), 0, 0 ])
 					rotate([ 0, 0, 180 - angle ])
 					wood_track_arc(radius, angle, false);
@@ -394,8 +397,8 @@ module mill_projections(base, left, straight, right, blade_space, axis_space, pi
 module visualize_blade_in_switch() {
 	translate([ -pivot_center_x, -pivot_center_y, 0 ])
 	modified_switch("female", "none", "female", "female", true, true);
-	translate([ -pivot_center_x, -pivot_center_y, 0 ])
-	switchblade_space("none", "female", "female");
+	//translate([ -pivot_center_x, -pivot_center_y, 0 ])
+	//switchblade_space("none", "female", "female");
 	rotate([ 0, 0, -16 ])
 	translate([ 0, -y_pos_first_pin, rail_well_height + 3 ])
 	rotate([ 0, 180, 0 ])
@@ -403,10 +406,10 @@ module visualize_blade_in_switch() {
 }
 
 // mill_projections("male","none","male","male",true,true,true); //right
-mill_projections("male", "male", "male", "none", true, false, false); // left
+//mill_projections("male", "male", "male", "none", true, false, false); // left
 
 // echo(pin_female_diameter);
-// visualize_blade_in_switch();
+visualize_blade_in_switch();
 // render_track("male","none","female","female",true);
 // modified_switch("male","none","female","female",true,true);
 // translate([100,0,0]) modified_switch("male","female","female","none",false,true);
