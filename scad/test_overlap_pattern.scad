@@ -45,6 +45,27 @@ module pattern_rot(){
         right(ric_inner_radius + ris_width/2) zrot(180-curve_angle) overlap_body_curve_rot();
         right(ric_inner_radius + ris_width/2) zrot(180) overlap_body_curve_rot();
     }
+
+    right(350) union(){
+        union(){
+            overlap_body_straight();
+            overlap_pattern_straight();
+        }
+        fwd(ris_length) union(){
+            overlap_body_straight();
+            overlap_pattern_straight();
+        }
+    }
+    right(450) union(){
+        union(){
+            overlap_body_straight();
+            overlap_pattern_straight();
+        }
+        zrot(180) union(){
+            overlap_body_straight();
+            overlap_pattern_straight();
+        }
+    }
 }
 
 
@@ -88,7 +109,7 @@ module pattern_onedirect(){
 }
 
 pattern_rot();
-fwd(400) pattern_onedirect();
+//fwd(400) pattern_onedirect();
 
 
 
