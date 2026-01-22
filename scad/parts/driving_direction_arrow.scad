@@ -10,6 +10,8 @@
 include <../config/global_variables.scad>
 include <../config/colors.scad>
 
+arrow_depth = 6.5;
+
 module attach_arrow() {
 	hull() {
 		cyl_d = 0.4;
@@ -29,3 +31,5 @@ module driving_direction_arrow() {
 	translate([ (attach_arrow_depth - 1.2) / 2, 0, 0 ])
 	color(INDICATOR_COLOR) cube([ 1.2, attach_arrow_depth, attach_arrow_height ]);
 }
+
+//attach_arrow();

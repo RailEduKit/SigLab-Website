@@ -6,6 +6,63 @@
  * Module: config/global_variables.scad
  */
 
+/* 
+++++++++++++++++++++++++ Start of New Structure +++++++++++++++++++++++++++++++++++
+
+the structure should orientate on the file structure
+but some variables have to stand on the top of the structure
+
+
+ */
+
+{// assemblies
+    {// balise
+            
+    }
+    {// checkbox_route
+        
+    }
+    {// clearing_point_block
+
+    }
+    {// clearing_point_route
+
+    }
+    {// direction_management_box
+
+    }
+    {// direction_management_lever
+
+    }
+    {// locking_pin
+
+    }
+    {// overlap_measure
+
+    }
+    {// position_indicator_number
+
+    }
+    {
+        
+    }
+}
+{// jigs
+
+
+}
+
+
+
+
+
+
+
+
+
+/* 
+++++++++++++++++++++++++ End of New Structure +++++++++++++++++++++++++++++++++++
+ */
 
 /*************** resolution ***************/
 // number of fragments; default 0;
@@ -76,6 +133,7 @@ nozzle_diameter = 0.4;
 
 {/***************overlap_measure***************/
     // overlap measure -> om
+    // The space between track and train is about 3mm height.
     om_thickness = 2;
     // pin specifications
     om_pin_height = 5;
@@ -87,9 +145,13 @@ nozzle_diameter = 0.4;
     om_track_guidance_height = 2.5;
     
     //dovetail connector specifications
-    om_dovetail_width = 10;
+    /* om_dovetail_width = 10;
     om_dovetail_depth = 5;
     om_dovetail_angle = 20;
+    dovetail_overhang = tan(om_dovetail_angle)*om_dovetail_depth; */
+    om_dovetail_width = rail_well_spacing/2-1;
+    om_dovetail_depth = 5;
+    om_dovetail_angle = 23;
     dovetail_overhang = tan(om_dovetail_angle)*om_dovetail_depth;
     
     
@@ -258,14 +320,6 @@ nozzle_diameter = 0.4;
     signal_symbol_size = block_width-2*signal_symbol_side_space;
     signal_triangle_height = (sqrt(3)*signal_symbol_size)/2;
 }
-{/***************clearing_point***************/
-    zs_with = 25;
-    zs_depth = 10;
-    zs_height = 15;
-
-    cp_symbol_side_space = 2;
-    cp_symbol_size = zs_depth-2*cp_symbol_side_space;
-}
 
 {/***************drill_template_straight***************/
     drill_move_tolerance = 0.3;
@@ -336,30 +390,12 @@ nozzle_diameter = 0.4;
 
 
 
-{/***************route signal***************/
-    // used "basis_component-roundedBox" and "locking_pin"
-    //road Checkbox -> rc
-    rc_symbol_side_space = 2;
-    rc_symbol_size = body_width*(2/3)-locker_width/2-2*rc_symbol_side_space;
-    // echo("rc_symbol_size: ", rc_symbol_size);
-    rc_symbol_xpos = body_width - (body_width - (body_width*(1/3)+locker_width/2))/2;
-    straight_thickness = 0.8;
-    rc_arrow_depth = 4;
-    rc_arrowline_length = 4;
-    slash_angle = 45; // 53,13
-    
-    junction_r=11.5;
-}
-
 {/***************direction_management***************/
-    arrow_depth = 6.5; //5 for onePiece
-    arrowline_length = 6.5; //5 for onePiece
-    
-    
+    // has to stay global. Box as well as lever uses the variables. Both objects are created in assemblies. So the variable can't be included, otherwise both objects are printed
+    // That is because in assemblies every object should be printed. 
     arrow_block_height = 9-engraving_height;
     overlap_cube_depth = arrow_block_height/2;
     arrow_block_depth = block_depth - overlap_cube_depth;
-    
 }
 
 {/***************number_plate***************/
@@ -394,11 +430,11 @@ nozzle_diameter = 0.4;
     coupling_curvature = 2;
     coupling_cut_pos   = coupling_radius*1/2;
     boogie_width       = 20;
-    coupler_thickness          = 1.5;
+    coupler_thickness  = 1.5;
     lipp_height        = 4;
     lipp_width         = coupler_thickness - move_tolerance;
     shield_width       = 20;
-    shield_depth        = 25;
+    shield_depth       = 25;
     inlay_thickness    = 0.45;
     shield_thickness   = 2; // the shield has to be at least 2mm thick. Otherwise the front symbol will be printed badly
     inlay_radius       = 10.5/2;
@@ -444,4 +480,5 @@ nozzle_diameter = 0.4;
 {/***************route_indicator_curve***************/
     // ric = route indicator curve
     ric_inner_radius = curve_inner_radius + (rail_width-ris_width)/2 - move_tolerance/2;
+    echo(str("ric_inner_radius = ", ric_inner_radius));
 }

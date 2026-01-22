@@ -6,6 +6,14 @@
  * Module: overlap_measure
  */
 
+/* 
+uses code from:
+Customizable toy train tracks
+by atartanian (www.thingiverse.com/atartanian)
+license CC-BY-SA
+ */
+
+
 // Include configuration file
 include <../config/global_variables.scad>
 include <../config/colors.scad>
@@ -29,19 +37,6 @@ thin_line = 4; //[2:2:10]
 
 // spacing between male and female connectors, in mm
 connector_tolerance = .3; //[.1:.05:1]
-
-//// pin specifications
-// om_pin_height = 5;
-// om_pin_diameter = 4.5;
-// om_pin_y_pos = 25;
-
-//// track guidance
-// om_track_guidance_width = 0.8;
-// om_track_guidance_height = 2.5;
-
-////dovetail connector specifications
-// om_dovetail_width = 10;
-// om_dovetail_depth = 5;
 
 /*[Custom Dimensions]*/
 use_custom_settings = 1; //[0:No,1:Yes]

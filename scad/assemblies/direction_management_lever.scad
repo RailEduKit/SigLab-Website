@@ -13,13 +13,15 @@ include <../config/colors.scad>
 // include external libraries
 include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
 
+arrowline_length = 6.5;
+
 module onedirect_arrow() {
 	color(INDICATOR_COLOR) union(){
 		translate([ -arrowline_length, -3 / 2, 0 ])
 		cube([ arrowline_length, 3, engraving_height ]);
-		translate([ arrow_depth * (3 / 8), 0, 0 ])
-		scale([ 3 / 4, (arrow_depth / (2 * arrow_depth * sin(120))), 1 ])
-		cylinder(engraving_height, arrow_depth, arrow_depth, $fn = 3);
+		translate([ arrowline_length * (3 / 8), 0, 0 ])
+		scale([ 3 / 4, (arrowline_length / (2 * arrowline_length * sin(120))), 1 ])
+		cylinder(engraving_height, arrowline_length, arrowline_length, $fn = 3);
 	}
 	
 }

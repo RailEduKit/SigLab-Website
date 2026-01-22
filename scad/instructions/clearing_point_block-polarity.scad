@@ -3,25 +3,24 @@
  * Project description: The Interactive Signalling Laboratory is a tool for training in Rail
  * Applications to enhance the knowledge of control and signalling principles for rail transport systems.
  *
- * Module: clearing_point_route
+ * Module: clearing_point_block-polarity
  */
 
 // Include configuration file
 include <../config/global_variables.scad>
-
-// Include common parts
 include <../parts/clearing_point_body.scad>
-include <../parts/clearing_point_symbols.scad>
-include <../parts/driving_direction_arrow.scad>
 
-module clearing_point_route() {
-    clearing_point_body();
-    translate([ zs_width / 2, zs_depth / 2, zs_height ])
-    route_clearing_symbol();
-    color(ROUTE_COLOR)
-    translate([ zs_width * (4 / 5), (zs_depth - attach_arrow_depth) / 2, zs_height ])
-	rotate([ 0, 0, 90 ])
-	driving_direction_arrow();
+// use common parts
+use <../assemblies/clearing_point_block.scad>
+use <polarity_indicator.scad>
+
+module clearing_point_block_polarity(){
+    translate([0,zs_width,0]) rotate([0,0,-90])
+    union(){
+        clearing_point_block();
+        polarity_bars_clearing_point();
+    }
+    
 }
 
-clearing_point_route();
+clearing_point_block_polarity();

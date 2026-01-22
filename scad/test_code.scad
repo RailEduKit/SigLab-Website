@@ -1,7 +1,16 @@
-include <BOSL2/std.scad>
-include <BOSL2/joiners.scad>
-diff()
-  cuboid([50,30,10]){
-    attach(BACK) dovetail("male", slide=10, width=15, height=5, angle = 25);
-    tag("remove")attach(FRONT) dovetail("female", slide=10, width=15, height=8);
-  }
+// Include external libraries
+include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
+include <BOSL2/joiners.scad> // Import joiners from dependency BelfrySCAD/BOSL2.git
+
+include <config/global_variables.scad>
+
+use <assemblies/overlap_pattern_straight.scad>
+use <assemblies/overlap_body_straight.scad>
+use <assemblies/overlap_curve.scad>
+
+/* fwd(straight_length) overlap_body_straight();
+fwd(straight_length) overlap_pattern_straight(); */
+left(ric_inner_radius + ris_width/2) overlap_body_curve();
+right(ric_inner_radius + ris_width/2) zrot(180) overlap_body_curve();
+//fwd(straight_length) overlap_straight();
+

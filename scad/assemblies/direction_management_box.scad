@@ -12,7 +12,7 @@ include <../config/colors.scad>
 
 // include common parts
 include <../parts/signal_box.scad>
-include <../parts/signal_lever.scad>
+include <../parts/signal_lever.scad> // for the lever_space_cubes
 
 // include external libraries
 include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git

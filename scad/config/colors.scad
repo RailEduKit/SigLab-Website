@@ -6,6 +6,9 @@
  * Module: config/colors.scad
  */
 
+
+SPRUCE_WOOD = [231/255, 203/255, 172/255]; // Desert Sand by https://www.schemecolor.com/spruce-wood-colors.php
+
 // component colors
 BASE_COLOR = [0.25, 0.25, 0.25];// lighter black to see the shapes
 INDICATOR_COLOR = "white";

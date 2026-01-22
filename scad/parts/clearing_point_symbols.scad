@@ -9,6 +9,12 @@
 // Include configuration file
 include <../config/global_variables.scad>
 include <../config/colors.scad>
+include <../parts/clearing_point_body.scad>
+
+// cp = clearing_point
+cp_symbol_side_space = 2;
+cp_symbol_size = zs_depth-2*cp_symbol_side_space;
+
 
 module route_clearing_symbol() {
 	color(ROUTE_COLOR)

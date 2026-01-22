@@ -8,6 +8,15 @@
 
 // Include configuration file
 include <../config/global_variables.scad>
+include <../config/colors.scad>
+
+//road Checkbox -> rc
+rc_symbol_side_space = 2;
+rc_symbol_size = body_width*(2/3)-locker_width/2-2*rc_symbol_side_space;
+straight_thickness = 0.8;
+rc_arrow_depth = 4;
+rc_arrowline_length = 4;
+junction_r=11.5;
 
 module bidirectional_arrow() {
 	translate([ -rc_arrowline_length / 2, -1.2 / 2, 0 ])
@@ -21,7 +30,7 @@ module bidirectional_arrow() {
 	    cylinder(engraving_height, rc_arrow_depth, rc_arrow_depth, $fn = 3);
 }
 
-module overlap_symbol() {
+module overlap_symbol() { // this has to be adopted to the new overlap pattern (to be seen in overlap_straigth)
 	module overlap() {
 		difference() {
 			union() {
@@ -127,3 +136,6 @@ module flank_protection_symbol() {
 	}
 	buckler();
 }
+
+
+color(BASE_COLOR) turnout_locking_symbol();
