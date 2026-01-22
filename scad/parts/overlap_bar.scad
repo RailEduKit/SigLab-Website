@@ -14,8 +14,9 @@ include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
 include <BOSL2/joiners.scad> // Import joiners from dependency BelfrySCAD/BOSL2.git
 
 bar_width = 3;
-additional_frame = 0; // can be used if the printer can't handle the rounding with the small normal frame
-bar_frame = (sqrt(pow(bar_width,2)/2) + additional_frame)/2;
+frame_min = sqrt(pow(bar_width,2)/2) / 2; // frame apply for one side. If you need the hole frame of one dimension e.g. x you need to multiply bar_frame*2
+additional_frame = (ris_rounding + 0.4) - frame_min; // can be used if the printer can't handle the rounding with the small normal frame
+bar_frame = frame_min + additional_frame; // frame apply for one side. If you need the hole frame of one dimension e.g. x you need to multiply bar_frame*2 
 bar_depth = sqrt(pow(ris_width - additional_frame, 2) + pow(ris_width - additional_frame, 2));
 
 

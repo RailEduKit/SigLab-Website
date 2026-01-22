@@ -27,16 +27,16 @@ module negative_curve_indicator(frame){
                 rotate_extrude(angle=curve_angle)
                 right(ric_inner_radius + frame) rect([ris_width - 2*frame, om_thickness], anchor = LEFT+FRONT);
                 right(ric_inner_radius+ris_width/2) up(om_thickness/2) xrot(90)
-                symmetrical_connector("male");
+                symmetrical_connector("male", frame = - 2*bar_frame);
                 zrot(curve_angle) right(ric_inner_radius+ris_width/2) up(om_thickness/2) zrot(180) xrot(90) 
-                symmetrical_connector("male");
+                symmetrical_connector("male", frame = - 2*bar_frame);
 
             }
     }
     right(ric_inner_radius+ris_width/2) up(om_thickness/2) xrot(90)
-    symmetrical_connector("female");
+    symmetrical_connector("female", frame = 2*bar_frame);
     zrot(curve_angle) right(ric_inner_radius+ris_width/2) up(om_thickness/2) zrot(180) xrot(90)
-    symmetrical_connector("female"); // Dont't worry, after rendering, the track guidance shouldn't overlap with the connector! Otherwise change the slope.
+    symmetrical_connector("female", frame = 2*bar_frame); // Dont't worry, after rendering, the track guidance shouldn't overlap with the connector! Otherwise change the slope.
 }
 
 module overlap_pattern_curve_rot(){
@@ -75,5 +75,5 @@ module overlap_pattern_curve_onedirect(){
     color(BASE_COLOR) up(om_thickness) right(ric_inner_radius) bar_for_curve(); */
 }
 
-
+//negative_curve_indicator(bar_frame);
 overlap_pattern_curve_rot();

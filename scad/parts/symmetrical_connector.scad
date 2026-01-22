@@ -15,25 +15,29 @@ include <../config/global_variables.scad>
 include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
 include <BOSL2/joiners.scad> // Import joiners from dependency BelfrySCAD/BOSL2.git
 
-module male_connector(){
-    right(ris_width*(1/4)) dovetail("male", w = om_dovetail_width, h = om_dovetail_depth, slide = om_thickness, radius = om_dovetail_depth/7,round = true, angle = om_dovetail_angle);
+module male_connector(frame){
+    right(ris_width*(1/4)) dovetail("male",  w = om_dovetail_width + frame, h = om_dovetail_depth + frame/3, slide = om_thickness, radius = om_dovetail_depth/7,round = true, angle = om_dovetail_angle);
 }
 
-module female_connector(){
+module female_connector(frame){
     // the slop has to be smaller than 0.35. If its higher you get a problem in the track_indicator_curve. The track guidance would be in the way of the connector.
     // If the slope is smaller than 0.3 the connecting is a bit rough.
-    #left(ris_width*(1/4)) tag("remove") dovetail("female", w = om_dovetail_width, h = om_dovetail_depth, slide = om_thickness, radius = om_dovetail_depth/7, round = true, $slop = 0.35, angle=om_dovetail_angle);
+    left(ris_width*(1/4)) tag("remove") dovetail("female", w = om_dovetail_width + frame, h = om_dovetail_depth + frame/3, slide = om_thickness, radius = om_dovetail_depth/7, round = true, $slop = 0.35, angle=om_dovetail_angle);
 }
 
-module symmetrical_connector(part = "both"){
+module symmetrical_connector(part = "both", frame = 0){
     if (part == "both") {
-        male_connector();
-        female_connector();
+        male_connector(frame);
+        female_connector(frame);
     }
     if (part == "male") {
-        male_connector();
+        male_connector(frame);
     }
     if (part == "female") {
-        female_connector();
+        female_connector(frame);
     }
 }
+
+#symmetrical_connector();
+symmetrical_connector("male",frame = - 5);
+symmetrical_connector("female",frame = 5);
