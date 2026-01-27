@@ -51,7 +51,7 @@ module overlap_pattern_straight(){
     
 }
 
-negative_track_indicator();
-#track_indicator_straight();
-//overlap_pattern_straight();
+//negative_track_indicator();
+//track_indicator_straight();
+overlap_pattern_straight();
 
