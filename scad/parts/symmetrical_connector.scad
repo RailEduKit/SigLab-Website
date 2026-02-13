@@ -22,7 +22,7 @@ module male_connector(){
 module female_connector(){
     // the slop has to be smaller than 0.65. If its higher you get a problem in the track_indicator_curve. The track guidance would be in the way of the connector.
     // If the slope is smaller than 0.3 the connecting is a bit rough.
-    left(ris_width*(1/4)) tag("remove") dovetail("female", w = om_dovetail_width, h = om_dovetail_depth, slide = om_thickness, radius = om_dovetail_depth/7, round = true, $slop = 0.65, angle=om_dovetail_angle);
+    left(ris_width*(1/4)) tag("remove") dovetail("female", w = om_dovetail_width, h = om_dovetail_depth, slide = om_thickness, radius = om_dovetail_depth/7, round = true, $slop = 0.55, angle=om_dovetail_angle);
 }
 
 module symmetrical_connector(part = "both", slop){
@@ -38,6 +38,6 @@ module symmetrical_connector(part = "both", slop){
     }
 }
 
-#symmetrical_connector();
+/* #symmetrical_connector();
 symmetrical_connector("male");
-symmetrical_connector("female");
+symmetrical_connector("female"); */
