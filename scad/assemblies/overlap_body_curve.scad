@@ -33,6 +33,8 @@ module overlap_body_curve_onedirect(){
         overlap_pattern_curve_onedirect();
     }
 }
+
+right(curve_outer_radius) zrot(180-curve_angle) //position for the creation of picture
 overlap_body_curve_rot();
 
 

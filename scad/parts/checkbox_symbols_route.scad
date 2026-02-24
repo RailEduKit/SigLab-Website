@@ -138,4 +138,4 @@ module flank_protection_symbol() {
 }
 
 
-color(BASE_COLOR) turnout_locking_symbol();
+// color(BASE_COLOR) turnout_locking_symbol();

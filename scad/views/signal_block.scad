@@ -6,6 +6,9 @@
  * Module: signal_block
  */
 
+// Include external libraries (has to be included, bacuase use files need the library)
+include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
+
 // Include configuration file
 include <../config/global_variables.scad>
 

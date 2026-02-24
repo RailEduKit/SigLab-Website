@@ -6,10 +6,13 @@
  * Module: locking_pin
  */
 
+// Include external libraries
+include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
+
+// Include configuration file
 include <../config/global_variables.scad>
 include <../config/colors.scad>
 
-locking_pin();
 
 module grip_ring() {
 	height = 1.2;
@@ -46,4 +49,5 @@ echo("lever_height+2*rounding: ", lever_height + 2 * rounding);
 echo("z_pos_axis-handle_height/2+move_tolerance+2*rounding: ",
      z_pos_axis - handle_height / 2 + move_tolerance + 2 * rounding);
 
-// signal_locker();
+up(locker_height) xrot(180) //position for the creation of picture
+locking_pin();

@@ -309,11 +309,10 @@ module pin(base_width, base_depth, base_height) {
 	translate([ 0, 0, -om_pin_height ])
 	cylinder(h = om_pin_height, d = om_pin_diameter);
 }
-// track_profile_2D();
-// flex_track_pattern_2D();
+
+
 endproduct(straight_length - om_dovetail_depth);
 translate([custom_width_base+10, 0 ,0])
 endproduct(curve_length_middle_radius - straight_length - om_dovetail_depth);
-//endproduct();
 
 echo("custom_width_base", custom_width_base);

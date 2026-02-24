@@ -6,6 +6,9 @@
  * Module: signal_lever_distant
  */
 
+// Include external libraries
+include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
+
 // Include configuration file
 include <../config/global_variables.scad>
 
@@ -30,4 +33,5 @@ module signal_lever_distant() {
 	}
 }
 
+right(block_width) up(block_height) yrot(180) //position for the creation of picture
 signal_lever_distant();

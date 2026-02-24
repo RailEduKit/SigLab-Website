@@ -8,6 +8,9 @@
 
 // this locker can be combined with the mechanical switch of BRIO https://www.brio.co.uk/en-GB/products/railway-toys/train-tracks/mechanical-switches-63334400
 
+// Include external libraries
+include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
+
 // Include configuration file
 include <../config/global_variables.scad>
 include <../config/colors.scad>
@@ -98,7 +101,5 @@ module switch_locker() {
     }
 }
 
-
-//brio_switch_handle();
+up(sl_lock_height) back(sl_depth) right(sl_width/2) zrot(180) //position for the creation of picture
 switch_locker();
-//wedge(sl_wedge_depth);

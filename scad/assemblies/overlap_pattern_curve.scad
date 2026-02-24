@@ -76,4 +76,5 @@ module overlap_pattern_curve_onedirect(){
 }
 
 //negative_curve_indicator(bar_frame);
+right(curve_outer_radius) zrot(180-curve_angle) //position for the creation of picture
 overlap_pattern_curve_rot();

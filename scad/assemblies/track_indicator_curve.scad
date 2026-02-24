@@ -36,4 +36,5 @@ module track_indicator_curve() {
     }
 
 //indicator();
+right(curve_outer_radius) zrot(180-curve_angle) //position for the creation of picture
 track_indicator_curve();

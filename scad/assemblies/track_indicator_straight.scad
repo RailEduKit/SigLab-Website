@@ -26,4 +26,5 @@ module track_indicator_straight() {
         }
 }
 
+back(straight_length/2) //position for the creation of picture
 track_indicator_straight();

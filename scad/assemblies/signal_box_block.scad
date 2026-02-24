@@ -6,6 +6,9 @@
  * Module: signal_box_block
  */
 
+// Include external libraries
+include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
+
 // Include configuration file
 include <../config/global_variables.scad>
 
@@ -46,4 +49,5 @@ module signal_box_block() {
 	cube([ lock_block_width, lock_block_depth, lock_block_height ]);
 }
 
+back(body_depth) right(body_width) zrot(180) //position for the creation of picture
 signal_box_block();
