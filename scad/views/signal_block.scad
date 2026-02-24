@@ -20,7 +20,7 @@ use <../assemblies/signal_lever_block.scad>
 
 
 
-module signal_block(aspect) {
+module signal_block(aspect, locker = false) {
 	translate([ 0, -body_depth / 2, -z_pos_axis ])
 	signal_box_block(); // z=-block_height/2-wall_thickness_z
 	if (aspect == "CLEAR") {
@@ -31,6 +31,9 @@ module signal_block(aspect) {
 			wall_thickness_z
 		])
 		signal_lever_block();
+		if (locker == true) {
+			echo(str("The aspect CLEAR can not be locked "));
+		}
 	}
 	if (aspect == "STOP") {
 		rotate([ -180, 0, 0 ])
@@ -40,11 +43,13 @@ module signal_block(aspect) {
 			wall_thickness_z
 		])
 		signal_lever_block();
-		translate([ body_width / 2, (body_depth - wall_thickness_y) / 2, locker_height - 0.5 - z_pos_axis ])
-		rotate([ 180, 0, 90 ])
-		locking_pin();
+		if (locker == true) {
+			translate([ body_width / 2, (body_depth - wall_thickness_y) / 2, locker_height - 0.5 - z_pos_axis ])
+			rotate([ 180, 0, 90 ])
+			locking_pin();
+		}
 	}
 }
 
-
-signal_block("CLEAR");
+right(body_width) zrot(180) //position for the creation of picture
+signal_block("STOP");

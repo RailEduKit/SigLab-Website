@@ -6,6 +6,9 @@
  * Module: direction_management
  */
 
+// include external libraries
+include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
+
 // Include configuration file
 include <../config/global_variables.scad>
 
@@ -14,10 +17,9 @@ use <../assemblies/direction_management_lever.scad>
 use <../assemblies/direction_management_box.scad>
 use <../assemblies/locking_pin.scad>
 
-// include external libraries
-include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
 
- module direction_management(state){
+
+ module direction_management(state, locker = false){
          union(){
             translate([0,-body_depth/2,-z_pos_axis]) direction_management_box();
             if(state == "-y"){
@@ -25,8 +27,10 @@ include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
                  rotate([0,0,0]) translate([wall_thickness_x + move_tolerance,
                  -(arrow_block_depth+overlap_cube_depth),-arrow_block_height/2-wall_thickness_z+wall_thickness_z])
                  direction_management_lever(); // translate y = -body_depth/2 + wall_thickness_y+3*move_tolerance
-                 translate([body_width/2,-(body_depth-wall_thickness_y)/2,locker_height-0.5-z_pos_axis])
-                 rotate([180,0,90]) locking_pin();
+                 if (locker == true) {
+                    translate([body_width/2,-(body_depth-wall_thickness_y)/2,locker_height-0.5-z_pos_axis])
+                    rotate([180,0,90]) locking_pin();
+                 }
              }
              if(state== "-yz"){
                  translate([0,-overlap_cube_depth*(2/3),-(overlap_cube_depth)/4]) 
@@ -38,11 +42,21 @@ include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
                  down(overlap_cube_depth/2) rotate([-90,0,0]) translate([wall_thickness_x + move_tolerance,
                  -arrow_block_depth,-arrow_block_height/2-wall_thickness_z+wall_thickness_z]) direction_management_lever();
              }
+
+            if(state== "yz"){
+                 translate([0,overlap_cube_depth*(2/3),-(overlap_cube_depth)/4]) 
+                 rotate([-135,0,0])
+                 translate([wall_thickness_x + move_tolerance,
+                 -arrow_block_depth,-arrow_block_height/2-wall_thickness_z+wall_thickness_z]) direction_management_lever();
+            }
              if(state== "y"){
                  rotate([-180,0,0]) translate([wall_thickness_x + move_tolerance, -body_depth/2 +
                  wall_thickness_y+3*move_tolerance,-arrow_block_height/2-wall_thickness_z+wall_thickness_z])
-                 direction_management_lever(); translate([body_width/2,(body_depth-wall_thickness_y)/2,locker_height-0.5-z_pos_axis])
-                 rotate([180,0,90]) locking_pin();
+                 direction_management_lever(); 
+                 if (locker == true) {
+                    translate([body_width/2,(body_depth-wall_thickness_y)/2,locker_height-0.5-z_pos_axis])
+                    rotate([180,0,90]) locking_pin();
+                 }
              }
          }
          //cut -> THIS would need a difference function
@@ -58,4 +72,7 @@ include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
      locking_pin();
  } */
 
-direction_management("y");
+
+ direction_management("y");
+
+/*  */
