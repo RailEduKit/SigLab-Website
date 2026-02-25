@@ -56,4 +56,6 @@ module polarity_bars_clearing_point(){
     cube([zs_width, polarity_width, polarity_height]);
 }
 
-polarity_bars_curve();
+
+polarity_bars_straight();
+polarity_bars_signal_box();

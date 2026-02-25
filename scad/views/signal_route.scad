@@ -6,6 +6,9 @@
  * Module: signal_route
  */
 
+// Include external libraries (has to be included, bacuase use files need the library)
+include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
+
 // Include configuration file
 include <../config/global_variables.scad>
 
@@ -32,4 +35,5 @@ module route_signal(aspect) {
 	}
 }
 
-route_signal("CLEAR"); // CLEAR or STOP
+zrot(180) //position for the creation of picture
+route_signal("STOP"); // CLEAR or STOP

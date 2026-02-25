@@ -6,6 +6,9 @@
  * Module: train_integrity_rear
  */
 
+// Include external libraries
+include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
+
 // Include configuration file
 include <../config/global_variables.scad>
 include <../config/colors.scad>
@@ -39,4 +42,5 @@ module train_integrity_rear(){
     train_integrity_symbol_rear();
 }
 
+yrot(180)
 train_integrity_rear();

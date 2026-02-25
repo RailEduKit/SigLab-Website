@@ -3,25 +3,26 @@
  * Project description: The Interactive Signalling Laboratory is a tool for training in Rail
  * Applications to enhance the knowledge of control and signalling principles for rail transport systems.
  *
- * Module: checkbox_route_polarity
+ * Module: overlap_straight
  */
+
+ // Include configuration file
+include <../config/global_variables.scad>
+include <../config/colors.scad>
 
 // Include external libraries
 include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
-
-// Include configuration file
-include <../config/global_variables.scad>
+include <BOSL2/joiners.scad> // Import joiners from dependency BelfrySCAD/BOSL2.git
 
 // use common parts
-use <../assemblies/checkbox_route.scad>
-use <polarity_indicator.scad>
+use <../assemblies/overlap_body_straight.scad>
+use <../assemblies/overlap_pattern_straight.scad>
 
-module checkbox_route_polarity(){
-    translate([ body_width, body_depth / 2, -z_pos_axis ])
-    rotate([0,0,180])
-    checkbox_route();
-    polarity_bars_signal_box();
+module overlap_straight(){
+    overlap_pattern_straight();
+    overlap_body_straight();
 }
 
-right(body_width) zrot(180) //position for the creation of picture
-checkbox_route_polarity();
+overlap_straight();
+
+

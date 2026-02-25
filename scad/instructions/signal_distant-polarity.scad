@@ -6,6 +6,9 @@
  * Module: sigal_distant-polarity
  */
 
+// Include external libraries
+include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
+
 // Include configuration file
 include <../config/global_variables.scad>
 
@@ -18,4 +21,5 @@ module signal_distant_polarity(state) {
     polarity_bars_signal_box();
 }
 
+right(body_width) zrot(180) //position for the creation of picture
 signal_distant_polarity("APPROACH");
