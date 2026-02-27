@@ -413,33 +413,12 @@ nozzle_diameter = 0.4;
 }
 
 {/***************balise***************/
-    balise_width = rail_well_spacing-2*3;
-    balise_depth = 2* balise_width;
-    balise_height = np_height;
-    
-    balise_pin_diameter = om_pin_diameter;
-    balise_pin_height = om_pin_height;
-
 }
 
 {/***************train integrity***************/
-    thinnest_layer     = 0.2;
-    
-    coupling_radius    = 13/2;
-    coupling_depth     = 8;
-    coupling_curvature = 2;
-    coupling_cut_pos   = coupling_radius*1/2;
-    boogie_width       = 20;
-    coupler_thickness  = 1.5;
-    lipp_height        = 4;
-    lipp_width         = coupler_thickness - move_tolerance;
-    shield_width       = 20;
-    shield_depth       = 25;
-    inlay_thickness    = 0.45;
-    shield_thickness   = 2; // the shield has to be at least 2mm thick. Otherwise the front symbol will be printed badly
-    inlay_radius       = 10.5/2;
 
-    headlight_d = (1/3)*shield_width;
+
+    
 }
 
 {/***************switch locker***************/
@@ -471,14 +450,9 @@ nozzle_diameter = 0.4;
 }
 
 {/***************route_indicator_straight***************/
-    // ris = route indicator straight
-    ris_width = rail_well_spacing + 2 * om_track_guidance_width + move_tolerance;
-    ris_length = straight_length;
-    ris_rounding = om_track_guidance_width; //om_thickness/2 doesn't work at the track guidance
+    
 }
 
 {/***************route_indicator_curve***************/
-    // ric = route indicator curve
-    ric_inner_radius = curve_inner_radius + (rail_width-ris_width)/2 - move_tolerance/2;
-    //echo(str("ric_inner_radius = ", ric_inner_radius));
+    
 }
