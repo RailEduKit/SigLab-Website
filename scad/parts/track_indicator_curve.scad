@@ -10,8 +10,8 @@
 include <../config/global_variables.scad>
 
 // Include common parts
-include <../parts/symmetrical_connector.scad>
-use <track_indicator_straight.scad> // access variables
+use <symmetrical_connector.scad>
+include <track_indicator_straight.scad> // access variables
 
 // Include external libraries
 include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
@@ -20,24 +20,24 @@ include <BOSL2/joiners.scad> // Import joiners from dependency BelfrySCAD/BOSL2.
 
 
 // ric = route indicator curve
-function ric_inner_radius() = curve_inner_radius + (rail_width-ris_width())/2 - move_tolerance/2;
+function ric_inner_radius() = curve_inner_radius + (rail_width-ris_width)/2 - move_tolerance/2;
 //echo(str("ric_inner_radius() = ", ric_inner_radius()));
 
 module track_indicator_curve() {
         difference(){
             union(){
                 rotate_extrude(angle=curve_angle)
-                right(ric_inner_radius()) rect([ris_width(), om_thickness], rounding = ris_rounding()*[1,1,0,0], anchor = LEFT+FRONT)
+                right(ric_inner_radius()) rect([ris_width, om_thickness], rounding = ris_rounding*[1,1,0,0], anchor = LEFT+FRONT)
                 xflip_copy() position(FRONT + LEFT) rect([om_track_guidance_width,om_track_guidance_height], anchor = BACK+LEFT);
-                right(ric_inner_radius()+ris_width()/2) up(om_thickness/2) xrot(90)
+                right(ric_inner_radius()+ris_width/2) up(om_thickness/2) xrot(90)
                 symmetrical_connector("male");
-                zrot(curve_angle) right(ric_inner_radius()+ris_width()/2) up(om_thickness/2) zrot(180) xrot(90) 
+                zrot(curve_angle) right(ric_inner_radius()+ris_width/2) up(om_thickness/2) zrot(180) xrot(90) 
                 symmetrical_connector("male");
 
             }
-            right(ric_inner_radius()+ris_width()/2) up(om_thickness/2) xrot(90)
+            right(ric_inner_radius()+ris_width/2) up(om_thickness/2) xrot(90)
             symmetrical_connector("female");
-            zrot(curve_angle) right(ric_inner_radius()+ris_width()/2) up(om_thickness/2) zrot(180) xrot(90)
+            zrot(curve_angle) right(ric_inner_radius()+ris_width/2) up(om_thickness/2) zrot(180) xrot(90)
             symmetrical_connector("female"); // Dont't worry, after rendering, the track guidance shouldn't overlap with the connector! Otherwise change the slope.
         }
     }

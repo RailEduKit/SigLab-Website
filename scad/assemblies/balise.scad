@@ -9,6 +9,9 @@
 // Include configuration file
 include <../config/global_variables.scad>
 
+// Include common parts
+include <../parts/track_indicator_straight.scad>
+
 balise_width = rail_well_spacing-2*3;
 balise_depth = 2* balise_width;
 balise_height = np_height;

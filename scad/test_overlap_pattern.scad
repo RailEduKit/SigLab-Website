@@ -7,8 +7,8 @@ include <config/global_variables.scad>
 use <assemblies/overlap_pattern_straight.scad>
 use <assemblies/overlap_body_straight.scad>
 use <assemblies/overlap_body_curve.scad>
-use <assemblies/track_indicator_curve.scad> // access variables
-use <assemblies/track_indicator_straight.scad> // access variables
+include <parts/track_indicator_curve.scad> // access variables
+include <parts/track_indicator_straight.scad> // access variables
 
 
 
@@ -113,7 +113,7 @@ module pattern_onedirect(){
 }
 
 pattern_rot();
-//fwd(400) pattern_onedirect();
+fwd(400) pattern_onedirect();
 
 
 

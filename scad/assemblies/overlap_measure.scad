@@ -22,6 +22,18 @@ include <../config/colors.scad>
 include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
 include <BOSL2/joiners.scad> // Import joiners from dependency BelfrySCAD/BOSL2.git
 
+// Include common parts
+include <../parts/track_indicator_straight.scad>
+
+// overlap measure -> om
+// pin specifications
+om_pin_height = 5;
+om_pin_diameter = 4.5;
+om_pin_y_pos = 25;
+
+
+
+
 /*[Track Settings]*/
 // length of track piece, in mm
 // length = straight_length - om_dovetail_depth; //[30:10:400] //inklusive the male pin

@@ -293,7 +293,7 @@
         <mxCell id="6Y5VyhFg0LRg5s5GnIcd-111" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
           <mxGeometry height="60" width="120" x="580" y="350" as="geometry" />
         </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-112" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;leerer Pfeil: das Modul wird benutzt&lt;/div&gt;leere Raute: include, die variablen werden genutzt&lt;div&gt;offener Pfeil: use, die variablen oder Module werden benutzt&lt;/div&gt;" vertex="1">
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-112" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;leerer Pfeil: das Modul wird benutzt&lt;/div&gt;leere Raute: include, die variablen werden genutzt&lt;div&gt;offener Pfeil: use(selten include), die variablen oder Module werden benutzt&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="390" x="1070" y="120" as="geometry" />
         </mxCell>
         <mxCell id="6Y5VyhFg0LRg5s5GnIcd-114" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="assemblies/overlap_pattern_straight.scad" vertex="1">

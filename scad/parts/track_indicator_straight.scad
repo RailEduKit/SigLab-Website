@@ -10,28 +10,28 @@
 include <../config/global_variables.scad>
 
 // Include common parts
-include <../parts/symmetrical_connector.scad>
+use <symmetrical_connector.scad>
 
 // Include external libraries
 include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
 include <BOSL2/joiners.scad> // Import joiners from dependency BelfrySCAD/BOSL2.git
 
 // ris = route indicator straight
-function ris_width() = rail_well_spacing + 2 * om_track_guidance_width + move_tolerance;
-function ris_length() = straight_length;
-function ris_rounding() = om_track_guidance_width; //om_thickness/2 doesn't work at the track guidance
+ris_width = rail_well_spacing + 2 * om_track_guidance_width + move_tolerance;
+ris_length = straight_length;
+ris_rounding = om_track_guidance_width; //om_thickness/2 doesn't work at the track guidance
 // overlap measure -> om
 om_thickness = 2;
 
 module track_indicator_straight() {
     diff()
-        cuboid([ris_width(), ris_length(), om_thickness], rounding = ris_rounding(), edges = [TOP+LEFT, TOP+RIGHT, FRONT+LEFT, FRONT+RIGHT, BACK+LEFT, BACK+RIGHT]){
+        cuboid([ris_width, ris_length, om_thickness], rounding = ris_rounding, edges = [TOP+LEFT, TOP+RIGHT, FRONT+LEFT, FRONT+RIGHT, BACK+LEFT, BACK+RIGHT]){
             //guidance
-            xflip_copy() position(BOTTOM+LEFT+FRONT) cuboid([om_track_guidance_width, ris_length(), om_track_guidance_height], anchor= LEFT+TOP+FRONT, rounding= ris_rounding(), edges = [LEFT+FRONT, LEFT+BACK]);
+            xflip_copy() position(BOTTOM+LEFT+FRONT) cuboid([om_track_guidance_width, ris_length, om_track_guidance_height], anchor= LEFT+TOP+FRONT, rounding= ris_rounding, edges = [LEFT+FRONT, LEFT+BACK]);
             // dovetail
             zrot_copies(n=2) attach(FRONT) symmetrical_connector();
         }
 }
 
-back(straight_length/2) //position for the creation of picture
-track_indicator_straight();
+/* back(straight_length/2) //position for the creation of picture
+track_indicator_straight(); */
