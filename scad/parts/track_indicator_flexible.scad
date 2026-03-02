@@ -23,7 +23,7 @@ include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
 include <BOSL2/joiners.scad> // Import joiners from dependency BelfrySCAD/BOSL2.git
 
 // Include common parts
-include <../parts/track_indicator_straight.scad>
+include <track_indicator_straight.scad>
 
 // overlap measure -> om
 // pin specifications
@@ -323,8 +323,8 @@ module pin(base_width, base_depth, base_height) {
 }
 
 
-endproduct(straight_length - om_dovetail_depth);
+/* endproduct(straight_length - om_dovetail_depth);
 translate([custom_width_base+10, 0 ,0])
-endproduct(curve_length_middle_radius - straight_length - om_dovetail_depth);
+endproduct(curve_length_middle_radius - straight_length - om_dovetail_depth); */
 
 echo("custom_width_base", custom_width_base);

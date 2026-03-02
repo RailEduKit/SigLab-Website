@@ -16,14 +16,14 @@ include <BOSL2/joiners.scad> // Import joiners from dependency BelfrySCAD/BOSL2.
 
 
 // Include common parts
-use <track_indicator_straight.scad>
+include <../parts/track_indicator_straight.scad>
 include <../parts/overlap_bar.scad>
 
 module negative_track_indicator(){
     difference(){
-        cuboid([2*ris_width(), straight_length + 3*bar_depth, om_thickness]);
+        cuboid([2*ris_width, straight_length + 3*bar_depth, om_thickness]);
         diff()
-            cuboid([ris_width()- 2*bar_frame, ris_length(), om_thickness]){
+            cuboid([ris_width- 2*bar_frame, ris_length, om_thickness]){
             attach(FRONT) symmetrical_connector("male");
             attach(FRONT) symmetrical_connector("female");
             attach(BACK) symmetrical_connector("male");
@@ -40,7 +40,7 @@ module overlap_pattern_straight(){
     module bar_setup(){
         x = round(straight_length / sqrt(2*pow(bar_width,2)));
         for(i = [-6:2:x]){
-        left(ris_width()/2 - bar_frame) back(i*sqrt(2*pow(bar_width,2)) + bar_frame) bar_for_curve(); 
+        left(ris_width/2 - bar_frame) back(i*sqrt(2*pow(bar_width,2)) + bar_frame) bar_for_curve(); 
         }
     }
     up(om_thickness/2 + 0.011) difference(){ // +0.011 to see it at the surface of the track indicator straigth

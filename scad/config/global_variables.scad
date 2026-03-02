@@ -396,6 +396,8 @@ nozzle_diameter = 0.4;
 }
 
 {/***************number_plate***************/
+    // om oin variables now in parts/track_indicator_flexible
+    
     // number_plate = np
     np_diameter = rail_well_spacing-2*3;
     np_height = 1;

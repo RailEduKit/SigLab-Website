@@ -18,7 +18,7 @@ module pattern_rot(){
             overlap_body_straight();
             overlap_pattern_straight();
         }
-        left(ric_inner_radius() + ris_width()/2) overlap_body_curve_rot();
+        left(ric_inner_radius + ris_width/2) overlap_body_curve_rot();
     }
 
     left(500) union(){
@@ -26,28 +26,28 @@ module pattern_rot(){
             overlap_body_straight();
             overlap_pattern_straight();
         }
-        right(ric_inner_radius() + ris_width()/2) zrot(180-curve_angle)  overlap_body_curve_rot();
+        right(ric_inner_radius + ris_width/2) zrot(180-curve_angle)  overlap_body_curve_rot();
     }
 
     left(300) union(){
-        left(ric_inner_radius() + ris_width()/2) overlap_body_curve_rot();
-        right(ric_inner_radius() + ris_width()/2) zrot(180) overlap_body_curve_rot();
+        left(ric_inner_radius + ris_width/2) overlap_body_curve_rot();
+        right(ric_inner_radius + ris_width/2) zrot(180) overlap_body_curve_rot();
     }
 
     left(100) union(){
-        left(ric_inner_radius() + ris_width()/2) zrot(-curve_angle) overlap_body_curve_rot();
-        right(ric_inner_radius() + ris_width()/2) zrot(180-curve_angle) overlap_body_curve_rot();
+        left(ric_inner_radius + ris_width/2) zrot(-curve_angle) overlap_body_curve_rot();
+        right(ric_inner_radius + ris_width/2) zrot(180-curve_angle) overlap_body_curve_rot();
     }
 
 
     right(100) union(){
-        left(ric_inner_radius() + ris_width()/2) zrot(-curve_angle) overlap_body_curve_rot();
-        left(ric_inner_radius() + ris_width()/2) zrot(0) overlap_body_curve_rot();
+        left(ric_inner_radius + ris_width/2) zrot(-curve_angle) overlap_body_curve_rot();
+        left(ric_inner_radius + ris_width/2) zrot(0) overlap_body_curve_rot();
     }
 
     right(200) union(){
-        right(ric_inner_radius() + ris_width()/2) zrot(180-curve_angle) overlap_body_curve_rot();
-        right(ric_inner_radius() + ris_width()/2) zrot(180) overlap_body_curve_rot();
+        right(ric_inner_radius + ris_width/2) zrot(180-curve_angle) overlap_body_curve_rot();
+        right(ric_inner_radius + ris_width/2) zrot(180) overlap_body_curve_rot();
     }
 
     right(350) union(){
@@ -55,7 +55,7 @@ module pattern_rot(){
             overlap_body_straight();
             overlap_pattern_straight();
         }
-        fwd(ris_length()) union(){
+        fwd(ris_length) union(){
             overlap_body_straight();
             overlap_pattern_straight();
         }
@@ -79,7 +79,7 @@ module pattern_onedirect(){
             overlap_body_straight();
             overlap_pattern_straight();
         }
-        left(ric_inner_radius() + ris_width()/2) overlap_body_curve_onedirect();
+        left(ric_inner_radius + ris_width/2) overlap_body_curve_onedirect();
     }
 
     left(500) union(){
@@ -87,28 +87,28 @@ module pattern_onedirect(){
             overlap_body_straight();
             overlap_pattern_straight();
         }
-        right(ric_inner_radius() + ris_width()/2) zrot(180-curve_angle)  overlap_body_curve_onedirect();
+        right(ric_inner_radius + ris_width/2) zrot(180-curve_angle)  overlap_body_curve_onedirect();
     }
 
     left(300) union(){
-        left(ric_inner_radius() + ris_width()/2) overlap_body_curve_onedirect();
-        right(ric_inner_radius() + ris_width()/2) zrot(180) overlap_body_curve_onedirect();
+        left(ric_inner_radius + ris_width/2) overlap_body_curve_onedirect();
+        right(ric_inner_radius + ris_width/2) zrot(180) overlap_body_curve_onedirect();
     }
 
     left(100) union(){
-        left(ric_inner_radius() + ris_width()/2) zrot(-curve_angle) overlap_body_curve_onedirect();
-        right(ric_inner_radius() + ris_width()/2) zrot(180-curve_angle) overlap_body_curve_onedirect();
+        left(ric_inner_radius + ris_width/2) zrot(-curve_angle) overlap_body_curve_onedirect();
+        right(ric_inner_radius + ris_width/2) zrot(180-curve_angle) overlap_body_curve_onedirect();
     }
 
 
     right(100) union(){
-        left(ric_inner_radius() + ris_width()/2) zrot(-curve_angle) overlap_body_curve_onedirect();
-        left(ric_inner_radius() + ris_width()/2) zrot(0) overlap_body_curve_onedirect();
+        left(ric_inner_radius + ris_width/2) zrot(-curve_angle) overlap_body_curve_onedirect();
+        left(ric_inner_radius + ris_width/2) zrot(0) overlap_body_curve_onedirect();
     }
 
     right(200) union(){
-        right(ric_inner_radius() + ris_width()/2) zrot(180-curve_angle) overlap_body_curve_onedirect();
-        right(ric_inner_radius() + ris_width()/2) zrot(180) overlap_body_curve_onedirect();
+        right(ric_inner_radius + ris_width/2) zrot(180-curve_angle) overlap_body_curve_onedirect();
+        right(ric_inner_radius + ris_width/2) zrot(180) overlap_body_curve_onedirect();
     }
 }
 
@@ -119,7 +119,7 @@ fwd(400) pattern_onedirect();
 
 
 /* fwd(straight_length)
-right(ric_inner_radius() + ris_width()/2) 
+right(ric_inner_radius + ris_width/2) 
 zrot(180) 
 overlap_body_curve_rot(); */
 //fwd(straight_length) overlap_straight();

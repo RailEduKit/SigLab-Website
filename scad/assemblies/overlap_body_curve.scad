@@ -15,9 +15,8 @@ include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
 include <BOSL2/joiners.scad> // Import joiners from dependency BelfrySCAD/BOSL2.git
 
 // Include common parts
-use <track_indicator_curve.scad>
+include <../parts/track_indicator_curve.scad>
 use <overlap_pattern_curve.scad>
-include <../parts/overlap_bar.scad>
 
 
 module overlap_body_curve_rot(){
