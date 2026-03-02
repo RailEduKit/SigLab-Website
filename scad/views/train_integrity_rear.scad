@@ -14,6 +14,7 @@ include <../config/global_variables.scad>
 include <../config/colors.scad>
 
 // use common parts
+include <../parts/train_integrity_body.scad>
 use <../assemblies/train_integrity_body_rear.scad>
 use <../assemblies/train_integrity_symbol_rear.scad>
 

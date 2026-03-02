@@ -20,6 +20,8 @@ include <BOSL2/joiners.scad> // Import joiners from dependency BelfrySCAD/BOSL2.
 function ris_width() = rail_well_spacing + 2 * om_track_guidance_width + move_tolerance;
 function ris_length() = straight_length;
 function ris_rounding() = om_track_guidance_width; //om_thickness/2 doesn't work at the track guidance
+// overlap measure -> om
+om_thickness = 2;
 
 module track_indicator_straight() {
     diff()

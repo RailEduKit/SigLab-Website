@@ -134,7 +134,7 @@ nozzle_diameter = 0.4;
 {/***************overlap_measure***************/
     // overlap measure -> om
     // The space between track and train is about 3mm height.
-    om_thickness = 2;
+    
     // pin specifications
     om_pin_height = 5;
     om_pin_diameter = 4.5;
