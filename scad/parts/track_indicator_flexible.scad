@@ -24,6 +24,7 @@ include <BOSL2/joiners.scad> // Import joiners from dependency BelfrySCAD/BOSL2.
 
 // Include common parts
 include <track_indicator_straight.scad>
+use <symmetrical_connector.scad>
 
 // overlap measure -> om
 // pin specifications
@@ -36,7 +37,7 @@ om_pin_y_pos = 25;
 
 /*[Track Settings]*/
 // length of track piece, in mm
-// length = straight_length - om_dovetail_depth; //[30:10:400] //inklusive the male pin
+// length = straight_length - om_dovetail_depth(); //[30:10:400] //inklusive the male pin
 
 // only one preset... for now
 // track_type = 0; //[1:brio,0:custom]
@@ -64,7 +65,7 @@ track_type = use_custom_settings ? 0 : 1;
 /***************/
 /*     CODE    */
 /***************/
-module endproduct(length) {
+module track_indicator_flexible(length) {
 	color(ROUTE_COLOR) union(){
 		translate([ -track_type_params()[track_type][1] / 2, 0 ])
 		intersection(convexity = 20) {
@@ -108,7 +109,7 @@ module endproduct(length) {
 
 		/***pin***/
 		// middle pin
-		// translate([0,(length+om_dovetail_depth)/2-0.1,0]) pin(track_type_params()[track_type][2]-2*thin_line *
+		// translate([0,(length+om_dovetail_depth())/2-0.1,0]) pin(track_type_params()[track_type][2]-2*thin_line *
 		// extrusion_width,
 		//     4*thin_line * extrusion_width,
 		//     track_type_params()[track_type][3]);
@@ -117,26 +118,49 @@ module endproduct(length) {
 		pin(track_type_params()[track_type][2] - 2 * thin_line * extrusion_width, 4 * thin_line * extrusion_width - 1,
 			track_type_params()[track_type][3]);
 		// female side pin
-		translate([ 0, length + om_dovetail_depth - (om_pin_y_pos), 0 ])
+		translate([ 0, length + om_dovetail_depth() - (om_pin_y_pos), 0 ])
 		pin(track_type_params()[track_type][2] - 2 * thin_line * extrusion_width, 4 * thin_line * extrusion_width - 1,
 			track_type_params()[track_type][3]); */
 		/***connectors***/
-		translate([ 0, 0, custom_height_middle / 2 ])
+		/* translate([ 0, 0, custom_height_middle / 2 ])
 		rotate([ 90, 0, 0 ])
-		dovetail("male", w = om_dovetail_width, h = om_dovetail_depth, slide = om_thickness);
-		translate([ 0, length, 0 ])
-		difference() {
-			translate([ -custom_width_middle / 2, 0, 0 ])
-			cube([ custom_width_middle, om_dovetail_depth, custom_height_middle ]);
-			translate([ 0, om_dovetail_depth, custom_height_middle / 2 ])
+		dovetail("male", w = om_dovetail_width(), h = om_dovetail_depth(), slide = om_thickness);
+		
+		translate([ -custom_width_middle / 2, 0, 0 ])
+		cube([ custom_width_middle, om_dovetail_depth(), custom_height_middle ]); */
+
+		rotate([0,0,180]) union(){
+			difference() {
+				translate([ -custom_width_middle / 2, 0, 0 ])
+				cube([ custom_width_middle, om_dovetail_depth(), custom_height_middle ]);
+				translate([ 0, om_dovetail_depth(), custom_height_middle / 2 ])
+				rotate([ -90, 0, 0 ])
+				symmetrical_connector("female");
+				//dovetail("female", w = om_dovetail_width(), h = om_dovetail_depth(), slide = custom_height_middle);
+			}
+			translate([ 0, om_dovetail_depth(), custom_height_middle / 2 ])
 			rotate([ -90, 0, 0 ])
-			dovetail("female", w = om_dovetail_width, h = om_dovetail_depth, slide = custom_height_middle);
+			symmetrical_connector("male");
+		}
+
+		translate([ 0, length, 0 ]) union(){
+			difference() {
+				translate([ -custom_width_middle / 2, 0, 0 ])
+				cube([ custom_width_middle, om_dovetail_depth(), custom_height_middle ]);
+				translate([ 0, om_dovetail_depth(), custom_height_middle / 2 ])
+				rotate([ -90, 0, 0 ])
+				symmetrical_connector("female");
+				//dovetail("female", w = om_dovetail_width(), h = om_dovetail_depth(), slide = custom_height_middle);
+			}
+			translate([ 0, om_dovetail_depth(), custom_height_middle / 2 ])
+			rotate([ -90, 0, 0 ])
+			symmetrical_connector("male");
 		}
 		// track guidance at the dovetail
 		translate([-custom_width_base/2, length, -om_track_guidance_height])
-		cube([om_track_guidance_width, om_dovetail_depth, om_track_guidance_height]);
+		cube([om_track_guidance_width, om_dovetail_depth(), om_track_guidance_height]);
 		translate([custom_width_base/2-om_track_guidance_width, length, -om_track_guidance_height])
-		cube([om_track_guidance_width, om_dovetail_depth, om_track_guidance_height]);
+		cube([om_track_guidance_width, om_dovetail_depth(), om_track_guidance_height]);
 	}
 	
 }
@@ -323,8 +347,8 @@ module pin(base_width, base_depth, base_height) {
 }
 
 
-/* endproduct(straight_length - om_dovetail_depth);
+track_indicator_flexible(straight_length - 2*om_dovetail_depth());
 translate([custom_width_base+10, 0 ,0])
-endproduct(curve_length_middle_radius - straight_length - om_dovetail_depth); */
+track_indicator_flexible(curve_length_middle_radius - straight_length - om_dovetail_depth());
 
 echo("custom_width_base", custom_width_base);

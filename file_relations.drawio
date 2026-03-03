@@ -1,17 +1,11 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="3178" dy="1848" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2339" pageHeight="3300" math="0" shadow="0">
+    <mxGraphModel dx="2175" dy="1264" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2339" pageHeight="3300" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-200" connectable="0" parent="WIyWlLk6GJQsqaUBKTNV-1" style="group" value="" vertex="1">
-          <mxGeometry height="1330" width="1640.0000000000002" x="40" y="990" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-192" parent="6Y5VyhFg0LRg5s5GnIcd-200" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCCCCC;opacity=30;" value="" vertex="1">
-          <mxGeometry height="1306.5" width="1640.0000000000002" y="23.5" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-197" parent="6Y5VyhFg0LRg5s5GnIcd-200" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Track indicator &amp;amp; Overlap indicator&lt;/span&gt;" vertex="1">
-          <mxGeometry height="40" width="391.6483516483517" x="40" as="geometry" />
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-192" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCCCCC;opacity=30;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="" vertex="1">
+          <mxGeometry height="1506.5" width="1640" x="40" y="1013.5" as="geometry" />
         </mxCell>
         <mxCell id="6Y5VyhFg0LRg5s5GnIcd-194" connectable="0" parent="WIyWlLk6GJQsqaUBKTNV-1" style="group" value="" vertex="1">
           <mxGeometry height="340" width="480" x="1800" y="1660" as="geometry" />
@@ -35,24 +29,12 @@
           <mxGeometry height="40" width="391.6483516483517" x="39.996483516483515" as="geometry" />
         </mxCell>
         <mxCell id="6Y5VyhFg0LRg5s5GnIcd-89" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=diamond;endFill=0;endSize=16;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="6Y5VyhFg0LRg5s5GnIcd-91">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-152" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endSize=16;endArrow=open;endFill=0;" target="6Y5VyhFg0LRg5s5GnIcd-80">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-57" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="parts/track_indicator_curve.scad" vertex="1">
-          <mxGeometry height="86" width="280" x="160" y="1520" as="geometry">
-            <mxRectangle height="26" width="170" x="340" y="380" as="alternateBounds" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="1729" />
+              <mxPoint x="160" y="1289" />
+            </Array>
           </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-59" parent="6Y5VyhFg0LRg5s5GnIcd-57" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="ric_inner_radius()" vertex="1">
-          <mxGeometry height="26" width="280" y="26" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-58" parent="6Y5VyhFg0LRg5s5GnIcd-57" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
-          <mxGeometry height="8" width="280" y="52" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-60" parent="6Y5VyhFg0LRg5s5GnIcd-57" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="track_indicator_curve()" vertex="1">
-          <mxGeometry height="26" width="280" y="60" as="geometry" />
         </mxCell>
         <mxCell id="6Y5VyhFg0LRg5s5GnIcd-66" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="zkfFHV4jXpPFQw0GAbJ--17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=block;endFill=0;endSize=16;" target="6Y5VyhFg0LRg5s5GnIcd-3">
           <mxGeometry relative="1" as="geometry" />
@@ -189,80 +171,306 @@
         </mxCell>
         <mxCell id="6Y5VyhFg0LRg5s5GnIcd-90" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=diamond;endFill=0;endSize=16;startArrow=open;startFill=0;startSize=16;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="6Y5VyhFg0LRg5s5GnIcd-84">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="300" y="1230" as="sourcePoint" />
+            <mxPoint x="340" y="1230" as="sourcePoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-80" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="parts/symmetrical_connector.scad" vertex="1">
-          <mxGeometry height="112" width="280" x="160" y="1360" as="geometry">
-            <mxRectangle height="26" width="170" x="340" y="380" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-82" parent="6Y5VyhFg0LRg5s5GnIcd-80" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
-          <mxGeometry height="8" width="280" y="26" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-83" parent="6Y5VyhFg0LRg5s5GnIcd-80" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="male_connector()" vertex="1">
-          <mxGeometry height="26" width="280" y="34" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-93" parent="6Y5VyhFg0LRg5s5GnIcd-80" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="female_connector()" vertex="1">
-          <mxGeometry height="26" width="280" y="60" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-94" parent="6Y5VyhFg0LRg5s5GnIcd-80" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="symmetrical_connector(part = &quot;both&quot;, slop)" vertex="1">
-          <mxGeometry height="26" width="280" y="86" as="geometry" />
         </mxCell>
         <mxCell id="6Y5VyhFg0LRg5s5GnIcd-84" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="parts/track_indicator_straigth.scad" vertex="1">
-          <mxGeometry height="164" width="280" x="160" y="1120" as="geometry">
+          <mxGeometry height="216" width="280" x="200" y="1120" as="geometry">
             <mxRectangle height="26" width="170" x="340" y="380" as="alternateBounds" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-85" parent="6Y5VyhFg0LRg5s5GnIcd-84" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="ris_width" vertex="1">
-          <mxGeometry height="26" width="280" y="26" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-87" parent="6Y5VyhFg0LRg5s5GnIcd-84" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="ris_length" vertex="1">
-          <mxGeometry height="26" width="280" y="52" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-91" parent="6Y5VyhFg0LRg5s5GnIcd-84" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="ris_rounding" vertex="1">
-          <mxGeometry height="26" width="280" y="78" as="geometry" />
         </mxCell>
         <mxCell id="6Y5VyhFg0LRg5s5GnIcd-107" parent="6Y5VyhFg0LRg5s5GnIcd-84" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="om_thickness" vertex="1">
+          <mxGeometry height="26" width="280" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="nVDm18oKsWm7i3djmgRE-3" parent="6Y5VyhFg0LRg5s5GnIcd-84" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="om_track_guidance_width" vertex="1">
+          <mxGeometry height="26" width="280" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="nVDm18oKsWm7i3djmgRE-4" parent="6Y5VyhFg0LRg5s5GnIcd-84" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="om_track_guidance_height" vertex="1">
+          <mxGeometry height="26" width="280" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-85" parent="6Y5VyhFg0LRg5s5GnIcd-84" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="ris_width" vertex="1">
           <mxGeometry height="26" width="280" y="104" as="geometry" />
         </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-87" parent="6Y5VyhFg0LRg5s5GnIcd-84" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="ris_length" vertex="1">
+          <mxGeometry height="26" width="280" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-91" parent="6Y5VyhFg0LRg5s5GnIcd-84" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="ris_rounding" vertex="1">
+          <mxGeometry height="26" width="280" y="156" as="geometry" />
+        </mxCell>
         <mxCell id="6Y5VyhFg0LRg5s5GnIcd-86" parent="6Y5VyhFg0LRg5s5GnIcd-84" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
-          <mxGeometry height="8" width="280" y="130" as="geometry" />
+          <mxGeometry height="8" width="280" y="182" as="geometry" />
         </mxCell>
         <mxCell id="6Y5VyhFg0LRg5s5GnIcd-92" parent="6Y5VyhFg0LRg5s5GnIcd-84" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="track_indicator_straight()" vertex="1">
-          <mxGeometry height="26" width="280" y="138" as="geometry" />
+          <mxGeometry height="26" width="280" y="190" as="geometry" />
         </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-108" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-98" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;endSize=16;">
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-109" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-103" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.718;entryY=0.027;entryDx=0;entryDy=0;endArrow=open;endFill=0;endSize=16;edgeStyle=orthogonalEdgeStyle;entryPerimeter=0;" target="6Y5VyhFg0LRg5s5GnIcd-84">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1440" y="1300" />
-              <mxPoint x="1340" y="1300" />
-              <mxPoint x="1340" y="1080" />
-              <mxPoint x="320" y="1080" />
-              <mxPoint x="320" y="1119" />
+              <mxPoint x="1600" y="1855" />
+              <mxPoint x="1600" y="1090" />
+              <mxPoint x="401" y="1090" />
             </Array>
-            <mxPoint x="320" y="1120" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-131" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-95" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;endArrow=open;endFill=0;endSize=16;" target="6Y5VyhFg0LRg5s5GnIcd-122">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-133" connectable="0" parent="6Y5VyhFg0LRg5s5GnIcd-109" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="include" vertex="1">
+          <mxGeometry relative="1" x="-0.6964" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-95" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="test_overlap_pattern.scad" vertex="1">
-          <mxGeometry height="86" width="290" x="1360" y="1284" as="geometry">
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-151" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-103" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=16;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="6Y5VyhFg0LRg5s5GnIcd-142">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1490" y="1924" />
+              <mxPoint x="1490" y="1924" />
+            </Array>
+            <mxPoint x="440" y="1920" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-103" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="assemblies/balise.scad" vertex="1">
+          <mxGeometry height="190" width="290" x="1840" y="1760" as="geometry">
             <mxRectangle height="26" width="170" x="340" y="380" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-97" parent="6Y5VyhFg0LRg5s5GnIcd-95" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
-          <mxGeometry height="8" width="290" y="26" as="geometry" />
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-104" parent="6Y5VyhFg0LRg5s5GnIcd-103" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="balise_width" vertex="1">
+          <mxGeometry height="26" width="290" y="26" as="geometry" />
         </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-98" parent="6Y5VyhFg0LRg5s5GnIcd-95" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="pattern_rot()" vertex="1">
-          <mxGeometry height="26" width="290" y="34" as="geometry" />
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-106" parent="6Y5VyhFg0LRg5s5GnIcd-103" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="balise_depth" vertex="1">
+          <mxGeometry height="26" width="290" y="52" as="geometry" />
         </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-113" parent="6Y5VyhFg0LRg5s5GnIcd-95" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="pattern_onedirect()" vertex="1">
-          <mxGeometry height="26" width="290" y="60" as="geometry" />
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-136" parent="6Y5VyhFg0LRg5s5GnIcd-103" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="balise_height" vertex="1">
+          <mxGeometry height="26" width="290" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-137" parent="6Y5VyhFg0LRg5s5GnIcd-103" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="balise_pin_diameter" vertex="1">
+          <mxGeometry height="26" width="290" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-138" parent="6Y5VyhFg0LRg5s5GnIcd-103" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="balise_pin_height" vertex="1">
+          <mxGeometry height="26" width="290" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-105" parent="6Y5VyhFg0LRg5s5GnIcd-103" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="290" y="156" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-139" parent="6Y5VyhFg0LRg5s5GnIcd-103" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="balise()" vertex="1">
+          <mxGeometry height="26" width="290" y="164" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-110" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-146" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=16;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="nVDm18oKsWm7i3djmgRE-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="120" y="2028" />
+              <mxPoint x="120" y="1211" />
+            </Array>
+            <mxPoint x="305" y="1460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-140" connectable="0" parent="6Y5VyhFg0LRg5s5GnIcd-110" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="include" vertex="1">
+          <mxGeometry relative="1" x="-0.8686" y="-3" as="geometry">
+            <mxPoint x="-16" y="-25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-112" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;leerer Pfeil: das Modul wird benutzt&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;leere Raute: include, die variablen werden genutzt&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;offener Pfeil: use(selten include), die variablen oder Module werden benutzt&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="190" width="910" x="1070" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-169" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-114" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=diamond;endFill=0;endSize=16;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" target="6Y5VyhFg0LRg5s5GnIcd-158">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="760" y="1260" />
+              <mxPoint x="680" y="1260" />
+              <mxPoint x="680" y="2281" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-114" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="assemblies/overlap_pattern_straight.scad" vertex="1">
+          <mxGeometry height="86" width="280" x="760" y="1240" as="geometry">
+            <mxRectangle height="26" width="170" x="340" y="380" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-116" parent="6Y5VyhFg0LRg5s5GnIcd-114" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="280" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-117" parent="6Y5VyhFg0LRg5s5GnIcd-114" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="negative_track_indicator()" vertex="1">
+          <mxGeometry height="26" width="280" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-157" parent="6Y5VyhFg0LRg5s5GnIcd-114" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="overlap_pattern_straight()" vertex="1">
+          <mxGeometry height="26" width="280" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-175" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=diamond;endFill=0;endSize=16;" target="6Y5VyhFg0LRg5s5GnIcd-160">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-176" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.995;entryY=0.247;entryDx=0;entryDy=0;endArrow=open;endFill=0;endSize=16;entryPerimeter=0;" target="nVDm18oKsWm7i3djmgRE-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="1723" />
+              <mxPoint x="600" y="1484" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-177" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-118" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=diamond;endFill=0;endSize=16;edgeStyle=orthogonalEdgeStyle;" target="nVDm18oKsWm7i3djmgRE-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="1723" />
+              <mxPoint x="600" y="1211" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-178" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-118" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=diamond;endFill=0;endSize=16;edgeStyle=orthogonalEdgeStyle;" target="6Y5VyhFg0LRg5s5GnIcd-60">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="1763" />
+              <mxPoint x="700" y="1763" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-118" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="assemblies/overlap_pattern_curve.scad" vertex="1">
+          <mxGeometry height="86" width="280" x="760" y="1680" as="geometry">
+            <mxRectangle height="26" width="170" x="340" y="380" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-120" parent="6Y5VyhFg0LRg5s5GnIcd-118" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="280" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-119" parent="6Y5VyhFg0LRg5s5GnIcd-118" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="negative_curve_indicator(frame)" vertex="1">
+          <mxGeometry height="26" width="280" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-121" parent="6Y5VyhFg0LRg5s5GnIcd-118" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="overlap_pattern_curve_rot()" vertex="1">
+          <mxGeometry height="26" width="280" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-173" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=open;endFill=0;endSize=16;" target="6Y5VyhFg0LRg5s5GnIcd-118">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-174" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=block;endFill=0;endSize=16;" target="6Y5VyhFg0LRg5s5GnIcd-59">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="1560" />
+              <mxPoint x="520" y="1729" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-122" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="assemblies/overlap_body_curve.scad" vertex="1">
+          <mxGeometry height="86" width="280" x="760" y="1520" as="geometry">
+            <mxRectangle height="26" width="170" x="340" y="380" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-124" parent="6Y5VyhFg0LRg5s5GnIcd-122" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="280" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-125" parent="6Y5VyhFg0LRg5s5GnIcd-122" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="overlap_body_curve_rot()" vertex="1">
+          <mxGeometry height="26" width="280" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-172" parent="6Y5VyhFg0LRg5s5GnIcd-122" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="overlap_body_curve_onedirect()" vertex="1">
+          <mxGeometry height="26" width="280" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-170" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-127" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=16;exitX=0.003;exitY=0.077;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="6Y5VyhFg0LRg5s5GnIcd-107">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="1180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-171" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-126" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=16;" target="6Y5VyhFg0LRg5s5GnIcd-114">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-126" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="assemblies/overlap_body_straight.scad" vertex="1">
+          <mxGeometry height="60" width="280" x="760" y="1120" as="geometry">
+            <mxRectangle height="26" width="170" x="340" y="380" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-128" parent="6Y5VyhFg0LRg5s5GnIcd-126" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="280" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-127" parent="6Y5VyhFg0LRg5s5GnIcd-126" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="overlap_body_straight()" vertex="1">
+          <mxGeometry height="26" width="280" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-166" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-156" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endSize=16;endArrow=open;endFill=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="6Y5VyhFg0LRg5s5GnIcd-107">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="2255" />
+              <mxPoint x="80" y="1159" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-167" connectable="0" parent="6Y5VyhFg0LRg5s5GnIcd-166" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="include" vertex="1">
+          <mxGeometry relative="1" x="-0.8812" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-165" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-114" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=diamond;endFill=0;endSize=16;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" target="6Y5VyhFg0LRg5s5GnIcd-87">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="1280" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-68" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="views/train_integrity_front.scad" vertex="1">
+          <mxGeometry height="60" width="280" x="680" y="250" as="geometry">
+            <mxRectangle height="26" width="170" x="340" y="380" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-69" parent="6Y5VyhFg0LRg5s5GnIcd-68" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="280" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-70" parent="6Y5VyhFg0LRg5s5GnIcd-68" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="train_integrity_front()" vertex="1">
+          <mxGeometry height="26" width="280" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-72" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="views/train_integrity_rear.scad" vertex="1">
+          <mxGeometry height="60" width="280" x="690" y="700" as="geometry">
+            <mxRectangle height="26" width="170" x="340" y="380" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-73" parent="6Y5VyhFg0LRg5s5GnIcd-72" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="280" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-74" parent="6Y5VyhFg0LRg5s5GnIcd-72" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="train_integrity_rear()" vertex="1">
+          <mxGeometry height="26" width="280" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-197" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Track indicator &amp;amp; Overlap indicator&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="391.6483516483517" x="80" y="990" as="geometry" />
+        </mxCell>
+        <mxCell id="nVDm18oKsWm7i3djmgRE-0" parent="WIyWlLk6GJQsqaUBKTNV-1" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#FF0000;fillColor=none;align=right;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;*&lt;/font&gt;" vertex="1">
+          <mxGeometry height="64" width="40" x="320" y="1336" as="geometry" />
+        </mxCell>
+        <mxCell id="nVDm18oKsWm7i3djmgRE-1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=1;whiteSpace=wrap;html=1;align=left;fillColor=none;" value="&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&amp;nbsp; *&lt;/font&gt;&lt;/div&gt;Both files depent on each other. That can causes some problems. It only works when one file &lt;b&gt;includes &lt;/b&gt;the other and one &lt;b&gt;uses &lt;/b&gt;the other:&lt;br&gt;symmetrical_connector &lt;b&gt;includes &lt;/b&gt;track_indicator_straight.&lt;div&gt;track_indicator_straight &lt;b&gt;uses&lt;/b&gt;&amp;nbsp;symmetrical_connecctor.&lt;/div&gt;&lt;div&gt;If you need both files and you &lt;b&gt;include &lt;/b&gt;track_indicator_straight, it is important that you &lt;b&gt;use &lt;/b&gt;symmetrical_connector. Otherwise you get:&lt;/div&gt;&lt;div&gt;&lt;a href=&quot;13,C:/Users/wecjul/Documents/Programme_Code_fuer_SigLab_entwicklung/SigLab-3Dmodels/scad/parts/track_indicator_straight.scad&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 176);&quot;&gt;WARNING: Can&#39;t open library &#39;symmetrical_connector.scad&#39;. in file , line 13&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="750" x="890" y="2360" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-80" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="parts/symmetrical_connector.scad" vertex="1">
+          <mxGeometry height="216" width="280" x="200" y="1400" as="geometry">
+            <mxRectangle height="26" width="170" x="340" y="380" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nVDm18oKsWm7i3djmgRE-5" parent="6Y5VyhFg0LRg5s5GnIcd-80" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="om_dovetail_width" vertex="1">
+          <mxGeometry height="26" width="280" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="nVDm18oKsWm7i3djmgRE-8" parent="6Y5VyhFg0LRg5s5GnIcd-80" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="om_dovetail_depth" vertex="1">
+          <mxGeometry height="26" width="280" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="nVDm18oKsWm7i3djmgRE-9" parent="6Y5VyhFg0LRg5s5GnIcd-80" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="om_dovetail_angle" vertex="1">
+          <mxGeometry height="26" width="280" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="nVDm18oKsWm7i3djmgRE-10" parent="6Y5VyhFg0LRg5s5GnIcd-80" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="dovetail_overhang" vertex="1">
+          <mxGeometry height="26" width="280" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-82" parent="6Y5VyhFg0LRg5s5GnIcd-80" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="280" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-83" parent="6Y5VyhFg0LRg5s5GnIcd-80" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="male_connector()" vertex="1">
+          <mxGeometry height="26" width="280" y="138" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-93" parent="6Y5VyhFg0LRg5s5GnIcd-80" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="female_connector()" vertex="1">
+          <mxGeometry height="26" width="280" y="164" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-94" parent="6Y5VyhFg0LRg5s5GnIcd-80" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="symmetrical_connector(part = &quot;both&quot;, slop)" vertex="1">
+          <mxGeometry height="26" width="280" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-57" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="parts/track_indicator_curve.scad" vertex="1">
+          <mxGeometry height="86" width="280" x="200" y="1690" as="geometry">
+            <mxRectangle height="26" width="170" x="340" y="380" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-59" parent="6Y5VyhFg0LRg5s5GnIcd-57" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="ric_inner_radius" vertex="1">
+          <mxGeometry height="26" width="280" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-58" parent="6Y5VyhFg0LRg5s5GnIcd-57" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="280" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-60" parent="6Y5VyhFg0LRg5s5GnIcd-57" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="track_indicator_curve()" vertex="1">
+          <mxGeometry height="26" width="280" y="60" as="geometry" />
         </mxCell>
         <mxCell id="6Y5VyhFg0LRg5s5GnIcd-99" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="parts/track_indicator_flexible.scad" vertex="1">
-          <mxGeometry height="346" width="280" x="160" y="1637" as="geometry">
+          <mxGeometry height="346" width="280" x="200" y="1807" as="geometry">
             <mxRectangle height="26" width="170" x="340" y="380" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -302,214 +510,11 @@
         <mxCell id="6Y5VyhFg0LRg5s5GnIcd-101" parent="6Y5VyhFg0LRg5s5GnIcd-99" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
           <mxGeometry height="8" width="280" y="312" as="geometry" />
         </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-149" parent="6Y5VyhFg0LRg5s5GnIcd-99" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="endproduct(length)" vertex="1">
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-149" parent="6Y5VyhFg0LRg5s5GnIcd-99" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="track_indicator_flexible(length)" vertex="1">
           <mxGeometry height="26" width="280" y="320" as="geometry" />
         </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-109" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-103" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.718;entryY=0.027;entryDx=0;entryDy=0;endArrow=open;endFill=0;endSize=16;edgeStyle=orthogonalEdgeStyle;entryPerimeter=0;" target="6Y5VyhFg0LRg5s5GnIcd-84">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1290" y="1090" />
-              <mxPoint x="361" y="1090" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-133" connectable="0" parent="6Y5VyhFg0LRg5s5GnIcd-109" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="include" vertex="1">
-          <mxGeometry relative="1" x="-0.6964" y="-1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-151" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=16;">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1195" y="1920" />
-              <mxPoint x="440" y="1920" />
-            </Array>
-            <mxPoint x="440" y="1920" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-103" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="assemblies/balise.scad" vertex="1">
-          <mxGeometry height="190" width="290" x="1840" y="1760" as="geometry">
-            <mxRectangle height="26" width="170" x="340" y="380" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-104" parent="6Y5VyhFg0LRg5s5GnIcd-103" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="balise_width" vertex="1">
-          <mxGeometry height="26" width="290" y="26" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-106" parent="6Y5VyhFg0LRg5s5GnIcd-103" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="balise_depth" vertex="1">
-          <mxGeometry height="26" width="290" y="52" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-136" parent="6Y5VyhFg0LRg5s5GnIcd-103" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="balise_height" vertex="1">
-          <mxGeometry height="26" width="290" y="78" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-137" parent="6Y5VyhFg0LRg5s5GnIcd-103" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="balise_pin_diameter" vertex="1">
-          <mxGeometry height="26" width="290" y="104" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-138" parent="6Y5VyhFg0LRg5s5GnIcd-103" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="balise_pin_height" vertex="1">
-          <mxGeometry height="26" width="290" y="130" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-105" parent="6Y5VyhFg0LRg5s5GnIcd-103" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
-          <mxGeometry height="8" width="290" y="156" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-139" parent="6Y5VyhFg0LRg5s5GnIcd-103" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="balise()" vertex="1">
-          <mxGeometry height="26" width="290" y="164" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-110" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-146" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=16;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="6Y5VyhFg0LRg5s5GnIcd-87">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="120" y="1871" />
-              <mxPoint x="120" y="1185" />
-            </Array>
-            <mxPoint x="305" y="1460" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-140" connectable="0" parent="6Y5VyhFg0LRg5s5GnIcd-110" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="include" vertex="1">
-          <mxGeometry relative="1" x="-0.8686" y="-3" as="geometry">
-            <mxPoint x="-3" y="-30" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-112" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;leerer Pfeil: das Modul wird benutzt&lt;/div&gt;leere Raute: include, die variablen werden genutzt&lt;div&gt;offener Pfeil: use(selten include), die variablen oder Module werden benutzt&lt;/div&gt;" vertex="1">
-          <mxGeometry height="60" width="390" x="1070" y="120" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-169" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-114" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=diamond;endFill=0;endSize=16;" target="6Y5VyhFg0LRg5s5GnIcd-160">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="520" y="1300" />
-              <mxPoint x="520" y="2163" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-114" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="assemblies/overlap_pattern_straight.scad" vertex="1">
-          <mxGeometry height="86" width="280" x="720" y="1240" as="geometry">
-            <mxRectangle height="26" width="170" x="340" y="380" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-116" parent="6Y5VyhFg0LRg5s5GnIcd-114" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
-          <mxGeometry height="8" width="280" y="26" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-117" parent="6Y5VyhFg0LRg5s5GnIcd-114" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="negative_track_indicator()" vertex="1">
-          <mxGeometry height="26" width="280" y="34" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-157" parent="6Y5VyhFg0LRg5s5GnIcd-114" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="overlap_pattern_straight()" vertex="1">
-          <mxGeometry height="26" width="280" y="60" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-175" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=diamond;endFill=0;endSize=16;" target="6Y5VyhFg0LRg5s5GnIcd-160">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-176" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=open;endFill=0;endSize=16;" target="6Y5VyhFg0LRg5s5GnIcd-93">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="640" y="1723" />
-              <mxPoint x="640" y="1433" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-177" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-118" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=diamond;endFill=0;endSize=16;edgeStyle=orthogonalEdgeStyle;" target="6Y5VyhFg0LRg5s5GnIcd-107">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="680" y="1723" />
-              <mxPoint x="680" y="1237" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-178" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=diamond;endFill=0;endSize=16;" target="6Y5VyhFg0LRg5s5GnIcd-60">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="600" y="1723" />
-              <mxPoint x="600" y="1593" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-118" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="assemblies/overlap_pattern_curve.scad" vertex="1">
-          <mxGeometry height="86" width="280" x="720" y="1680" as="geometry">
-            <mxRectangle height="26" width="170" x="340" y="380" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-120" parent="6Y5VyhFg0LRg5s5GnIcd-118" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
-          <mxGeometry height="8" width="280" y="26" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-119" parent="6Y5VyhFg0LRg5s5GnIcd-118" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="negative_curve_indicator(frame)" vertex="1">
-          <mxGeometry height="26" width="280" y="34" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-121" parent="6Y5VyhFg0LRg5s5GnIcd-118" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="overlap_pattern_curve_rot()" vertex="1">
-          <mxGeometry height="26" width="280" y="60" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-173" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=open;endFill=0;endSize=16;" target="6Y5VyhFg0LRg5s5GnIcd-118">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-174" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=block;endFill=0;endSize=16;" target="6Y5VyhFg0LRg5s5GnIcd-59">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="585" y="1560" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-122" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="assemblies/overlap_body_curve.scad" vertex="1">
-          <mxGeometry height="86" width="280" x="720" y="1520" as="geometry">
-            <mxRectangle height="26" width="170" x="340" y="380" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-124" parent="6Y5VyhFg0LRg5s5GnIcd-122" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
-          <mxGeometry height="8" width="280" y="26" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-125" parent="6Y5VyhFg0LRg5s5GnIcd-122" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="overlap_body_curve_rot()" vertex="1">
-          <mxGeometry height="26" width="280" y="34" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-172" parent="6Y5VyhFg0LRg5s5GnIcd-122" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="overlap_body_curve_onedirect()" vertex="1">
-          <mxGeometry height="26" width="280" y="60" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-170" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-126" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=block;endFill=0;endSize=16;exitX=0.001;exitY=0.391;exitDx=0;exitDy=0;exitPerimeter=0;" target="6Y5VyhFg0LRg5s5GnIcd-85">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="600" y="1144" />
-              <mxPoint x="600" y="1159" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-171" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-126" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=16;" target="6Y5VyhFg0LRg5s5GnIcd-114">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-126" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="assemblies/overlap_body_straight.scad" vertex="1">
-          <mxGeometry height="60" width="280" x="720" y="1120" as="geometry">
-            <mxRectangle height="26" width="170" x="340" y="380" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-128" parent="6Y5VyhFg0LRg5s5GnIcd-126" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
-          <mxGeometry height="8" width="280" y="26" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-127" parent="6Y5VyhFg0LRg5s5GnIcd-126" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="overlap_body_straight()" vertex="1">
-          <mxGeometry height="26" width="280" y="34" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-130" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-98" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;endSize=16;" target="6Y5VyhFg0LRg5s5GnIcd-114">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1310" y="1152" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-132" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-98" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.997;entryY=0.156;entryDx=0;entryDy=0;endArrow=open;endFill=0;entryPerimeter=0;endSize=16;" target="6Y5VyhFg0LRg5s5GnIcd-126">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-166" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-153" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endSize=16;endArrow=open;endFill=0;" target="6Y5VyhFg0LRg5s5GnIcd-85">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="80" y="2154" />
-              <mxPoint x="80" y="1159" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-167" connectable="0" parent="6Y5VyhFg0LRg5s5GnIcd-166" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="include" vertex="1">
-          <mxGeometry relative="1" x="-0.8812" y="-1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-168" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-153" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=open;endFill=0;endSize=16;" target="6Y5VyhFg0LRg5s5GnIcd-60">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="100" y="2154" />
-              <mxPoint x="100" y="1593" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="6Y5VyhFg0LRg5s5GnIcd-153" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="parts/overlap_bar.scad" vertex="1">
-          <mxGeometry height="268" width="280" x="160" y="2020" as="geometry">
+          <mxGeometry height="268" width="280" x="200" y="2190" as="geometry">
             <mxRectangle height="26" width="170" x="340" y="380" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -543,45 +548,85 @@
         <mxCell id="6Y5VyhFg0LRg5s5GnIcd-164" parent="6Y5VyhFg0LRg5s5GnIcd-153" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="bar_for_straight()" vertex="1">
           <mxGeometry height="26" width="280" y="242" as="geometry" />
         </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-165" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-117" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=diamond;endFill=0;endSize=16;" target="6Y5VyhFg0LRg5s5GnIcd-91">
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-152" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endSize=16;endArrow=open;endFill=0;" target="6Y5VyhFg0LRg5s5GnIcd-80">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-168" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-156" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=open;endFill=0;endSize=16;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="6Y5VyhFg0LRg5s5GnIcd-60">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="700" y="1287" />
-              <mxPoint x="700" y="1211" />
+              <mxPoint x="80" y="2255" />
+              <mxPoint x="80" y="1763" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-180" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.001;entryY=0.156;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.483;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;endArrow=open;endFill=0;endSize=16;" target="6Y5VyhFg0LRg5s5GnIcd-57">
+        <mxCell id="nVDm18oKsWm7i3djmgRE-71" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="nVDm18oKsWm7i3djmgRE-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=open;endFill=0;endSize=16;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" target="6Y5VyhFg0LRg5s5GnIcd-126">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1480" y="1370" />
-              <mxPoint x="1480" y="1400" />
-              <mxPoint x="560" y="1400" />
-              <mxPoint x="560" y="1533" />
+              <mxPoint x="1160" y="1213" />
+              <mxPoint x="1160" y="1150" />
+            </Array>
+            <mxPoint x="1360" y="1228" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nVDm18oKsWm7i3djmgRE-63" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="views/overlap_straight.scad" vertex="1">
+          <mxGeometry height="60" width="280" x="1240" y="1198" as="geometry">
+            <mxRectangle height="26" width="170" x="340" y="380" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nVDm18oKsWm7i3djmgRE-64" parent="nVDm18oKsWm7i3djmgRE-63" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="280" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="nVDm18oKsWm7i3djmgRE-65" parent="nVDm18oKsWm7i3djmgRE-63" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="overlap_straight()" vertex="1">
+          <mxGeometry height="26" width="280" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="nVDm18oKsWm7i3djmgRE-72" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="nVDm18oKsWm7i3djmgRE-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=open;endFill=0;endSize=16;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" target="6Y5VyhFg0LRg5s5GnIcd-117">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1160" y="1213" />
+              <mxPoint x="1160" y="1287" />
+            </Array>
+            <mxPoint x="1360" y="1228" as="sourcePoint" />
+            <mxPoint x="1280" y="1200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nVDm18oKsWm7i3djmgRE-73" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="views/overlap_curve.scad" vertex="1">
+          <mxGeometry height="60" width="280" x="1240" y="1600" as="geometry">
+            <mxRectangle height="26" width="170" x="340" y="380" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nVDm18oKsWm7i3djmgRE-74" parent="nVDm18oKsWm7i3djmgRE-73" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="280" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="nVDm18oKsWm7i3djmgRE-75" parent="nVDm18oKsWm7i3djmgRE-73" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="overlap_curve()" vertex="1">
+          <mxGeometry height="26" width="280" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="nVDm18oKsWm7i3djmgRE-76" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="nVDm18oKsWm7i3djmgRE-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=open;endFill=0;endSize=16;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" target="6Y5VyhFg0LRg5s5GnIcd-119">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1160" y="1615" />
+              <mxPoint x="1160" y="1727" />
+            </Array>
+            <mxPoint x="1360" y="1647" as="sourcePoint" />
+            <mxPoint x="1049" y="1717" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nVDm18oKsWm7i3djmgRE-77" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="nVDm18oKsWm7i3djmgRE-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=open;endFill=0;endSize=16;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" target="6Y5VyhFg0LRg5s5GnIcd-125">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1160" y="1615" />
+              <mxPoint x="1160" y="1567" />
+            </Array>
+            <mxPoint x="1360" y="1647" as="sourcePoint" />
+            <mxPoint x="1310" y="1727" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nVDm18oKsWm7i3djmgRE-11" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Y5VyhFg0LRg5s5GnIcd-146" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=open;endFill=0;endSize=16;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" target="6Y5VyhFg0LRg5s5GnIcd-83">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="120" y="2028" />
+              <mxPoint x="120" y="1551" />
             </Array>
           </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-68" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="views/train_integrity_front.scad" vertex="1">
-          <mxGeometry height="60" width="280" x="680" y="250" as="geometry">
-            <mxRectangle height="26" width="170" x="340" y="380" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-69" parent="6Y5VyhFg0LRg5s5GnIcd-68" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
-          <mxGeometry height="8" width="280" y="26" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-70" parent="6Y5VyhFg0LRg5s5GnIcd-68" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="train_integrity_front()" vertex="1">
-          <mxGeometry height="26" width="280" y="34" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-72" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="views/train_integrity_rear.scad" vertex="1">
-          <mxGeometry height="60" width="280" x="690" y="700" as="geometry">
-            <mxRectangle height="26" width="170" x="340" y="380" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-73" parent="6Y5VyhFg0LRg5s5GnIcd-72" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
-          <mxGeometry height="8" width="280" y="26" as="geometry" />
-        </mxCell>
-        <mxCell id="6Y5VyhFg0LRg5s5GnIcd-74" parent="6Y5VyhFg0LRg5s5GnIcd-72" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="train_integrity_rear()" vertex="1">
-          <mxGeometry height="26" width="280" y="34" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

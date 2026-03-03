@@ -16,12 +16,20 @@ use <symmetrical_connector.scad>
 include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
 include <BOSL2/joiners.scad> // Import joiners from dependency BelfrySCAD/BOSL2.git
 
+// The space between track and train is about 3mm height.
+
+// overlap measure -> om
+om_thickness = 2;
+// track guidance
+om_track_guidance_width = 0.8;
+om_track_guidance_height = 2.5;
+
+
 // ris = route indicator straight
 ris_width = rail_well_spacing + 2 * om_track_guidance_width + move_tolerance;
 ris_length = straight_length;
 ris_rounding = om_track_guidance_width; //om_thickness/2 doesn't work at the track guidance
-// overlap measure -> om
-om_thickness = 2;
+
 
 module track_indicator_straight() {
     diff()
