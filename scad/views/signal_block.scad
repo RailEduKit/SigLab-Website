@@ -13,6 +13,7 @@ include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
 include <../config/global_variables.scad>
 
 // include other parts
+include <../parts/signal_box.scad>
 use <../assemblies/locking_pin.scad> 
 use <../assemblies/signal_box_block.scad>
 use <../assemblies/signal_lever_block.scad>

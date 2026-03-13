@@ -14,6 +14,18 @@ include <../config/colors.scad>
 // include common components
 include <magnet_hole.scad>
 
+block_width = 20; //material constraint //body_width-2*wall_thickness_x-move_tolerance;
+
+// body specifications
+axis_diameter = 2; //maybe use the same material as lever anchor
+wall_thickness_x = (body_width-block_width)/2-move_tolerance;//5;
+wall_thickness_y = lever_thickness_switch;
+wall_thickness_z = 2;
+z_pos_axis = 10; // the block_height=13.5 lies a bit heigher, previous: block_height/2+wall_thickness_z
+
+
+
+
 module signal_box() {
 	module box() {
 		difference() {

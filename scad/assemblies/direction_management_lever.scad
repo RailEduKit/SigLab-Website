@@ -13,6 +13,11 @@ include <../config/colors.scad>
 // include external libraries
 include <BOSL2/std.scad> // Import std from dependency BelfrySCAD/BOSL2.git
 
+// include common parts
+include <../parts/signal_box.scad>
+
+
+
 arrowline_length = 6.5;
 
 module onedirect_arrow() {

@@ -266,30 +266,23 @@ nozzle_diameter = 0.4;
     rounding = 0.5;
 }
 {/***************distant and block signal***************/
-    block_width = 20; //material constraint //body_width-2*wall_thickness_x-move_tolerance;
 
-    // body specifications
-    axis_diameter = 2; //maybe use the same material as lever anchor
-    wall_thickness_x = (body_width-block_width)/2-move_tolerance;//5;
-    wall_thickness_y = lever_thickness_switch;
-    wall_thickness_z = 2;
-    z_pos_axis = 10; // the block_height=13.5 lies a bit heigher, previous: block_height/2+wall_thickness_z
-    attach_arrow_wall_distance = 0.8;
-    attach_arrow_depth = wall_thickness_x-2*attach_arrow_wall_distance;
-    attach_arrow_height = 1.2;
 
+
+    /* CAN BE DELETED??  
     // Locking Part specifications
     lock_lever_depth = 9.5;
     lock_lever_thickness = 2.5;
     lock_lever_height = 10;
-    foot_width = 2.5;
+    foot_width = 2.5; */
 
     // color_block specifications
+    // parts/signal_box.scad don't need this variables
     block_depth = (body_depth-2*wall_thickness_y)/2-3*move_tolerance;
     block_height = 13.5; 
-    overhang = block_height/2-2*move_tolerance; //the circle has to be flattend at one side with move_tolerance
     handle_depth = 10+wall_thickness_y;
     handle_height = 3;
+    // can be removed?: overhang = block_height/2-2*move_tolerance; // the circle has to be flattend at one side with move_tolerance
     
 
     //Symbol Specifications
