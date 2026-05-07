@@ -26,7 +26,7 @@ jobs:
       - name: Clone sibling repos
         run: |
           git clone --depth=1 https://github.com/RailEduKit/SigLab-3Dmodels.git
-          git clone --depth=1 https://github.com/RailEduKit/SigLab-handouts.git || true
+          git clone --depth=1 https://github.com/RailEduKit/SigLab-handouts.git
           git clone --depth=1 https://github.com/RailEduKit/SigLab-Papercut.git
 
       - name: Fetch branding from master repo
