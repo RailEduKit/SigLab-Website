@@ -1,0 +1,11 @@
+# dst	src	required
+downloads/handbook.pdf	SigLab-handouts/handbook.pdf	yes
+downloads/route_locking_matrix.pdf	SigLab-handouts/route_locking_matrix.pdf	yes
+downloads/quickstart-card.pdf	SigLab-handouts/quickstart-card.pdf	no
+downloads/papercut/bill_of_materials.pdf	SigLab-Papercut/bill_of_materials.pdf	yes
+downloads/papercut/block_signals.pdf	SigLab-Papercut/block_signals.pdf	yes
+downloads/papercut/plain_track.pdf	SigLab-Papercut/plain_track.pdf	yes
+downloads/papercut/route_signals.pdf	SigLab-Papercut/route_signals.pdf	yes
+downloads/papercut/protocol.pdf	SigLab-Papercut/protocol.pdf	yes
+images/external/main_signal.png	SigLab-3Dmodels/images/renders/main_signal.png	no
+branding/logo.svg	branding/logo.svg	yes

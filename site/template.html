@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>$if(title)$$title$ - $endif$SigLab</title>
+  $if(description)$
+  <meta name="description" content="$description$">
+  $endif$
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/assets/favicon/favicon.ico">
+</head>
+<body data-path="$path$">
+  <header class="site-header">
+    <a class="brand" href="/index.html">
+      <img src="/branding/logo.svg" alt="SigLab" class="brand-wordmark">
+    </a>
+    <nav class="top-nav">
+      <a href="/index.html">Home</a>
+      <a href="/downloads.html">Downloads</a>
+      <a href="/contribute.html">Contribute</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+$sidebar$
+    </aside>
+
+    <main class="content">
+      <article>
+$body$
+      </article>
+      <nav class="prev-next">
+$if(prev)$
+        <a class="prev" href="$prev.url$">&larr; $prev.title$</a>
+$endif$
+$if(next)$
+        <a class="next" href="$next.url$">$next.title$ &rarr;</a>
+$endif$
+      </nav>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>
+      Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+      Source repositories are linked from
+      <a href="https://github.com/RailEduKit/InteractiveSignallingLaboratory">InteractiveSignallingLaboratory</a>.
+    </p>
+  </footer>
+</body>
+</html>

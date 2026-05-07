@@ -1,0 +1,125 @@
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #666666;
+  --accent: #004de6;
+  --border: #e5e7eb;
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+}
+
+.brand-wordmark {
+  height: 24px;
+}
+
+.top-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.layout {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.sidebar {
+  border-right: 1px solid var(--border);
+  padding-right: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 0.3rem 0;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.prev-next {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+body[data-path="index"] .sidebar a[href="/index.html"],
+body[data-path="concept"] .sidebar a[href="/concept.html"],
+body[data-path="build-it/index"] .sidebar a[href="/build-it/index.html"],
+body[data-path="build-it/bom"] .sidebar a[href="/build-it/bom.html"],
+body[data-path="play-it/index"] .sidebar a[href="/play-it/index.html"],
+body[data-path="teach-with-it/index"] .sidebar a[href="/teach-with-it/index.html"],
+body[data-path="downloads"] .sidebar a[href="/downloads.html"],
+body[data-path="contribute"] .sidebar a[href="/contribute.html"],
+body[data-path="contributors"] .sidebar a[href="/contributors.html"] {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem;
+  }
+}
+
+@media print {
+  .site-header,
+  .sidebar,
+  .prev-next,
+  .site-footer {
+    display: none;
+  }
+
+  .layout {
+    display: block;
+    padding: 0;
+  }
+}
