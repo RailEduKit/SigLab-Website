@@ -6,8 +6,9 @@ BUILD := .build
 TEMPLATE := site/template.html
 FILTERS := --lua-filter=site/filters/md-links-to-html.lua --lua-filter=site/filters/figure-caption.lua
 
-MD_SRC := $(shell find content -type f -name "*.md" ! -name "SUMMARY.md")
-HTML_OUT := $(patsubst content/%.md,$(OUT)/%.html,$(MD_SRC))
+CONTENT_MD_SRC := $(shell find content -type f -name "*.md" ! -name "SUMMARY.md")
+ROOT_MD_SRC := contributors.md
+HTML_OUT := $(patsubst content/%.md,$(OUT)/%.html,$(CONTENT_MD_SRC)) $(patsubst %.md,$(OUT)/%.html,$(ROOT_MD_SRC))
 
 export SIBLINGS_ROOT
 
@@ -22,6 +23,16 @@ external: check-deps
 site: $(HTML_OUT) $(OUT)/style.css local-assets
 
 $(OUT)/%.html: content/%.md $(TEMPLATE) $(BUILD)/sidebar.html
+	@mkdir -p $(dir $@)
+	@if [ ! -f "$(BUILD)/prevnext/$*.yaml" ]; then mkdir -p "$(dir $(BUILD)/prevnext/$*.yaml)" && : > "$(BUILD)/prevnext/$*.yaml"; fi
+	$(PANDOC) $(FILTERS) \
+		--template=$(TEMPLATE) \
+		--metadata=path:"$*" \
+		--metadata-file=$(BUILD)/prevnext/$*.yaml \
+		--variable sidebar="$$(cat $(BUILD)/sidebar.html)" \
+		-o $@ $<
+
+$(OUT)/%.html: %.md $(TEMPLATE) $(BUILD)/sidebar.html
 	@mkdir -p $(dir $@)
 	@if [ ! -f "$(BUILD)/prevnext/$*.yaml" ]; then mkdir -p "$(dir $(BUILD)/prevnext/$*.yaml)" && : > "$(BUILD)/prevnext/$*.yaml"; fi
 	$(PANDOC) $(FILTERS) \
